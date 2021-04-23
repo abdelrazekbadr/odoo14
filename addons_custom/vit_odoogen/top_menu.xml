@@ -1,0 +1,13 @@
+<openerp>
+	<data>
+
+		<menuitem id="menu_odoogen"
+				  parent="base.menu_administration"
+				  name="Odoo Generator"
+				  sequence="100"
+				  action="act_open_download_wizard"
+		/>
+
+
+	</data>
+</openerp>

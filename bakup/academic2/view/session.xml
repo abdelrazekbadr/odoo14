@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="view_academy_session_tree" model="ir.ui.view">
+            <field name="name">academy_session_tree</field>
+            <field name="model">academy.session</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Session">
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="date_start" />
+                    <field name="duration" />
+                    <field name="seats" />
+                    <field name="course_id" />
+                    <field name="instructor_id" />
+                </tree>
+            </field>
+        </record>
+        <!-- form view -->
+        <record id="view_academy_session_form" model="ir.ui.view">
+            <field name="name">academy_session_form</field>
+            <field name="model">academy.session</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Session">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--button type="object" name="action_view_detail" class="oe_stat_button" icon="fa-pencil-square-o"-->
+                                <!--field name="detail_count" widget="statinfo" string="Detail(s)"/-->
+                                <!--field name="detail_ids" invisible="1"/-->
+                            <!--/button-->
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Session Name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description" />
+                                <field name="date_start" />
+                                <field name="duration" />
+                                <field name="seats" />
+                            </group>
+                            <group>
+                                <field name="course_id" />
+                                <field name="instructor_id" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Attendees">
+                                <field name="attendee_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- search -->
+        <record id="view_academy_session_search" model="ir.ui.view">
+            <field name="name">academy_session</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <search string="Session">
+
+                    <filter string="Name" name="filter_by_name" domain="[('name','=','')]" />
+                    <filter string="Description" name="filter_by_description" domain="[('description','=','')]" />
+                    <filter string="Date start" name="filter_by_date_start" domain="[('date_start','=','')]" />
+                    <filter string="Duration" name="filter_by_duration" domain="[('duration','=','')]" />
+                    <filter string="Seats" name="filter_by_seats" domain="[('seats','=','')]" />
+                    <field name="name" select="True"/>
+                    <field name="description" select="True"/>
+                    <field name="date_start" select="True"/>
+                    <field name="duration" select="True"/>
+                    <field name="seats" select="True"/>
+                    <field name="course_id" select="True"/>
+                    <field name="instructor_id" select="True"/>
+                    <group string="Group By..">
+                        <filter string="Course" domain="[]" name="group_by_course_id" context="{'group_by':'course_id'}"/>
+                        <filter string="Instructor" domain="[]" name="group_by_instructor_id" context="{'group_by':'instructor_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- kanban , to show image, please add image_small in the model -->
+        <record id="view_academy_session_kanban" model="ir.ui.view" >
+            <field name="name">academy_session</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <kanban version="7.0">
+                    <field name="id" />
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="date_start" />
+                    <field name="duration" />
+                    <field name="seats" />
+                    <field name="course_id" />
+                    <field name="instructor_id" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_details">
+                                    <h4>
+                                        <a type="open"><field name="name"/></a>
+                                    </h4>
+                                    <ul>
+
+                                        <li>
+                                            <span class="text-muted">Course</span> <field name="course_id"></field>
+                                        </li>
+
+
+                                        <li>
+                                            <span class="text-muted">Instructor</span> <field name="instructor_id"></field>
+                                        </li>
+
+                                        <li>
+                                            <span class="text-muted">Date start</span> <field name="date_start"></field>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <!-- calendar if a date field exists -->
+        <record id="view_academy_session_cal" model="ir.ui.view">
+            <field name="name">academy_session_cal</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <calendar string="Session" date_start="date_start">
+                    <field name="name" />
+                </calendar>
+            </field>
+        </record>
+        <!-- graph -->
+        <record id="view_academy_session_graph" model="ir.ui.view">
+            <field name="name">academy_session</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <graph string="Session" type="bar">
+                    <field name="course_id"/>
+                </graph>
+            </field>
+        </record>
+        <!-- action window -->
+        <record id="action_academy_session" model="ir.actions.act_window">
+            <field name="name">Session</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">academy.session</field>
+            <field name="view_mode">kanban,tree,form,calendar,graph</field>
+            <field name="context">{"search_default_fieldname":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a new Session
+                </p><p>
+                Click the Create button to add a new Session
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_academy_session" name="Session" parent="academic_config_menu" action="action_academy_session" sequence="20"/>
+    </data>
+</odoo>

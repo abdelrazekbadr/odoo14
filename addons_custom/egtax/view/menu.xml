@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+		<menuitem id="egtax_top_menu" name="EGTax" sequence="20" web_icon="egtax,static/description/icon.png" />
+		<menuitem id="egtax_sub_menu" name="Operations" sequence="40" parent="egtax_top_menu" />
+		<menuitem id="egtax_config_menu" name="Configurations" sequence="50" parent="egtax_top_menu" />
+	</data>
+</odoo>

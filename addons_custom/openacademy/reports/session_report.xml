@@ -1,0 +1,81 @@
+<odoo>
+
+    <record id="report_session" model="ir.actions.report">
+        <field name="name">Session Report</field>
+        <field name="model">openacademy.session</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">openacademy.report_session_view</field>
+        <field name="report_file">openacademy.report_session</field>
+        <field name="binding_model_id" ref="model_openacademy_session"/>
+        <field name="binding_type">report</field>
+        <field name="attachment_use" eval="True"/>
+    </record>
+
+    <template id="report_session_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <xpath expr="." position="inside">
+                        <link rel="stylesheet" href="/openacademy/static/src/css/tether.min.css"/>
+                        <link rel="stylesheet" href="/openacademy/static/src/css/bootstrap.min.css"/>
+                        <link rel="stylesheet" href="/openacademy/static/src/css/bootstrap-grid.min.css"/>
+                        <link rel="stylesheet" href="/openacademy/static/src/css/bootstrap-reboot.min.css"/>
+                        <link rel="stylesheet" href="/openacademy/static/src/css/style.css"/>
+                        <link rel="preload" as="style" href="/openacademy/static/src/css/mbr-additional.css"/>
+                        <link rel="stylesheet" href="/openacademy/static/src/css/mbr-additional.css" type="text/css"/>
+                    </xpath>
+                    <div class="page">
+                        <div class="features9 cid-sfPkTTKXpJ" id="features10-p">
+                            <div class="container">
+                                <div class="mbr-section-head">
+                                    <h3 class="mbr-section-title mbr-fonts-style mb-0 display-2">
+                                        <strong>Product List</strong>
+                                    </h3>
+
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="card col-12">
+                                        <div class="card-wrapper">
+                                            <div class="top-line row">
+                                                <div class="col">
+                                                    <h4 class="card-title mbr-fonts-style display-5">
+                                                        <strong>Attendees count</strong>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p class="price mbr-fonts-style display-5">
+                                                        <span t-field="doc.attendees_count"/>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="bottom-line">
+                                                <p class="mbr-text mbr-fonts-style display-7">
+                                                    Test Bootstrap HTML Templste with custom css
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 t-field="doc.name"/>
+                        <p>From
+                            <span t-field="doc.start_date"/>
+                            to
+                            <span t-field="doc.end_date"/>
+                        </p>
+                        <h3>Attendees:</h3>
+                        <ul>
+                            <t t-foreach="doc.attendee_ids" t-as="attendee">
+                                <li>
+                                    <span t-field="attendee.name"/>
+                                </li>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

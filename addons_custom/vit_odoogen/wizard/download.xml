@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="act_open_download_wizard" model="ir.actions.act_window">
+            <field name="name">Download</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vit.download_wizard</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="download_wizard_view" model="ir.ui.view">
+            <field name="name">download</field>
+            <field name="model">vit.download_wizard</field>
+            <field name="arch" type="xml">
+                <form string="download">
+
+                    <group>
+                        <a class="btn btn-primary" href="/vit_odoogen/static/staruml-odoo-pro-1.8.zip" target="_new">Download the extension ZIP file here</a>
+                    </group>
+
+                    <group string="Installation instruction">
+                        <ul>
+                            <li>
+                                Download StarUML from <a href="http://staruml.io" target="_new">staruml.io</a> and install it on your local computer.
+                            </li>
+
+                            <li>Extract the extension ZIP file onto the StarUML extensions path:
+                                <ul>
+                                    <li>for Mac OS: <b>/Users/&lt;user&gt;/Library/Application Support/StarUML/extensions/user</b></li>
+                                    <li>for Windows: <b>C:\Users\&lt;user&gt;\AppData\Roaming\StarUML\extensions\user</b></li>
+                                    <li>for Linux: <b>~/.config/StarUML/extensions/user</b></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Make sure that the <b>staruml-odoo-pro</b> folder is in the extensions path and the <b>main.js</b> file is in the folder.
+                            </li>
+                            <li>
+                                Restart StarUML.
+                            </li>
+
+                            <li>
+                                For detailed installation process of the StarUML extension, please check here:
+                                <a hre="https://docs.staruml.io/user-guide/managing-extensions" target="_new">
+                                    https://docs.staruml.io/user-guide/managing-extensions
+                                </a>
+                            </li>
+
+                        </ul>
+                    </group>
+
+                    <footer>
+                        <button string="Cancel" icon="fa-times" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+
+    
+    </data>
+</openerp>

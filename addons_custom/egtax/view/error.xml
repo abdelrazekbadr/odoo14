@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="view_egtax_error_tree" model="ir.ui.view">
+            <field name="name">egtax_error_tree</field>
+            <field name="model">egtax.error</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Error">
+                    <field name="code" />
+                    <field name="message" />
+                    <field name="target" />
+                    <field name="date" />
+                    <field name="invoice_id" />
+                </tree>
+            </field>
+        </record>
+        <!-- form view -->
+
+        <!-- search -->
+        <record id="view_egtax_error_search" model="ir.ui.view">
+            <field name="name">egtax_error</field>
+            <field name="model">egtax.error</field>
+            <field name="arch" type="xml">
+                <search string="Error">
+
+                    <filter string="Code" name="filter_by_code" domain="[('code','=','')]" />
+                    <filter string="Message" name="filter_by_message" domain="[('message','=','')]" />
+                    <filter string="Target" name="filter_by_target" domain="[('target','=','')]" />
+                    <filter string="Date" name="filter_by_date" domain="[('date','=','')]" />
+                    <field name="code" select="True"/>
+                    <field name="message" select="True"/>
+                    <field name="target" select="True"/>
+                    <field name="date" select="True"/>
+                    <field name="invoice_id" select="True"/>
+                    <group string="Group By..">
+                        <filter string="Invoice" domain="[]" name="group_by_invoice_id" context="{'group_by':'invoice_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- kanban , to show image, please add image_small in the model -->
+
+        <!-- calendar if a date field exists -->
+
+        <!-- graph -->
+
+        <!-- action window -->
+        <record id="action_egtax_error" model="ir.actions.act_window">
+            <field name="name">Error</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">egtax.error</field>
+            <field name="view_mode">ree,form</field>
+            <field name="context">{"search_default_fieldname":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a new Error
+                </p><p>
+                Click the Create button to add a new Error
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_egtax_error" name="Error" parent="egtax_config_menu" action="action_egtax_error" sequence="80"/>
+    </data>
+</odoo>

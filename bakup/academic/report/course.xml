@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- report qweb view -->
+        <report id="report_academy_course_menu" string="Academy - Course"
+         model="academy.course" report_type="qweb-pdf" 
+         file="academy.course"  name="academic.academy_course_report" />
+
+        <!-- document template -->
+        <template id="academic.academy_course_report_document" >
+            <t t-call="web.external_layout">
+                <t t-set="doc" t-value="doc.with_context({'lang': lang})"/>
+                <div class="page">
+                    <h2>
+                        Course: <span t-field="doc.name"/>
+                    </h2>
+                    <div class="row mt32 mb32">
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Description</strong>
+                            <p class="m-0" t-field="doc.description" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Responsible</strong>
+                            <p class="m-0" t-field="doc.responsible_id"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+                <h2>Sessions</h2>
+                <table class="table table-sm o_main_table" name="session_ids_table">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Description</td>
+                            <td>Date start</td>
+                            <td>Duration</td>
+                            <td>Seats</td>
+                            <td>Course</td>
+                            <td>Instructor</td>
+                        </tr>
+                    </thead>
+                    <tbody class="session_ids_tbody">
+                        <tr t-foreach="doc.session_ids" t-as="line">
+                            <td><span t-field="line.name" /></td>
+                            <td><span t-field="line.description" /></td>
+                            <td><span t-field="line.date_start" /></td>
+                            <td><span t-field="line.duration" /></td>
+                            <td><span t-field="line.seats" /></td>
+                            <td><span t-field="line.course_id" /></td>
+                            <td><span t-field="line.instructor_id" /></td>
+                        </tr> <!-- foreach-->
+                    </tbody>
+                </table>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+
+        <!-- main template -->
+        <template id="academic.academy_course_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="lang" t-value="doc.create_uid.lang"/>
+                    <t t-call="academic.academy_course_report_document" />
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

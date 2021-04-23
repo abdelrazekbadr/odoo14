@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- form view -->
+
+<!--        <record id="view_res_config_settings" model="ir.ui.view">-->
+<!--            <field name="name">egtax.res.config.settings.form</field>-->
+<!--            <field name="model">res.config.settings</field>-->
+<!--            <field name="inherit_id" ref="base.res_config_settings_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[hasclass('settings')]" position="inside">-->
+<!--                    <div class="app_settings_block" data-string="EG Tax" string="EG Tax"-->
+<!--                         data-key="egtax"-->
+<!--                         groups="required_group_id">-->
+
+<!--                        <form string="Setting">-->
+<!--                            <header>-->
+<!--                            </header>-->
+<!--                            <sheet>-->
+<!--                                <group>-->
+<!--                                    <field name="scope"/>-->
+<!--                                    <field name="grant_type"/>-->
+<!--                                    <field name="client_id"/>-->
+<!--                                    <field name="client_secret"/>-->
+<!--                                    <field name="apiBaseUrl"/>-->
+<!--                                    <field name="idSrvBaseUrl"/>-->
+<!--                                    <field name="client_token"/>-->
+<!--                                    <field name="auto_post"/>-->
+<!--                                    <field name="last_token_date"/>-->
+<!--                                    <field name="signature_type"/>-->
+<!--                                    <field name="signature_value"/>-->
+<!--                                </group>-->
+<!--                                <notebook>-->
+<!--                                </notebook>-->
+<!--                            </sheet>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <!-- action window -->
+<!--        <record id="action_egtax_setting" model="ir.actions.act_window">-->
+<!--            <field name="name">Settings</field>-->
+<!--           <field name="type">ir.actions.act_window</field>-->
+<!--           <field name="res_model">res.config.settings</field>-->
+<!--           <field name="view_mode">form</field>-->
+<!--           <field name="target">inline</field>-->
+<!--           <field name="context">{'module' : 'egtax'}</field>-->
+<!--        </record>-->
+
+
+
+
+     <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.egtax</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="EG Tax" string="EG Tax" data-key="egtax" >
+                    <h2>EG E-Invoice Tax</h2>
+                 <div class="col-12 col-md-11 col-lg-10 mt16" >
+                        <form string="Setting">
+                            <sheet>
+                                <group>
+                                    <field name="scope"/>
+                                    <field name="grant_type"/>
+                                    <field name="client_id"/>
+                                    <field name="client_secret"/>
+                                    <field name="apiBaseUrl"/>
+                                    <field name="idSrvBaseUrl"/>
+                                    <field name="client_token"/>
+                                    <field name="auto_post"/>
+                                    <field name="last_token_date"/>
+                                    <field name="signature_type"/>
+                                    <field name="signature_value"/>
+                                </group>
+                                <notebook>
+                                </notebook>
+                            </sheet>
+                        </form>
+                 </div>
+
+<!--                    <div class="row mt16 o_settings_container" name="qualification_setting_container">-->
+<!--                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead"-->
+<!--                            title="Use leads if you need a qualification step before creating an opportunity or a customer. It can be a business card you received, a contact form filled in your website, or a file of unqualified prospects you import, etc. Once qualified, the lead can be converted into a business opportunity and/or a new customer in your address book.">-->
+<!--                            <div class="o_setting_left_pane">-->
+<!--                                <field name="group_use_lead"/>-->
+<!--                            </div>-->
+<!--                            <div class="o_setting_right_pane">-->
+<!--                                <label for="group_use_lead"/>-->
+<!--                                <div class="text-muted">-->
+<!--                                    Add a qualification step before the creation of an opportunity-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead"-->
+<!--                                attrs="{'invisible': [('group_use_lead','=',False)]}"-->
+<!--                                title="Emails received to that address generate new leads not assigned to any Sales Team yet. This can be made when converting them into opportunities. Incoming emails can be automatically assigned to specific Sales Teams. To do so, set an email alias on the Sales Team.">-->
+<!--                            <div class="o_setting_left_pane">-->
+<!--                                <field name="generate_lead_from_alias"/>-->
+<!--                            </div>-->
+<!--                            <div class="o_setting_right_pane">-->
+<!--                                <label for="generate_lead_from_alias" string="Incoming Emails"/>-->
+<!--                                <div class="text-muted">-->
+<!--                                    Create leads from incoming emails-->
+<!--                                </div>-->
+<!--                                <div class="content-group" attrs="{'invisible': [('generate_lead_from_alias','=',False)]}">-->
+<!--                                    <div class="mt16">-->
+<!--                                        <field name="crm_alias_prefix" class="oe_inline"-->
+<!--                                            attrs="{'required': [('generate_lead_from_alias', '=', True)]}"/>-->
+<!--                                        <label for="alias_domain" string="@"/>-->
+<!--                                        <field name="alias_domain" readonly="1" force_save="1" class="oe_inline"/>-->
+<!--                                    </div>-->
+<!--                                    <div attrs="{'invisible': [('alias_domain', 'not in', ['localhost', '', False])]}">-->
+<!--                                        <button type="action"-->
+<!--                                            name="base_setup.action_general_configuration"-->
+<!--                                            string="Use an External Email Server" icon="fa-arrow-right" class="oe_link"/>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="egtax_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'egtax'}</field>
+    </record>
+
+            <!--        <menuitem id="menu_egtax_setting" name="Setting" parent="egtax_config_menu" action="action_egtax_setting" sequence="20"/>-->
+        <menuitem id="egtax_config_settings_menu"
+                  name="Setting"
+                  parent="egtax_top_menu"
+                  action="egtax_config_settings_action"
+                  sequence="100"/>
+
+<!--    <record id="egtax_config_settings_menu" model="ir.ui.menu">-->
+<!--        <field name="action" ref="egtax.egtax_config_settings_action"/>-->
+<!--    </record>-->
+
+</odoo>

@@ -1,0 +1,10 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_user_academy_session,access_user_academy_session,model_academy_session,academic.group_academic_user,1,0,0,0
+access_manager_academy_session,access_manager_academy_session,model_academy_session,academic.group_academic_manager,1,1,1,1
+access_admin_academy_session,access_admin_academy_session,model_academy_session,base.group_system,1,1,1,1
+access_user_academy_course,access_user_academy_course,model_academy_course,academic.group_academic_user,1,0,0,0
+access_manager_academy_course,access_manager_academy_course,model_academy_course,academic.group_academic_manager,1,1,1,1
+access_admin_academy_course,access_admin_academy_course,model_academy_course,base.group_system,1,1,1,1
+access_user_academy_attendee,access_user_academy_attendee,model_academy_attendee,academic.group_academic_user,1,0,0,0
+access_manager_academy_attendee,access_manager_academy_attendee,model_academy_attendee,academic.group_academic_manager,1,1,1,1
+access_admin_academy_attendee,access_admin_academy_attendee,model_academy_attendee,base.group_system,1,1,1,1

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- report qweb view -->
+        <report id="report_res_users_menu" string="Academy - User"
+         model="res.users" report_type="qweb-pdf" 
+         file="res.users"  name="academic.res_users_report" />
+
+        <!-- document template -->
+        <template id="academic.res_users_report_document" >
+            <t t-call="web.external_layout">
+                <t t-set="doc" t-value="doc.with_context({'lang': lang})"/>
+                <div class="page">
+                    <h2>
+                        User: <span t-field="doc.name"/>
+                    </h2>
+                    <div class="row mt32 mb32">
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+                <h2>Courses</h2>
+                <table class="table table-sm o_main_table" name="course_ids_table">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Description</td>
+                            <td>Responsible</td>
+                        </tr>
+                    </thead>
+                    <tbody class="course_ids_tbody">
+                        <tr t-foreach="doc.course_ids" t-as="line">
+                            <td><span t-field="line.name" /></td>
+                            <td><span t-field="line.description" /></td>
+                            <td><span t-field="line.responsible_id" /></td>
+                        </tr> <!-- foreach-->
+                    </tbody>
+                </table>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+
+        <!-- main template -->
+        <template id="academic.res_users_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="lang" t-value="doc.create_uid.lang"/>
+                    <t t-call="academic.res_users_report_document" />
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>
