@@ -1,601 +1,685 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
      <data noupdate="1">
 
      <!--    Record 2Z    -->
        <record id='2Z' model='egtax.unit_type'>
-          <field name='code'>2Z </field>
-          <field name='desc_en'>Millivolt ( mV ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>2Z</field>
+          <field name='desc_en'>Millivolt ( mV )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record 4K    -->
        <record id='4K' model='egtax.unit_type'>
-          <field name='code'>4K </field>
-          <field name='desc_en'>Milliampere ( mA ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>4K</field>
+          <field name='desc_en'>Milliampere ( mA )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record 4O    -->
        <record id='4O' model='egtax.unit_type'>
-          <field name='code'>4O </field>
-          <field name='desc_en'>Microfarad ( microF ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>4O</field>
+          <field name='desc_en'>Microfarad ( microF )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record A87    -->
        <record id='A87' model='egtax.unit_type'>
-          <field name='code'>A87 </field>
-          <field name='desc_en'>Gigaohm ( GOhm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>A87</field>
+          <field name='desc_en'>Gigaohm ( GOhm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record A93    -->
        <record id='A93' model='egtax.unit_type'>
-          <field name='code'>A93 </field>
-          <field name='desc_en'>Gram/Cubic meter ( g/m3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>A93</field>
+          <field name='desc_en'>Gram/Cubic meter ( g/m3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record A94    -->
        <record id='A94' model='egtax.unit_type'>
-          <field name='code'>A94 </field>
-          <field name='desc_en'>Gram/cubic centimeter ( g/cm3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>A94</field>
+          <field name='desc_en'>Gram/cubic centimeter ( g/cm3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record AMP    -->
        <record id='AMP' model='egtax.unit_type'>
-          <field name='code'>AMP </field>
-          <field name='desc_en'>Ampere ( A ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>AMP</field>
+          <field name='desc_en'>Ampere ( A )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record ANN    -->
        <record id='ANN' model='egtax.unit_type'>
-          <field name='code'>ANN </field>
-          <field name='desc_en'>Years ( yr ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>ANN</field>
+          <field name='desc_en'>Years ( yr )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record B22    -->
        <record id='B22' model='egtax.unit_type'>
-          <field name='code'>B22 </field>
-          <field name='desc_en'>Kiloampere ( kA ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>B22</field>
+          <field name='desc_en'>Kiloampere ( kA )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record B49    -->
        <record id='B49' model='egtax.unit_type'>
-          <field name='code'>B49 </field>
-          <field name='desc_en'>Kiloohm ( kOhm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>B49</field>
+          <field name='desc_en'>Kiloohm ( kOhm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record B75    -->
        <record id='B75' model='egtax.unit_type'>
-          <field name='code'>B75 </field>
-          <field name='desc_en'>Megohm ( MOhm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>B75</field>
+          <field name='desc_en'>Megohm ( MOhm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record B78    -->
        <record id='B78' model='egtax.unit_type'>
-          <field name='code'>B78 </field>
-          <field name='desc_en'>Megavolt ( MV ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>B78</field>
+          <field name='desc_en'>Megavolt ( MV )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record B84    -->
        <record id='B84' model='egtax.unit_type'>
-          <field name='code'>B84 </field>
-          <field name='desc_en'>Microampere ( microA ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>B84</field>
+          <field name='desc_en'>Microampere ( microA )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record BAR    -->
        <record id='BAR' model='egtax.unit_type'>
-          <field name='code'>BAR </field>
-          <field name='desc_en'>bar ( bar ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>BAR</field>
+          <field name='desc_en'>bar ( bar )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record BG    -->
        <record id='BG' model='egtax.unit_type'>
-          <field name='code'>BG </field>
-          <field name='desc_en'>Bag ( Bag ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>BG</field>
+          <field name='desc_en'>Bag ( Bag )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record BO    -->
        <record id='BO' model='egtax.unit_type'>
-          <field name='code'>BO </field>
-          <field name='desc_en'>Bottle ( Bt. ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>BO</field>
+          <field name='desc_en'>Bottle ( Bt. )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record C10    -->
        <record id='C10' model='egtax.unit_type'>
-          <field name='code'>C10 </field>
-          <field name='desc_en'>Millifarad ( mF ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>C10</field>
+          <field name='desc_en'>Millifarad ( mF )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record C39    -->
        <record id='C39' model='egtax.unit_type'>
-          <field name='code'>C39 </field>
-          <field name='desc_en'>Nanoampere ( nA ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>C39</field>
+          <field name='desc_en'>Nanoampere ( nA )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record C41    -->
        <record id='C41' model='egtax.unit_type'>
-          <field name='code'>C41 </field>
-          <field name='desc_en'>Nanofarad ( nF ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>C41</field>
+          <field name='desc_en'>Nanofarad ( nF )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record C45    -->
        <record id='C45' model='egtax.unit_type'>
-          <field name='code'>C45 </field>
-          <field name='desc_en'>Nanometer ( nm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>C45</field>
+          <field name='desc_en'>Nanometer ( nm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record C62    -->
        <record id='C62' model='egtax.unit_type'>
-          <field name='code'>C62 </field>
-          <field name='desc_en'>Activity unit ( AU ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>C62</field>
+          <field name='desc_en'>Activity unit ( AU )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CA    -->
        <record id='CA' model='egtax.unit_type'>
-          <field name='code'>CA </field>
-          <field name='desc_en'>Canister ( Can ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CA</field>
+          <field name='desc_en'>Canister ( Can )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CMK    -->
        <record id='CMK' model='egtax.unit_type'>
-          <field name='code'>CMK </field>
-          <field name='desc_en'>Square centimeter ( cm2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CMK</field>
+          <field name='desc_en'>Square centimeter ( cm2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CMQ    -->
        <record id='CMQ' model='egtax.unit_type'>
-          <field name='code'>CMQ </field>
-          <field name='desc_en'>Cubic centimeter ( cm3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CMQ</field>
+          <field name='desc_en'>Cubic centimeter ( cm3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CMT    -->
        <record id='CMT' model='egtax.unit_type'>
-          <field name='code'>CMT </field>
-          <field name='desc_en'>Centimeter ( cm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CMT</field>
+          <field name='desc_en'>Centimeter ( cm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CS    -->
        <record id='CS' model='egtax.unit_type'>
-          <field name='code'>CS </field>
-          <field name='desc_en'>Case ( Case ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CS</field>
+          <field name='desc_en'>Case ( Case )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CT    -->
        <record id='CT' model='egtax.unit_type'>
-          <field name='code'>CT </field>
-          <field name='desc_en'>Carton ( Car ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CT</field>
+          <field name='desc_en'>Carton ( Car )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record CTL    -->
        <record id='CTL' model='egtax.unit_type'>
-          <field name='code'>CTL </field>
-          <field name='desc_en'>Centiliter ( Cl ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>CTL</field>
+          <field name='desc_en'>Centiliter ( Cl )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record D10    -->
        <record id='D10' model='egtax.unit_type'>
-          <field name='code'>D10 </field>
-          <field name='desc_en'>Siemens per meter ( S/m ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>D10</field>
+          <field name='desc_en'>Siemens per meter ( S/m )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record D33    -->
        <record id='D33' model='egtax.unit_type'>
-          <field name='code'>D33 </field>
-          <field name='desc_en'>Tesla ( D ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>D33</field>
+          <field name='desc_en'>Tesla ( D )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record D41    -->
        <record id='D41' model='egtax.unit_type'>
-          <field name='code'>D41 </field>
-          <field name='desc_en'>Ton/Cubic meter ( t/m3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>D41</field>
+          <field name='desc_en'>Ton/Cubic meter ( t/m3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record DAY    -->
        <record id='DAY' model='egtax.unit_type'>
-          <field name='code'>DAY </field>
-          <field name='desc_en'>Days ( d ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>DAY</field>
+          <field name='desc_en'>Days ( d )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record DMT    -->
        <record id='DMT' model='egtax.unit_type'>
-          <field name='code'>DMT </field>
-          <field name='desc_en'>Decimeter ( dm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>DMT</field>
+          <field name='desc_en'>Decimeter ( dm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record EA    -->
        <record id='EA' model='egtax.unit_type'>
-          <field name='code'>EA </field>
-          <field name='desc_en'>each (ST) ( ST ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>EA</field>
+          <field name='desc_en'>each (ST) ( ST )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record FAR    -->
        <record id='FAR' model='egtax.unit_type'>
-          <field name='code'>FAR </field>
-          <field name='desc_en'>Farad ( F ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>FAR</field>
+          <field name='desc_en'>Farad ( F )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record FOT    -->
        <record id='FOT' model='egtax.unit_type'>
-          <field name='code'>FOT </field>
-          <field name='desc_en'>Foot ( Foot ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>FOT</field>
+          <field name='desc_en'>Foot ( Foot )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record FTK    -->
        <record id='FTK' model='egtax.unit_type'>
-          <field name='code'>FTK </field>
-          <field name='desc_en'>Square foot ( ft2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>FTK</field>
+          <field name='desc_en'>Square foot ( ft2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record FTQ    -->
        <record id='FTQ' model='egtax.unit_type'>
-          <field name='code'>FTQ </field>
-          <field name='desc_en'>Cubic foot ( ft3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>FTQ</field>
+          <field name='desc_en'>Cubic foot ( ft3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record G42    -->
        <record id='G42' model='egtax.unit_type'>
-          <field name='code'>G42 </field>
-          <field name='desc_en'>Microsiemens per centimeter ( microS/cm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>G42</field>
+          <field name='desc_en'>Microsiemens per centimeter ( microS/cm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record GL    -->
        <record id='GL' model='egtax.unit_type'>
-          <field name='code'>GL </field>
-          <field name='desc_en'>Gram/liter ( g/l ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>GL</field>
+          <field name='desc_en'>Gram/liter ( g/l )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record GLL    -->
        <record id='GLL' model='egtax.unit_type'>
-          <field name='code'>GLL </field>
-          <field name='desc_en'>gallon ( gal ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>GLL</field>
+          <field name='desc_en'>gallon ( gal )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record GM    -->
        <record id='GM' model='egtax.unit_type'>
-          <field name='code'>GM </field>
-          <field name='desc_en'>Gram/square meter ( g/m2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>GM</field>
+          <field name='desc_en'>Gram/square meter ( g/m2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record GRM    -->
        <record id='GRM' model='egtax.unit_type'>
-          <field name='code'>GRM </field>
-          <field name='desc_en'>Gram ( g ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>GRM</field>
+          <field name='desc_en'>Gram ( g )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record H63    -->
        <record id='H63' model='egtax.unit_type'>
-          <field name='code'>H63 </field>
-          <field name='desc_en'>Milligram/Square centimeter ( mg/cm2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>H63</field>
+          <field name='desc_en'>Milligram/Square centimeter ( mg/cm2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record HLT    -->
        <record id='HLT' model='egtax.unit_type'>
-          <field name='code'>HLT </field>
-          <field name='desc_en'>Hectoliter ( hl ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>HLT</field>
+          <field name='desc_en'>Hectoliter ( hl )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record HTZ    -->
        <record id='HTZ' model='egtax.unit_type'>
-          <field name='code'>HTZ </field>
-          <field name='desc_en'>Hertz (1/second) ( Hz ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>HTZ</field>
+          <field name='desc_en'>Hertz (1/second) ( Hz )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record HUR    -->
        <record id='HUR' model='egtax.unit_type'>
-          <field name='code'>HUR </field>
-          <field name='desc_en'>Hours ( hrs ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>HUR</field>
+          <field name='desc_en'>Hours ( hrs )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record IE    -->
        <record id='IE' model='egtax.unit_type'>
-          <field name='code'>IE </field>
-          <field name='desc_en'>Number of Persons ( PRS ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>IE</field>
+          <field name='desc_en'>Number of Persons ( PRS )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record INH    -->
        <record id='INH' model='egtax.unit_type'>
-          <field name='code'>INH </field>
-          <field name='desc_en'>Inch ( “” ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>INH</field>
+          <field name='desc_en'>Inch ( “” )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record INK    -->
        <record id='INK' model='egtax.unit_type'>
-          <field name='code'>INK </field>
-          <field name='desc_en'>Square inch ( Inch2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>INK</field>
+          <field name='desc_en'>Square inch ( Inch2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KGM    -->
        <record id='KGM' model='egtax.unit_type'>
-          <field name='code'>KGM </field>
-          <field name='desc_en'>Kilogram ( KG ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KGM</field>
+          <field name='desc_en'>Kilogram ( KG )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KHZ    -->
        <record id='KHZ' model='egtax.unit_type'>
-          <field name='code'>KHZ </field>
-          <field name='desc_en'>Kilohertz ( kHz ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KHZ</field>
+          <field name='desc_en'>Kilohertz ( kHz )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KMH    -->
        <record id='KMH' model='egtax.unit_type'>
-          <field name='code'>KMH </field>
-          <field name='desc_en'>Kilometer/hour ( km/h ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KMH</field>
+          <field name='desc_en'>Kilometer/hour ( km/h )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KMK    -->
        <record id='KMK' model='egtax.unit_type'>
-          <field name='code'>KMK </field>
-          <field name='desc_en'>Square kilometer ( km2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KMK</field>
+          <field name='desc_en'>Square kilometer ( km2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KMQ    -->
        <record id='KMQ' model='egtax.unit_type'>
-          <field name='code'>KMQ </field>
-          <field name='desc_en'>Kilogram/cubic meter ( kg/m3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KMQ</field>
+          <field name='desc_en'>Kilogram/cubic meter ( kg/m3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KMT    -->
        <record id='KMT' model='egtax.unit_type'>
-          <field name='code'>KMT </field>
-          <field name='desc_en'>Kilometer ( km ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KMT</field>
+          <field name='desc_en'>Kilometer ( km )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KSM    -->
        <record id='KSM' model='egtax.unit_type'>
-          <field name='code'>KSM </field>
-          <field name='desc_en'>Kilogram/Square meter ( kg/m2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KSM</field>
+          <field name='desc_en'>Kilogram/Square meter ( kg/m2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KVT    -->
        <record id='KVT' model='egtax.unit_type'>
-          <field name='code'>KVT </field>
-          <field name='desc_en'>Kilovolt ( kV ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KVT</field>
+          <field name='desc_en'>Kilovolt ( kV )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record KWT    -->
        <record id='KWT' model='egtax.unit_type'>
-          <field name='code'>KWT </field>
-          <field name='desc_en'>Kilowatt ( KW ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>KWT</field>
+          <field name='desc_en'>Kilowatt ( KW )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record LTR    -->
        <record id='LTR' model='egtax.unit_type'>
-          <field name='code'>LTR </field>
-          <field name='desc_en'>Liter ( l ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>LTR</field>
+          <field name='desc_en'>Liter ( l )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record M    -->
        <record id='M' model='egtax.unit_type'>
-          <field name='code'>M </field>
-          <field name='desc_en'>Meter ( m ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>M</field>
+          <field name='desc_en'>Meter ( m )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MAW    -->
        <record id='MAW' model='egtax.unit_type'>
-          <field name='code'>MAW </field>
-          <field name='desc_en'>Megawatt ( VA ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MAW</field>
+          <field name='desc_en'>Megawatt ( VA )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MGM    -->
        <record id='MGM' model='egtax.unit_type'>
-          <field name='code'>MGM </field>
-          <field name='desc_en'>Milligram ( mg ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MGM</field>
+          <field name='desc_en'>Milligram ( mg )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MHZ    -->
        <record id='MHZ' model='egtax.unit_type'>
-          <field name='code'>MHZ </field>
-          <field name='desc_en'>Megahertz ( MHz ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MHZ</field>
+          <field name='desc_en'>Megahertz ( MHz )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MIN    -->
        <record id='MIN' model='egtax.unit_type'>
-          <field name='code'>MIN </field>
-          <field name='desc_en'>Minute ( min ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MIN</field>
+          <field name='desc_en'>Minute ( min )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MMK    -->
        <record id='MMK' model='egtax.unit_type'>
-          <field name='code'>MMK </field>
-          <field name='desc_en'>Square millimeter ( mm2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MMK</field>
+          <field name='desc_en'>Square millimeter ( mm2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MMQ    -->
        <record id='MMQ' model='egtax.unit_type'>
-          <field name='code'>MMQ </field>
-          <field name='desc_en'>Cubic millimeter ( mm3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MMQ</field>
+          <field name='desc_en'>Cubic millimeter ( mm3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MMT    -->
        <record id='MMT' model='egtax.unit_type'>
-          <field name='code'>MMT </field>
-          <field name='desc_en'>Millimeter ( mm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MMT</field>
+          <field name='desc_en'>Millimeter ( mm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MON    -->
        <record id='MON' model='egtax.unit_type'>
-          <field name='code'>MON </field>
-          <field name='desc_en'>Months ( Months ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MON</field>
+          <field name='desc_en'>Months ( Months )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MTK    -->
        <record id='MTK' model='egtax.unit_type'>
-          <field name='code'>MTK </field>
-          <field name='desc_en'>Square meter ( m2 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MTK</field>
+          <field name='desc_en'>Square meter ( m2 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record MTQ    -->
        <record id='MTQ' model='egtax.unit_type'>
-          <field name='code'>MTQ </field>
-          <field name='desc_en'>Cubic meter ( m3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>MTQ</field>
+          <field name='desc_en'>Cubic meter ( m3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record OHM    -->
        <record id='OHM' model='egtax.unit_type'>
-          <field name='code'>OHM </field>
-          <field name='desc_en'>Ohm ( Ohm ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>OHM</field>
+          <field name='desc_en'>Ohm ( Ohm )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record ONZ    -->
        <record id='ONZ' model='egtax.unit_type'>
-          <field name='code'>ONZ </field>
-          <field name='desc_en'>Ounce ( oz ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>ONZ</field>
+          <field name='desc_en'>Ounce ( oz )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record PAL    -->
        <record id='PAL' model='egtax.unit_type'>
-          <field name='code'>PAL </field>
-          <field name='desc_en'>Pascal ( Pa ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>PAL</field>
+          <field name='desc_en'>Pascal ( Pa )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record PF    -->
        <record id='PF' model='egtax.unit_type'>
-          <field name='code'>PF </field>
-          <field name='desc_en'>Pallet ( PAL ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>PF</field>
+          <field name='desc_en'>Pallet ( PAL )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record PK    -->
        <record id='PK' model='egtax.unit_type'>
-          <field name='code'>PK </field>
-          <field name='desc_en'>Pack ( PAK ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>PK</field>
+          <field name='desc_en'>Pack ( PAK )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record SH    -->
        <record id='SH' model='egtax.unit_type'>
-          <field name='code'>SH </field>
-          <field name='desc_en'>Shrink ( Shrink ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>SH</field>
+          <field name='desc_en'>Shrink ( Shrink )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record SMI    -->
        <record id='SMI' model='egtax.unit_type'>
-          <field name='code'>SMI </field>
-          <field name='desc_en'>Mile ( mile ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>SMI</field>
+          <field name='desc_en'>Mile ( mile )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record TNE    -->
        <record id='TNE' model='egtax.unit_type'>
-          <field name='code'>TNE </field>
-          <field name='desc_en'>Tonne ( t ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>TNE</field>
+          <field name='desc_en'>Tonne ( t )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record VLT    -->
        <record id='VLT' model='egtax.unit_type'>
-          <field name='code'>VLT </field>
-          <field name='desc_en'>Volt ( V ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>VLT</field>
+          <field name='desc_en'>Volt ( V )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record WEE    -->
        <record id='WEE' model='egtax.unit_type'>
-          <field name='code'>WEE </field>
-          <field name='desc_en'>Weeks ( Weeks ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>WEE</field>
+          <field name='desc_en'>Weeks ( Weeks )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record WTT    -->
        <record id='WTT' model='egtax.unit_type'>
-          <field name='code'>WTT </field>
-          <field name='desc_en'>Watt ( W ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>WTT</field>
+          <field name='desc_en'>Watt ( W )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record X03    -->
        <record id='X03' model='egtax.unit_type'>
-          <field name='code'>X03 </field>
-          <field name='desc_en'>Meter/Hour ( m/h ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>X03</field>
+          <field name='desc_en'>Meter/Hour ( m/h )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record YDQ    -->
        <record id='YDQ' model='egtax.unit_type'>
-          <field name='code'>YDQ </field>
-          <field name='desc_en'>Cubic yard ( yd3 ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>YDQ</field>
+          <field name='desc_en'>Cubic yard ( yd3 )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      <!--    Record YRD    -->
        <record id='YRD' model='egtax.unit_type'>
-          <field name='code'>YRD </field>
-          <field name='desc_en'>Yards ( yd ) </field>
-          <field name='desc_ar'> </field>
+          <field name='code'>YRD</field>
+          <field name='desc_en'>Yards ( yd )</field>
+          <field name='desc_ar'></field>
+          <!--todo_add_field-->
        </record>
 
      </data>

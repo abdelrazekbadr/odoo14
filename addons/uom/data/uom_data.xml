@@ -28,6 +28,7 @@
             <field name="factor" eval="1.0"/>
             <field name="uom_type">reference</field>
         </record>
+        <!-- _________________-->
        <record id="product_uom_dozen" model="uom.uom">
             <field name="category_id" ref="uom.product_uom_categ_unit"/>
             <field name="name">Dozens</field>

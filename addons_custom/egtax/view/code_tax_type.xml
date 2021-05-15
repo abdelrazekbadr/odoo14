@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="view_egtax_tax_type_tree" model="ir.ui.view">
+            <field name="name">egtax_tax_type_tree</field>
+            <field name="model">egtax.tax_type</field>
+            <field name="field_parent">children_ids</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Taxable Types">
+<!--                    <field name="name" />-->
+                    <field name="code" />
+                    <field name="desc_ar" />
+                    <field name="desc_en" />
+                    <field name="parent_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+        <!-- form view -->
+        <record id="view_egtax_tax_type_form" model="ir.ui.view">
+            <field name="name">egtax_tax_type_form</field>
+            <field name="model">egtax.tax_type</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Code">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--button type="object" name="action_view_detail" class="oe_stat_button" icon="fa-pencil-square-o"-->
+                                <!--field name="detail_count" widget="statinfo" string="Detail(s)"/-->
+                                <!--field name="detail_ids" invisible="1"/-->
+                            <!--/button-->
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Code Name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" />
+                                <field name="desc_ar" />
+                                <field name="desc_en" />
+                            </group>
+                            <group>
+                                <field name="is_non_taxable" />
+                                 <field name="parent_id" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Sub Types">
+                                 <field name="children_ids" />
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- search -->
+        <record id="view_egtax_tax_type_search" model="ir.ui.view">
+            <field name="name">egtax_tax_type</field>
+            <field name="model">egtax.tax_type</field>
+            <field name="arch" type="xml">
+                <search string="Code">
+                    <filter string="Code" name="filter_by_code" domain="[('code','=','')]" />
+                    <filter string="Desc ar" name="filter_by_desc_ar" domain="[('desc_ar','=','')]" />
+                    <filter string="Desc en" name="filter_by_desc_en" domain="[('desc_en','=','')]" />
+                    <field name="code" select="True"/>
+                    <field name="desc_ar" select="True"/>
+                    <field name="desc_en" select="True"/>
+                    <group string="Group By..">
+                        <field name="parent_id"></field>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- kanban , to show image, please add image_small in the model -->
+        <record id="view_egtax_tax_type_kanban" model="ir.ui.view" >
+            <field name="name">egtax_tax_type</field>
+            <field name="model">egtax.tax_type</field>
+            <field name="arch" type="xml">
+                <kanban version="7.0">
+                    <field name="id" />
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="desc_ar" />
+                    <field name="desc_en" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_details">
+                                    <h4>
+                                        <a type="open"><field name="name"/></a>
+                                    </h4>
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <!-- calendar if a date field exists -->
+        <!-- graph -->
+        <record id="view_egtax_tax_type_graph" model="ir.ui.view">
+            <field name="name">egtax_tax_type</field>
+            <field name="model">egtax.tax_type</field>
+            <field name="arch" type="xml">
+                <graph string="Code" type="bar">
+                </graph>
+            </field>
+        </record>
+        <!-- action window -->
+        <record id="action_egtax_tax_type" model="ir.actions.act_window">
+            <field name="name">Taxes Types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">egtax.tax_type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_fieldname":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a new Code
+                </p><p>
+                Click the Create button to add a new Code
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_egtax_tax_type" name="Taxable Types" parent="egtax_config_menu" action="action_egtax_tax_type" sequence="120"/>
+    </data>
+</odoo>

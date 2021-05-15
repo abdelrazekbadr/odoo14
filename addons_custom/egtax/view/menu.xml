@@ -1,7 +1,45 @@
 <odoo>
-	<data>
-		<menuitem id="egtax_top_menu" name="EGTax" sequence="20" web_icon="egtax,static/description/icon.png" />
-		<menuitem id="egtax_sub_menu" name="Operations" sequence="40" parent="egtax_top_menu" />
-		<menuitem id="egtax_config_menu" name="Configurations" sequence="50" parent="egtax_top_menu" />
-	</data>
+    <data>
+        <menuitem id="egtax_top_menu" name="e-Invoices" action="action_account_move_tax" sequence="20"
+                  web_icon="egtax,static/description/icon.png"/>
+        <menuitem id="egtax_sub_menu" name="Operations" sequence="40" parent="egtax_top_menu"/>
+        <menuitem id="egtax_config_menu" name="Configurations" sequence="50" parent="egtax_top_menu"/>
+
+
+        <!--<action inherited from account-->
+        <menuitem id="menu_finance_receivables_egtax" name="Customers" parent="egtax_top_menu" sequence="21">
+            <menuitem id="menu_action_move_out_invoice_type_egtax" action="account.action_move_out_invoice_type"
+                      sequence="20"/>
+            <menuitem id="menu_action_move_out_refund_type_egtax" action="account.action_move_out_refund_type"
+                      sequence="30"/>
+            <menuitem id="menu_action_move_out_receipt_type_egtax" action="account.action_move_out_receipt_type"
+                      groups="account.group_sale_receipts" sequence="40"/>
+            <menuitem id="menu_action_account_payments_receivable_egtax" action="account.action_account_payments"
+                      sequence="50"/>
+            <menuitem id="product_product_menu_sellable_egtax" name="Products"
+                      action="account.product_product_action_sellable" sequence="60"/>
+            <menuitem id="menu_account_customer_egtax" name="Customers" action="account.res_partner_action_customer"
+                      sequence="70"/>
+
+            <menuitem id="menu_egtax_e_inv" name="e-Invoices" action="action_account_move_tax" sequence="80"/>
+        </menuitem>
+
+        <menuitem id="menu_finance_payables_egtax" name="Vendors" parent="egtax_top_menu" sequence="22">
+            <menuitem id="menu_action_move_in_invoice_type_egtax" action="account.action_move_in_invoice_type"
+                      sequence="1"/>
+            <menuitem id="menu_action_move_in_refund_type_egtax" action="account.action_move_in_refund_type"
+                      sequence="2"/>
+            <menuitem id="menu_action_move_in_receipt_type_egtax" action="account.action_move_in_receipt_type"
+                      groups="account.group_purchase_receipts" sequence="3"/>
+            <menuitem id="menu_action_account_payments_payable_egtax" action="account.action_account_payments_payable"
+                      sequence="20"/>
+            <menuitem id="product_product_menu_purchasable_egtax" name="Products"
+                      action="account.product_product_action_purchasable" sequence="100"/>
+            <menuitem id="menu_account_supplier_egtax" name="Vendors" action="account.res_partner_action_supplier"
+                      sequence="200"/>
+
+
+        </menuitem>
+
+    </data>
 </odoo>

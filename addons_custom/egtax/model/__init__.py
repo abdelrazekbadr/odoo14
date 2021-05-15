@@ -1,8 +1,11 @@
 #!/usr/bin/python
 from . import res_config_settings
 from . import accountmove
-from . import invoice
-from . import creditnote
-from . import bill
-from . import depitnote
+from . import res_config_settings
 from . import error
+from . import code_base_type
+from . import code_unit_type
+from . import code_tax_type
+from . import code_activity_type
+from . import account_tax
+from . import uom

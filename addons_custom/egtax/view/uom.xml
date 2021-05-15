@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="view_uom_uom_tree" model="ir.ui.view">
+            <field name="name">uom_uom_tree</field>
+            <field name="model">uom.uom</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="uom.product_uom_tree_view"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                 <field name="name" position="after">
+                     <field name="einv_code" />
+                 </field>
+            </field>
+        </record>
+        <!-- form view -->
+        <record id="view_uom_uom_form" model="ir.ui.view">
+            <field name="name">uom_uom_form</field>
+            <field name="model">uom.uom</field>
+            <field name="inherit_id" ref="uom.product_uom_form_view"/>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                     <field name="einv_code" />
+                 </field>
+            </field>
+        </record>
+        <!-- search -->
+        <record id="view_uom_uom_search" model="ir.ui.view">
+            <field name="name">uom_uom</field>
+            <field name="model">uom.uom</field>
+            <field name="inherit_id" ref="uom.uom_uom_view_search"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <filter string="name" name="filter_by_einv_name" domain="[('name','=','')]" />
+                    <filter string="eInv Code" name="filter_by_einv_code" domain="[('einv_code','=','')]" />
+                    <filter string="eInv Module" name="filter_by_einv_module" domain="[('einv_module','=','')]" />
+                    <field name="name" select="True"/>
+                    <field name="einv_code" select="True"/>
+                     <field name="einv_module" select="True"/>
+                    <group string="Group By..">
+                    </group>
+                 </field>
+            </field>
+        </record>
+
+        <!-- action window -->
+        <record id="action_uom_uom" model="ir.actions.act_window">
+            <field name="name">Uom</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">uom.uom</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_fieldname":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a new Uom
+                </p><p>
+                Click the Create button to add a new Uom
+                </p>
+            </field>
+        </record>
+        <menuitem action="uom.product_uom_form_action" id="menu_product_uom_form_action_egtax" parent="egtax.egtax_config_menu" sequence="20" />
+
+<!--        <menuitem id="menu_uom_uom" name="Uom" parent="egtax_config_menu" action="action_uom_uom" sequence="160"/>-->
+    </data>
+</odoo>

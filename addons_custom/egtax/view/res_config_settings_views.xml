@@ -66,11 +66,14 @@
                             <sheet>
                                 <group>
                                     <field name="scope"/>
+                                    <field name="activity_id" widget="many2one"/>
                                     <field name="grant_type"/>
                                     <field name="client_id"/>
                                     <field name="client_secret"/>
                                     <field name="apiBaseUrl"/>
                                     <field name="idSrvBaseUrl"/>
+                                    <field name="product_coding_schema"/>
+<!--                                    <field name="default_coding_schema"/>-->
                                     <field name="client_token"/>
                                     <field name="auto_post"/>
                                     <field name="last_token_date"/>

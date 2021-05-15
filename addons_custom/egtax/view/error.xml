@@ -63,6 +63,6 @@
             </field>
         </record>
 
-        <menuitem id="menu_egtax_error" name="Error" parent="egtax_config_menu" action="action_egtax_error" sequence="80"/>
+<!--        <menuitem id="menu_egtax_error" name="Error" parent="egtax_config_menu" action="action_egtax_error" sequence="80"/>-->
     </data>
 </odoo>

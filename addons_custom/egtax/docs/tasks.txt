@@ -1,0 +1,21 @@
+
+- Add new model unit_types & UI XML -->done
+- Add XML records data for unit_types -->done
+
+- Add new model Activity Types -->done
+- Add XML records data for Activity Types -->done
+
+- Add new models Tax Types -->done
+- Add XML record data for Tax Types -->done
+- add activity type relation on egtax setting -->done
+
+
+- add tax_types relation on exist model account.tax =>done
+
+- Add untit type in invoiceline , product default unit
+
+-generator map unit type to UoM odoo
+
+- add country relation on egtax setting
+- handel response submit document
+- handel errors returns

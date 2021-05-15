@@ -6,13 +6,12 @@
             <field name="name">account_tax_tree</field>
             <field name="model">account.tax</field>
             <field name="type">tree</field>
+            <field name="inherit_id" ref="account.view_tax_tree"></field>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <tree string="Tax">
-                    <field name="einv_code" />
-                    <field name="einv_sub_code" />
-                    <field name="env_tax_type_id" />
-                </tree>
+                 <field name="name" position="after">
+                     <field name="einv_code" />
+                 </field>
             </field>
         </record>
         <!-- form view -->
@@ -20,55 +19,32 @@
             <field name="name">account_tax_form</field>
             <field name="model">account.tax</field>
             <field name="type">form</field>
+            <field name="inherit_id" ref="account.view_tax_form"></field>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <form string="Tax">
-                    <header>
-                    </header>
-                    <sheet>
-                        <div class="oe_button_box" name="button_box">
-                            <!--button type="object" name="action_view_detail" class="oe_stat_button" icon="fa-pencil-square-o"-->
-                                <!--field name="detail_count" widget="statinfo" string="Detail(s)"/-->
-                                <!--field name="detail_ids" invisible="1"/-->
-                            <!--/button-->
-                        </div>
-                        <div class="oe_title">
-                            <label for="name" class="oe_edit_only" string="Tax Name"/>
-                            <h1><field name="name"/></h1>
-                        </div>
-                        <group>
-                            <group>
-                                <field name="einv_code" />
-                                <field name="einv_sub_code" />
-                            </group>
-                            <group>
-                                <field name="env_tax_type_id" />
-                            </group>
-                        </group>
-                        <notebook>
-                        </notebook>
-                    </sheet>
-                </form>
+                <field name="amount_type" position="after">
+                    <field name="einv_tax_type_id"/>
+                </field>
             </field>
         </record>
         <!-- search -->
-        <record id="view_account_tax_search" model="ir.ui.view">
-            <field name="name">account_tax</field>
-            <field name="model">account.tax</field>
-            <field name="arch" type="xml">
-                <search string="Tax">
+<!--        <record id="view_account_tax_search" model="ir.ui.view">-->
+<!--            <field name="name">account_tax</field>-->
+<!--            <field name="model">account.tax</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="Tax">-->
 
-                    <filter string="Einv code" name="filter_by_einv_code" domain="[('einv_code','=','')]" />
-                    <filter string="Einv sub code" name="filter_by_einv_sub_code" domain="[('einv_sub_code','=','')]" />
-                    <field name="einv_code" select="True"/>
-                    <field name="einv_sub_code" select="True"/>
-                    <field name="env_tax_type_id" select="True"/>
-                    <group string="Group By..">
-                        <filter string="Env tax type" domain="[]" name="group_by_env_tax_type_id" context="{'group_by':'env_tax_type_id'}"/>
-                    </group>
-                </search>
-            </field>
-        </record>
+<!--                    <filter string="Einv code" name="filter_by_einv_code" domain="[('einv_code','=','')]" />-->
+<!--                    <filter string="Einv sub code" name="filter_by_einv_sub_code" domain="[('einv_sub_code','=','')]" />-->
+<!--                    <field name="einv_code" select="True"/>-->
+<!--                    <field name="einv_sub_code" select="True"/>-->
+<!--                    <field name="einv_tax_type_id" select="True"/>-->
+<!--                    <group string="Group By..">-->
+<!--                        <filter string="Env tax type" domain="[]" name="group_by_env_tax_type_id" context="{'group_by':'env_tax_type_id'}"/>-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
         <!-- kanban , to show image, please add image_small in the model -->
         <record id="view_account_tax_kanban" model="ir.ui.view" >
             <field name="name">account_tax</field>
@@ -78,7 +54,7 @@
                     <field name="id" />
                     <field name="einv_code" />
                     <field name="einv_sub_code" />
-                    <field name="env_tax_type_id" />
+                    <field name="einv_tax_type_id" />
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
@@ -89,7 +65,7 @@
                                     <ul>
 
                                         <li>
-                                            <span class="text-muted">Env tax type</span> <field name="env_tax_type_id"></field>
+                                            <span class="text-muted">Env tax type</span> <field name="einv_tax_type_id"></field>
                                         </li>
 
                                     </ul>
@@ -107,7 +83,7 @@
             <field name="model">account.tax</field>
             <field name="arch" type="xml">
                 <graph string="Tax" type="bar">
-                    <field name="env_tax_type_id"/>
+                    <field name="einv_tax_type_id"/>
                 </graph>
             </field>
         </record>
@@ -116,7 +92,7 @@
             <field name="name">Tax</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">account.tax</field>
-            <field name="view_mode">kanban,tree,form,graph</field>
+            <field name="view_mode">tree,form</field>
             <field name="context">{"search_default_fieldname":1}</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
@@ -126,7 +102,7 @@
                 </p>
             </field>
         </record>
-
-        <menuitem id="menu_account_tax" name="Tax" parent="egtax_config_menu" action="action_account_tax" sequence="130"/>
+          <menuitem id="menu_action_tax_form_egtax" action="account.action_tax_form" sequence="2" parent="egtax_config_menu"/>
+<!--        <menuitem id="menu_account_tax" name="Tax" parent="egtax_config_menu" action="action_account_tax" sequence="130"/>-->
     </data>
 </odoo>

@@ -1,9 +1,20 @@
-
-
 from datetime import datetime
 from typing import Any, List, Optional, TypeVar, Callable, Type, cast
 import dateutil.parser
+
+from collections import defaultdict, Counter
+
 T = TypeVar("T")
+
+
+def sum_group_by(dataset, group_by_key, sum_value_keys):
+    dic = defaultdict(Counter)
+
+    for item in dataset:
+        key = item[group_by_key]
+        vals = {k: item[k] for k in sum_value_keys}
+        dic[key].update(vals)
+    return dic
 
 
 def from_str(x: Any) -> str:
@@ -12,7 +23,8 @@ def from_str(x: Any) -> str:
 
 
 def from_datetime(x: Any) -> datetime:
-    return dateutil.parser.parse(x)
+    val=dateutil.parser.parse(x)
+    return val
 
 
 def from_float(x: Any) -> float:
@@ -41,7 +53,7 @@ def to_class(c: Type[T], x: Any) -> dict:
 
 
 def from_none(x: Any) -> Any:
-    assert x is None
+    assert x is None , f"{x} is null"
     return x
 
 
@@ -49,12 +61,11 @@ def from_union(fs, x):
     for f in fs:
         try:
             return f(x)
-        except:
+        except :
             pass
-    assert False
+    assert False, x
 
 
 def is_type(t: Type[T], x: Any) -> T:
     assert isinstance(x, t)
     return x
-

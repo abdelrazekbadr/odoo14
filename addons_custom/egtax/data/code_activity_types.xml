@@ -1,0 +1,3487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <data noupdate="1">
+
+     <!--    Record 0111    -->
+       <record id='0111' model='egtax.activity_type'>
+          <field name='code'>0111</field>
+          <field name='desc_en'>Cultivation of grains and crops (except for rice), legumes and oilseeds</field>
+          <field name='desc_ar'>زراعة الحبوب والمحاصيل ( فيما عدا الارز ) والبقوليات والحبوب الزيتية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0112    -->
+       <record id='0112' model='egtax.activity_type'>
+          <field name='code'>0112</field>
+          <field name='desc_en'>Cultivation of rice</field>
+          <field name='desc_ar'>زراعة الارز</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0113    -->
+       <record id='0113' model='egtax.activity_type'>
+          <field name='code'>0113</field>
+          <field name='desc_en'>Growing vegetables, melons, roots and tubers</field>
+          <field name='desc_ar'>زراعة الخضر ؤالبطيخ والجذور والدرنات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0114    -->
+       <record id='0114' model='egtax.activity_type'>
+          <field name='code'>0114</field>
+          <field name='desc_en'>Cultivation of sugar cane</field>
+          <field name='desc_ar'>زراعة قصب السكر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0115    -->
+       <record id='0115' model='egtax.activity_type'>
+          <field name='code'>0115</field>
+          <field name='desc_en'>Tobacco cultivation</field>
+          <field name='desc_ar'>زراعة التبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0116    -->
+       <record id='0116' model='egtax.activity_type'>
+          <field name='code'>0116</field>
+          <field name='desc_en'>Growing fiber crops</field>
+          <field name='desc_ar'>زراعة المحاصيل ذات الالياف</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0119    -->
+       <record id='0119' model='egtax.activity_type'>
+          <field name='code'>0119</field>
+          <field name='desc_en'>Cultivation of other non-perennial crops</field>
+          <field name='desc_ar'>زراعة المحاصيل غير المعمرة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0121    -->
+       <record id='0121' model='egtax.activity_type'>
+          <field name='code'>0121</field>
+          <field name='desc_en'>the cultivation of grapevines.</field>
+          <field name='desc_ar'>زراعة الكروم</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0122    -->
+       <record id='0122' model='egtax.activity_type'>
+          <field name='code'>0122</field>
+          <field name='desc_en'>Growing tropical and subtropical fruits</field>
+          <field name='desc_ar'>زراعة الفواكه الاستوائية وشبه الاستوائية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0123    -->
+       <record id='0123' model='egtax.activity_type'>
+          <field name='code'>0123</field>
+          <field name='desc_en'>Cultivation of citrus fruits</field>
+          <field name='desc_ar'>زراعة الموالح</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0124    -->
+       <record id='0124' model='egtax.activity_type'>
+          <field name='code'>0124</field>
+          <field name='desc_en'>Cultivation of fruit with Date kernel and from palm trees</field>
+          <field name='desc_ar'>زراعة الفواكة ذات النواة والناتجة عن انواع النخيل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0125    -->
+       <record id='0125' model='egtax.activity_type'>
+          <field name='code'>0125</field>
+          <field name='desc_en'>Plant fruit trees and shrubs and other nuts</field>
+          <field name='desc_ar'>زراعة أشجار وشجيرات الفواكهة والمكسرات الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0126    -->
+       <record id='0126' model='egtax.activity_type'>
+          <field name='code'>0126</field>
+          <field name='desc_en'>Growing oil fruits</field>
+          <field name='desc_ar'>زراعة الفواكهة الزيتية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0127    -->
+       <record id='0127' model='egtax.activity_type'>
+          <field name='code'>0127</field>
+          <field name='desc_en'>Cultivation of the crops from which drinks are extracted</field>
+          <field name='desc_ar'>زراعة المحاصيل التى تستخرج منها المشروبات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0128    -->
+       <record id='0128' model='egtax.activity_type'>
+          <field name='code'>0128</field>
+          <field name='desc_en'>Cultivation of spice crops, aromatics, medicine and pharmaceutical drugs</field>
+          <field name='desc_ar'>زراعة محاصيل التوابل والعطريات والادوية والعقاقير الصيدلانية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0129    -->
+       <record id='0129' model='egtax.activity_type'>
+          <field name='code'>0129</field>
+          <field name='desc_en'>Cultivation of other perennial crops</field>
+          <field name='desc_ar'>زراعة المحاصيل المعمرة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0130    -->
+       <record id='0130' model='egtax.activity_type'>
+          <field name='code'>0130</field>
+          <field name='desc_en'>Crop breeding</field>
+          <field name='desc_ar'>تكاثر المحاصيل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0141    -->
+       <record id='0141' model='egtax.activity_type'>
+          <field name='code'>0141</field>
+          <field name='desc_en'>Breeding of cattle and buffalo</field>
+          <field name='desc_ar'>تربية الماشية والجواميس</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0142    -->
+       <record id='0142' model='egtax.activity_type'>
+          <field name='code'>0142</field>
+          <field name='desc_en'>Breeding of horses and mare</field>
+          <field name='desc_ar'>تربية الخيول و الفرس</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0143    -->
+       <record id='0143' model='egtax.activity_type'>
+          <field name='code'>0143</field>
+          <field name='desc_en'>Breeding of camels</field>
+          <field name='desc_ar'>تربية الجمال والهجن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0144    -->
+       <record id='0144' model='egtax.activity_type'>
+          <field name='code'>0144</field>
+          <field name='desc_en'>Breeding sheep and goats</field>
+          <field name='desc_ar'>تربية الخراف والماعز</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0145    -->
+       <record id='0145' model='egtax.activity_type'>
+          <field name='code'>0145</field>
+          <field name='desc_en'>Breeding of Pig</field>
+          <field name='desc_ar'>تربية الحنازير</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0146    -->
+       <record id='0146' model='egtax.activity_type'>
+          <field name='code'>0146</field>
+          <field name='desc_en'>Poultry farming</field>
+          <field name='desc_ar'>تربية الدواجن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0149    -->
+       <record id='0149' model='egtax.activity_type'>
+          <field name='code'>0149</field>
+          <field name='desc_en'>Breeding other animals</field>
+          <field name='desc_ar'>تربية الحيوانات الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0150    -->
+       <record id='0150' model='egtax.activity_type'>
+          <field name='code'>0150</field>
+          <field name='desc_en'>Mixed education</field>
+          <field name='desc_ar'>التربية المختلطة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0161    -->
+       <record id='0161' model='egtax.activity_type'>
+          <field name='code'>0161</field>
+          <field name='desc_en'>Support activities for crop production</field>
+          <field name='desc_ar'>الانشطة الداعمة لانتاج المحاصيل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0162    -->
+       <record id='0162' model='egtax.activity_type'>
+          <field name='code'>0162</field>
+          <field name='desc_en'>Activities in support of animal production</field>
+          <field name='desc_ar'>الانشطة الداعمة لانتاج الحيوانات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0163    -->
+       <record id='0163' model='egtax.activity_type'>
+          <field name='code'>0163</field>
+          <field name='desc_en'>Post-harvest activities</field>
+          <field name='desc_ar'>الانشطة اللاحقة لحصاد المحاصيل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0164    -->
+       <record id='0164' model='egtax.activity_type'>
+          <field name='code'>0164</field>
+          <field name='desc_en'>Preparing grains for reproduction</field>
+          <field name='desc_ar'>تجهيز الحبوب للتكاثر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0170    -->
+       <record id='0170' model='egtax.activity_type'>
+          <field name='code'>0170</field>
+          <field name='desc_en'>Hunting, erection, and related service activities</field>
+          <field name='desc_ar'>الصيد ونصب الاشراك وانشطة الخدمات ذات الصلة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0210    -->
+       <record id='0210' model='egtax.activity_type'>
+          <field name='code'>0210</field>
+          <field name='desc_en'>Forest care and forest-related activities</field>
+          <field name='desc_ar'>رعاية الغابات والانشطة المتصلة بالغابات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0220    -->
+       <record id='0220' model='egtax.activity_type'>
+          <field name='code'>0220</field>
+          <field name='desc_en'>Wood cutting</field>
+          <field name='desc_ar'>قطع الاخشاب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0230    -->
+       <record id='0230' model='egtax.activity_type'>
+          <field name='code'>0230</field>
+          <field name='desc_en'>Assembling non-wood forest products</field>
+          <field name='desc_ar'>تجميع المنتجات غير الخشبية بالغابات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0240    -->
+       <record id='0240' model='egtax.activity_type'>
+          <field name='code'>0240</field>
+          <field name='desc_en'>Forest support services</field>
+          <field name='desc_ar'>الخدمات الداعمة للغابات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0311    -->
+       <record id='0311' model='egtax.activity_type'>
+          <field name='code'>0311</field>
+          <field name='desc_en'>Fishing</field>
+          <field name='desc_ar'>الصيد البحرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0312    -->
+       <record id='0312' model='egtax.activity_type'>
+          <field name='code'>0312</field>
+          <field name='desc_en'>River fishing</field>
+          <field name='desc_ar'>الصيد النهرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0321    -->
+       <record id='0321' model='egtax.activity_type'>
+          <field name='code'>0321</field>
+          <field name='desc_en'>Marine farms</field>
+          <field name='desc_ar'>المزارع البحرية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0322    -->
+       <record id='0322' model='egtax.activity_type'>
+          <field name='code'>0322</field>
+          <field name='desc_en'>River farms</field>
+          <field name='desc_ar'>المزارع النهرية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0411    -->
+       <record id='0411' model='egtax.activity_type'>
+          <field name='code'>0411</field>
+          <field name='desc_en'>Earn a job</field>
+          <field name='desc_ar'>كسب عمل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0412    -->
+       <record id='0412' model='egtax.activity_type'>
+          <field name='code'>0412</field>
+          <field name='desc_en'>Income from government agencies salaries</field>
+          <field name='desc_ar'>ايرادات من مرتبات جهات حكوميه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0413    -->
+       <record id='0413' model='egtax.activity_type'>
+          <field name='code'>0413</field>
+          <field name='desc_en'>Income and salaries from the public business sector</field>
+          <field name='desc_ar'>إيرادات ومرتبات من قطاع الاعمال العام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0414    -->
+       <record id='0414' model='egtax.activity_type'>
+          <field name='code'>0414</field>
+          <field name='desc_en'>Income and salaries from the private sector</field>
+          <field name='desc_ar'>ايرادات ومرتبات من قطاع خاص</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0415    -->
+       <record id='0415' model='egtax.activity_type'>
+          <field name='code'>0415</field>
+          <field name='desc_en'>Income and salary from non-subject entities</field>
+          <field name='desc_ar'>ايرادات ومرتبات من جهات غير خاضعه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0416    -->
+       <record id='0416' model='egtax.activity_type'>
+          <field name='code'>0416</field>
+          <field name='desc_en'>Inspection and sting</field>
+          <field name='desc_ar'>تفتيش ودمغة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0441    -->
+       <record id='0441' model='egtax.activity_type'>
+          <field name='code'>0441</field>
+          <field name='desc_en'>Income of agricultural lands</field>
+          <field name='desc_ar'>ايرادالاراضي الزراعيه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0442    -->
+       <record id='0442' model='egtax.activity_type'>
+          <field name='code'>0442</field>
+          <field name='desc_en'>Revenue from constructed real estate</field>
+          <field name='desc_ar'>ايراد العقارات المبنيه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0444    -->
+       <record id='0444' model='egtax.activity_type'>
+          <field name='code'>0444</field>
+          <field name='desc_en'>Income of real estate activities</field>
+          <field name='desc_ar'>ايراد الانشطه العقاريه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0451    -->
+       <record id='0451' model='egtax.activity_type'>
+          <field name='code'>0451</field>
+          <field name='desc_en'>Errand stamp</field>
+          <field name='desc_ar'>دمغة مأمورية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0461    -->
+       <record id='0461' model='egtax.activity_type'>
+          <field name='code'>0461</field>
+          <field name='desc_en'>Revenue from non-funders</field>
+          <field name='desc_ar'>ايرادات غير الممولين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0462    -->
+       <record id='0462' model='egtax.activity_type'>
+          <field name='code'>0462</field>
+          <field name='desc_en'>Revenue of transferred capital</field>
+          <field name='desc_ar'>إيراد رؤوس الأموال المنقولة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0463    -->
+       <record id='0463' model='egtax.activity_type'>
+          <field name='code'>0463</field>
+          <field name='desc_en'>Income earned from abroad</field>
+          <field name='desc_ar'>ايرادات محصله من الخارج</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0464    -->
+       <record id='0464' model='egtax.activity_type'>
+          <field name='code'>0464</field>
+          <field name='desc_en'>Other categories / miscellaneous other income</field>
+          <field name='desc_ar'>فئات اخري/ ايرادات اخري متنوعه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0471    -->
+       <record id='0471' model='egtax.activity_type'>
+          <field name='code'>0471</field>
+          <field name='desc_en'>Free market revenue</field>
+          <field name='desc_ar'>ايرادات أسواق حرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0472    -->
+       <record id='0472' model='egtax.activity_type'>
+          <field name='code'>0472</field>
+          <field name='desc_en'>Free Zones revenue</field>
+          <field name='desc_ar'>ايرادات مناطق حره</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0510    -->
+       <record id='0510' model='egtax.activity_type'>
+          <field name='code'>0510</field>
+          <field name='desc_en'>Hard coal mining</field>
+          <field name='desc_ar'>تعدين الفحم الصلب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0520    -->
+       <record id='0520' model='egtax.activity_type'>
+          <field name='code'>0520</field>
+          <field name='desc_en'>Lignite mining</field>
+          <field name='desc_ar'>تعدين الليجنيت</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0610    -->
+       <record id='0610' model='egtax.activity_type'>
+          <field name='code'>0610</field>
+          <field name='desc_en'>Extract the crude oil</field>
+          <field name='desc_ar'>استخرج البترول الخام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0620    -->
+       <record id='0620' model='egtax.activity_type'>
+          <field name='code'>0620</field>
+          <field name='desc_en'>Extract natural gas</field>
+          <field name='desc_ar'>استخرج االغاز الطبيعى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0710    -->
+       <record id='0710' model='egtax.activity_type'>
+          <field name='code'>0710</field>
+          <field name='desc_en'>Iron ore mining</field>
+          <field name='desc_ar'>تعدين الحديد الخام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0721    -->
+       <record id='0721' model='egtax.activity_type'>
+          <field name='code'>0721</field>
+          <field name='desc_en'>Uranium and raw thorium mining</field>
+          <field name='desc_ar'>تعدين اليورانيوم والثوريوم الخام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0729    -->
+       <record id='0729' model='egtax.activity_type'>
+          <field name='code'>0729</field>
+          <field name='desc_en'>Mining other non-ferrous metals</field>
+          <field name='desc_ar'>تعدين المعادن الخام الاخرى غير الحديدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0810    -->
+       <record id='0810' model='egtax.activity_type'>
+          <field name='code'>0810</field>
+          <field name='desc_en'>Quarrying to extract stones, sand and shale</field>
+          <field name='desc_ar'>استغلال المحاجر لاستخراج الاحجار والرمال والطفل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0891    -->
+       <record id='0891' model='egtax.activity_type'>
+          <field name='code'>0891</field>
+          <field name='desc_en'>Chemical minerals and fertilizer extraction</field>
+          <field name='desc_ar'>استخراج المعادن الكيميائية والاسمدة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0892    -->
+       <record id='0892' model='egtax.activity_type'>
+          <field name='code'>0892</field>
+          <field name='desc_en'>Peat extraction</field>
+          <field name='desc_ar'>استخراج الخث</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0893    -->
+       <record id='0893' model='egtax.activity_type'>
+          <field name='code'>0893</field>
+          <field name='desc_en'>Salt extraction</field>
+          <field name='desc_ar'>استخراج الملح</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0899    -->
+       <record id='0899' model='egtax.activity_type'>
+          <field name='code'>0899</field>
+          <field name='desc_en'>Other mining and quarrying activities are not elsewhere classified</field>
+          <field name='desc_ar'>الانشطة الاخرى للتعدين واستغلال المحاجر غير مصنفة فى موضع اخر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0910    -->
+       <record id='0910' model='egtax.activity_type'>
+          <field name='code'>0910</field>
+          <field name='desc_en'>Service activities in support of oil and natural gas extraction</field>
+          <field name='desc_ar'>انشطة الخدمات الداعمة لاعمال استخراج البترول والغاز الطبيعى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 0990    -->
+       <record id='0990' model='egtax.activity_type'>
+          <field name='code'>0990</field>
+          <field name='desc_en'>Service activities in support of other mining and quarrying activities</field>
+          <field name='desc_ar'>انشطة الخدمات الداعمة للاعمال الاخرى للتعدين واستغلال المحاجر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1010    -->
+       <record id='1010' model='egtax.activity_type'>
+          <field name='code'>1010</field>
+          <field name='desc_en'>Meat processing and preservation</field>
+          <field name='desc_ar'>تصنيع وحفظ اللحوم</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1020    -->
+       <record id='1020' model='egtax.activity_type'>
+          <field name='code'>1020</field>
+          <field name='desc_en'>Manufacture and preservation of fish, crustaceans and mollusks</field>
+          <field name='desc_ar'>تصنيع وحفظ الاسماك والقشريات والرخويات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1030    -->
+       <record id='1030' model='egtax.activity_type'>
+          <field name='code'>1030</field>
+          <field name='desc_en'>Manufacturing and preserving fruits and vegetables</field>
+          <field name='desc_ar'>تصنيع وحفظ الفواكهة و الخضراوات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1040    -->
+       <record id='1040' model='egtax.activity_type'>
+          <field name='code'>1040</field>
+          <field name='desc_en'>Manufacture of vegetable and animal oils and fats</field>
+          <field name='desc_ar'>تصنيع الزيوت و الدهون الحيوانية والنباتية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1050    -->
+       <record id='1050' model='egtax.activity_type'>
+          <field name='code'>1050</field>
+          <field name='desc_en'>Dairy products manufacturing</field>
+          <field name='desc_ar'>تصنيع منتجات الالبان</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1061    -->
+       <record id='1061' model='egtax.activity_type'>
+          <field name='code'>1061</field>
+          <field name='desc_en'>Manufacture of grain mill products</field>
+          <field name='desc_ar'>تصنيع منتجات طواحين الحبوب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1062    -->
+       <record id='1062' model='egtax.activity_type'>
+          <field name='code'>1062</field>
+          <field name='desc_en'>Manufacture of starch and starch products</field>
+          <field name='desc_ar'>تصنيع منتجات النشاء ومنتجات النشاء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1071    -->
+       <record id='1071' model='egtax.activity_type'>
+          <field name='code'>1071</field>
+          <field name='desc_en'>Manufacturing bakery products</field>
+          <field name='desc_ar'>تصنيع منتجات المخابز</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1072    -->
+       <record id='1072' model='egtax.activity_type'>
+          <field name='code'>1072</field>
+          <field name='desc_en'>Sugar industry</field>
+          <field name='desc_ar'>صناعة السكر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1073    -->
+       <record id='1073' model='egtax.activity_type'>
+          <field name='code'>1073</field>
+          <field name='desc_en'>Manufacture of cocoa, chocolate and sugar confectionery</field>
+          <field name='desc_ar'>تصنيع الكاكاو والشيكولاتة والحلويات السكرية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1074    -->
+       <record id='1074' model='egtax.activity_type'>
+          <field name='code'>1074</field>
+          <field name='desc_en'>Manufacturing pasta, strips, couscous and similar starchy products</field>
+          <field name='desc_ar'>تصنيع المعكرونة وشرائطها والكسكسى والمنتجات النشوية المماثلة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1075    -->
+       <record id='1075' model='egtax.activity_type'>
+          <field name='code'>1075</field>
+          <field name='desc_en'>Meals and ready-made food industry</field>
+          <field name='desc_ar'>صناعة الوجبات و الاغذية الجاهزة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1079    -->
+       <record id='1079' model='egtax.activity_type'>
+          <field name='code'>1079</field>
+          <field name='desc_en'>Manufacture of other products not classified elsewhere</field>
+          <field name='desc_ar'>صناعة المنتجات الاخرى غير مصنفة فى موضع اخر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1080    -->
+       <record id='1080' model='egtax.activity_type'>
+          <field name='code'>1080</field>
+          <field name='desc_en'>Prepared animal food industry</field>
+          <field name='desc_ar'>صناعة الاغذية الحيوانية المجهزة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1101    -->
+       <record id='1101' model='egtax.activity_type'>
+          <field name='code'>1101</field>
+          <field name='desc_en'>Spirits distilled, refined and mixed</field>
+          <field name='desc_ar'>تقطير المشروبات الروحية وتكريرها وخلطها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1102    -->
+       <record id='1102' model='egtax.activity_type'>
+          <field name='code'>1102</field>
+          <field name='desc_en'>Winemaking</field>
+          <field name='desc_ar'>صناعة النبيذ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1103    -->
+       <record id='1103' model='egtax.activity_type'>
+          <field name='code'>1103</field>
+          <field name='desc_en'>The manufacture of alcoholic drinks derived from the molten and the manufacture of molten</field>
+          <field name='desc_ar'>صناعة المشروبات الكحولية المشتقة من المولت وصنع المولت</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1104    -->
+       <record id='1104' model='egtax.activity_type'>
+          <field name='code'>1104</field>
+          <field name='desc_en'>Manufacturing soft drinks and producing mineral water</field>
+          <field name='desc_ar'>صناعة المشروبات المرطبة وانتاج المياة المعدنية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1200    -->
+       <record id='1200' model='egtax.activity_type'>
+          <field name='code'>1200</field>
+          <field name='desc_en'>Manufacture of tobacco products</field>
+          <field name='desc_ar'>صناعة منتجات التبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1311    -->
+       <record id='1311' model='egtax.activity_type'>
+          <field name='code'>1311</field>
+          <field name='desc_en'>Processing and spinning of textile fibers</field>
+          <field name='desc_ar'>تجهيز وغزل الياف المنسوجات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1312    -->
+       <record id='1312' model='egtax.activity_type'>
+          <field name='code'>1312</field>
+          <field name='desc_en'>Textile weave</field>
+          <field name='desc_ar'>نسج المنسوجات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1313    -->
+       <record id='1313' model='egtax.activity_type'>
+          <field name='code'>1313</field>
+          <field name='desc_en'>The textile industry</field>
+          <field name='desc_ar'>صناعة المنسوجات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1391    -->
+       <record id='1391' model='egtax.activity_type'>
+          <field name='code'>1391</field>
+          <field name='desc_en'>Manufacture of knitted and crocheted fabrics</field>
+          <field name='desc_ar'>صناعة الاقمشة التريكو والكروشية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1392    -->
+       <record id='1392' model='egtax.activity_type'>
+          <field name='code'>1392</field>
+          <field name='desc_en'>Manufacture of ready-made textile accessories, except garment wear</field>
+          <field name='desc_ar'>صناعة مستلزمات المنسوجات الجاهزة باستثناء ملابس الزينة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1393    -->
+       <record id='1393' model='egtax.activity_type'>
+          <field name='code'>1393</field>
+          <field name='desc_en'>Carpet and blanket industry</field>
+          <field name='desc_ar'>صناعة السجاد والبطاطين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1394    -->
+       <record id='1394' model='egtax.activity_type'>
+          <field name='code'>1394</field>
+          <field name='desc_en'>Manufacture of ropes, thick and double ropes and nets</field>
+          <field name='desc_ar'>صناعة الحبال والحبال الغليظة والمذدوجة والشباك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1399    -->
+       <record id='1399' model='egtax.activity_type'>
+          <field name='code'>1399</field>
+          <field name='desc_en'>Other textile industry not elsewhere classified</field>
+          <field name='desc_ar'>صناعة المنسوجات الاخرى غير مصنفة فى موضع اخر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1410    -->
+       <record id='1410' model='egtax.activity_type'>
+          <field name='code'>1410</field>
+          <field name='desc_en'>Manufacture of garment with the exception of fur</field>
+          <field name='desc_ar'>صناعة الملابس ذات الزينة باستثناء الفراء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1420    -->
+       <record id='1420' model='egtax.activity_type'>
+          <field name='code'>1420</field>
+          <field name='desc_en'>Fur accessories industry</field>
+          <field name='desc_ar'>صناعة مستلزمات الفراء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1430    -->
+       <record id='1430' model='egtax.activity_type'>
+          <field name='code'>1430</field>
+          <field name='desc_en'>The manufacture of clothing, knitted and crocheted</field>
+          <field name='desc_ar'>صناعة ملابس الزينة بالتريكو والكروشية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1511    -->
+       <record id='1511' model='egtax.activity_type'>
+          <field name='code'>1511</field>
+          <field name='desc_en'>Tanning and processing of leather, fillings and dyeing of fur</field>
+          <field name='desc_ar'>دبغ وتجهيز الجلود والحشوات وصباغة الفراء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1512    -->
+       <record id='1512' model='egtax.activity_type'>
+          <field name='code'>1512</field>
+          <field name='desc_en'>Luggage, handbags and similar industries, along with saddles and horse sets</field>
+          <field name='desc_ar'>صناعة حفائب الامتعة وحقائب اليد وما شابهة ذلك الى جانب السروج واطقم الجياد</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1520    -->
+       <record id='1520' model='egtax.activity_type'>
+          <field name='code'>1520</field>
+          <field name='desc_en'>Shoe manufacturing</field>
+          <field name='desc_ar'>صناعة الاحذية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1610    -->
+       <record id='1610' model='egtax.activity_type'>
+          <field name='code'>1610</field>
+          <field name='desc_en'>Sawing wood and abrasion</field>
+          <field name='desc_ar'>نشر الخشب وسحجة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1621    -->
+       <record id='1621' model='egtax.activity_type'>
+          <field name='code'>1621</field>
+          <field name='desc_en'>Sheets made of wood veneer and wood-based panels</field>
+          <field name='desc_ar'>الصفائح من قشرة الخشب والالواح ذات الاساس الخشبى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1622    -->
+       <record id='1622' model='egtax.activity_type'>
+          <field name='code'>1622</field>
+          <field name='desc_en'>Manufacture of carpentry accessories intended for buildings and installations</field>
+          <field name='desc_ar'>صناعة مستلزمات النجارة المعدة للابنية والمنشات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1623    -->
+       <record id='1623' model='egtax.activity_type'>
+          <field name='code'>1623</field>
+          <field name='desc_en'>Wooden boxes industry</field>
+          <field name='desc_ar'>صناعة الصناديق الخشبية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1629    -->
+       <record id='1629' model='egtax.activity_type'>
+          <field name='code'>1629</field>
+          <field name='desc_en'>Manufacture of wood, wood products and cork, except furniture, and manufacture of articles produced from straw and sheets</field>
+          <field name='desc_ar'>صناعة الاخشاب والمنتجات الخشبية والفلين باستثناء الاثاث وصناعة الاصناف المنتجة من القش والصفائح</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1701    -->
+       <record id='1701' model='egtax.activity_type'>
+          <field name='code'>1701</field>
+          <field name='desc_en'>Paper and carvatard pulp industry</field>
+          <field name='desc_ar'>صناعة عجائن الورق و الورق المقوى ( الكارتون )</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1702    -->
+       <record id='1702' model='egtax.activity_type'>
+          <field name='code'>1702</field>
+          <field name='desc_en'>Manufacture of corrugated paper and paperboard and boxes made of paper and paperboard</field>
+          <field name='desc_ar'>صناعة الورق والورق المقوى المموج والصناديق المصنوعة من الورق والورق المقوى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1709    -->
+       <record id='1709' model='egtax.activity_type'>
+          <field name='code'>1709</field>
+          <field name='desc_en'>Manufacture of other articles of paper and paperboard</field>
+          <field name='desc_ar'>صناعة اصناف اخرى من الورق والورق المقوى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1811    -->
+       <record id='1811' model='egtax.activity_type'>
+          <field name='code'>1811</field>
+          <field name='desc_en'>printing</field>
+          <field name='desc_ar'>الطباعة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1812    -->
+       <record id='1812' model='egtax.activity_type'>
+          <field name='code'>1812</field>
+          <field name='desc_en'>Printing service activities</field>
+          <field name='desc_ar'>انشطة الخدمات المرتبطة بالطباعة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1820    -->
+       <record id='1820' model='egtax.activity_type'>
+          <field name='code'>1820</field>
+          <field name='desc_en'>Clone recorded media</field>
+          <field name='desc_ar'>استنساخ وسائل الاعلام المسجلة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1910    -->
+       <record id='1910' model='egtax.activity_type'>
+          <field name='code'>1910</field>
+          <field name='desc_en'>Coke oven products industry</field>
+          <field name='desc_ar'>صناعة منتجات افران الكوك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 1920    -->
+       <record id='1920' model='egtax.activity_type'>
+          <field name='code'>1920</field>
+          <field name='desc_en'>Refined petroleum products</field>
+          <field name='desc_ar'>المنتجات النفطية المكررة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2011    -->
+       <record id='2011' model='egtax.activity_type'>
+          <field name='code'>2011</field>
+          <field name='desc_en'>Basic chemicals</field>
+          <field name='desc_ar'>المواد الكيميائية الاساسية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2012    -->
+       <record id='2012' model='egtax.activity_type'>
+          <field name='code'>2012</field>
+          <field name='desc_en'>Manufacture of fertilizers and nitrogen compounds</field>
+          <field name='desc_ar'>صناعة الاسمدة والمركبات الازوتية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2013    -->
+       <record id='2013' model='egtax.activity_type'>
+          <field name='code'>2013</field>
+          <field name='desc_en'>Plastics industry in its primary forms and synthetic rubber</field>
+          <field name='desc_ar'>صناعة اللادائن فى اشكالها الاولية والمطاط الصناعى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2021    -->
+       <record id='2021' model='egtax.activity_type'>
+          <field name='code'>2021</field>
+          <field name='desc_en'>Pesticide industry and other agricultural chemical products</field>
+          <field name='desc_ar'>صناعة مبيدات الافات والمنتجات الكيميائية الزراعية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2022    -->
+       <record id='2022' model='egtax.activity_type'>
+          <field name='code'>2022</field>
+          <field name='desc_en'>Manufacture of paints, varnishes, and similar coatings, printing inks and molds</field>
+          <field name='desc_ar'>صناعة الدهانات والورنيش والطلاء المماثلة واحبار الطباعة والمصطكات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2023    -->
+       <record id='2023' model='egtax.activity_type'>
+          <field name='code'>2023</field>
+          <field name='desc_en'>Manufacture of soap, disinfectants, cleaning and polishing preparations, perfumes and cosmetics</field>
+          <field name='desc_ar'>صناعة الصابون والمطهرات ومستحضرات التنظيف والتلميع والعطور ومستحضرات التجميل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2029    -->
+       <record id='2029' model='egtax.activity_type'>
+          <field name='code'>2029</field>
+          <field name='desc_en'>Manufacture of other chemical products not classified elsewhere</field>
+          <field name='desc_ar'>صناعة المنتجات الكيميائية الاخرى غير المصنفة فى موضع اخر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2030    -->
+       <record id='2030' model='egtax.activity_type'>
+          <field name='code'>2030</field>
+          <field name='desc_en'>Industrial fiber industry</field>
+          <field name='desc_ar'>صناعة الالياف الصناعية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2100    -->
+       <record id='2100' model='egtax.activity_type'>
+          <field name='code'>2100</field>
+          <field name='desc_en'>Manufacture of pharmaceutical, chemical, and plant products</field>
+          <field name='desc_ar'>صناعة المستحضرات الصيدلانية والكيميائية الدواءية والمنتجات النباتية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2211    -->
+       <record id='2211' model='egtax.activity_type'>
+          <field name='code'>2211</field>
+          <field name='desc_en'>Manufacture of rubber tires and tubes, renewing and rebuilding the outer surfaces of rubber tires</field>
+          <field name='desc_ar'>صناعة الاطارات والانابيب المطاطية وتجديد الاسطح الخارجية للاطارات المطاطية واعادة بنائها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2219    -->
+       <record id='2219' model='egtax.activity_type'>
+          <field name='code'>2219</field>
+          <field name='desc_en'>Manufacture of other rubber products</field>
+          <field name='desc_ar'>صناعة المنتجات المطاطية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2220    -->
+       <record id='2220' model='egtax.activity_type'>
+          <field name='code'>2220</field>
+          <field name='desc_en'>Plastics industry</field>
+          <field name='desc_ar'>صناعة منتجات اللادائن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2310    -->
+       <record id='2310' model='egtax.activity_type'>
+          <field name='code'>2310</field>
+          <field name='desc_en'>Glass and its products industry</field>
+          <field name='desc_ar'>صناعة الزجاج ومنتجاتة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2391    -->
+       <record id='2391' model='egtax.activity_type'>
+          <field name='code'>2391</field>
+          <field name='desc_en'>Manufacture of fusion products</field>
+          <field name='desc_ar'>صناعة المنتجات المقاومة للانصهار</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2392    -->
+       <record id='2392' model='egtax.activity_type'>
+          <field name='code'>2392</field>
+          <field name='desc_en'>Manufacture of Shale products for Building</field>
+          <field name='desc_ar'>صناعة مواد الطفلة الخاصة بالبناء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2393    -->
+       <record id='2393' model='egtax.activity_type'>
+          <field name='code'>2393</field>
+          <field name='desc_en'>Manufacture of other Porcelain and ceramic products</field>
+          <field name='desc_ar'>صناعة منتجات البرسولين والسيراميك الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2394    -->
+       <record id='2394' model='egtax.activity_type'>
+          <field name='code'>2394</field>
+          <field name='desc_en'>Cement, lime and plaster industry</field>
+          <field name='desc_ar'>صناعة الاسمنت والجير والجص</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2395    -->
+       <record id='2395' model='egtax.activity_type'>
+          <field name='code'>2395</field>
+          <field name='desc_en'>Manufacture of concrete products, cement and plaster</field>
+          <field name='desc_ar'>صناعة منتجات الخرسانة والاسمنت والجص</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2396    -->
+       <record id='2396' model='egtax.activity_type'>
+          <field name='code'>2396</field>
+          <field name='desc_en'>Cutting, forming and completing the stone processing</field>
+          <field name='desc_ar'>قطع وتشكيل واتمام تجهيز الاحجار</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2399    -->
+       <record id='2399' model='egtax.activity_type'>
+          <field name='code'>2399</field>
+          <field name='desc_en'>Manufacture of non-metallic minerals products not classified elsewhere</field>
+          <field name='desc_ar'>صناعة منتجات المعادن الافلزية الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2410    -->
+       <record id='2410' model='egtax.activity_type'>
+          <field name='code'>2410</field>
+          <field name='desc_en'>The industry of basic iron and steel</field>
+          <field name='desc_ar'>صناعة الحديد والصلب القاعديين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2420    -->
+       <record id='2420' model='egtax.activity_type'>
+          <field name='code'>2420</field>
+          <field name='desc_en'>Manufacture of precious and non-ferrous basic metals</field>
+          <field name='desc_ar'>صناعة الفلزات الثمينة وغير الحديدية القاعدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2431    -->
+       <record id='2431' model='egtax.activity_type'>
+          <field name='code'>2431</field>
+          <field name='desc_en'>Iron and steel casting</field>
+          <field name='desc_ar'>سبك الحديدوالصلب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2432    -->
+       <record id='2432' model='egtax.activity_type'>
+          <field name='code'>2432</field>
+          <field name='desc_en'>Non-ferrous metal casting</field>
+          <field name='desc_ar'>سبك المعادن غير الحديدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2511    -->
+       <record id='2511' model='egtax.activity_type'>
+          <field name='code'>2511</field>
+          <field name='desc_en'>Structural metal products industry</field>
+          <field name='desc_ar'>صناعة المنتجات المعدنية الانشائية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2512    -->
+       <record id='2512' model='egtax.activity_type'>
+          <field name='code'>2512</field>
+          <field name='desc_en'>Industry of tanks and metal containers</field>
+          <field name='desc_ar'>صناعة الصهاريج والخزانات و الحاويات المعدنية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2513    -->
+       <record id='2513' model='egtax.activity_type'>
+          <field name='code'>2513</field>
+          <field name='desc_en'>Water vapor generators except for central heating boilers in hot water</field>
+          <field name='desc_ar'>مولدات بخار الماء باستثناء مراجل التدفئةالمركزية بالمياة الساخنة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2520    -->
+       <record id='2520' model='egtax.activity_type'>
+          <field name='code'>2520</field>
+          <field name='desc_en'>Arms and ammunition industry</field>
+          <field name='desc_ar'>صناعة الاسلحة والذخائر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2591    -->
+       <record id='2591' model='egtax.activity_type'>
+          <field name='code'>2591</field>
+          <field name='desc_en'>Forming metals by hammering, pressing, casting, rolling, and treatment of metal powders</field>
+          <field name='desc_ar'>تشكيل المعادن بالطرق والكبس و السبك والدلفنة ومعالجة مساحيق المعادن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2592    -->
+       <record id='2592' model='egtax.activity_type'>
+          <field name='code'>2592</field>
+          <field name='desc_en'>Metal processing and coating</field>
+          <field name='desc_ar'>معالجة وطلى المعادن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2593    -->
+       <record id='2593' model='egtax.activity_type'>
+          <field name='code'>2593</field>
+          <field name='desc_en'>Manufacture of cutting tools, hand tools and general metal tools</field>
+          <field name='desc_ar'>صناعة ادوات القطع والعدد اليدوية والادوات المعدنية العامة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2599    -->
+       <record id='2599' model='egtax.activity_type'>
+          <field name='code'>2599</field>
+          <field name='desc_en'>Manufacture of other fabricated metal products not classified elsewhere</field>
+          <field name='desc_ar'>صناعة منتجات المعادن المشكلة الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2610    -->
+       <record id='2610' model='egtax.activity_type'>
+          <field name='code'>2610</field>
+          <field name='desc_en'>Electronic components and panels industry</field>
+          <field name='desc_ar'>صناعة المكونات والالواح الاليكترونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2620    -->
+       <record id='2620' model='egtax.activity_type'>
+          <field name='code'>2620</field>
+          <field name='desc_en'>The manufacture of electronic computers and related devices</field>
+          <field name='desc_ar'>صناعة الحاسبات الاليكترونية و الاجهزة المتصلة بة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2630    -->
+       <record id='2630' model='egtax.activity_type'>
+          <field name='code'>2630</field>
+          <field name='desc_en'>Communications equipment industry</field>
+          <field name='desc_ar'>صناعة اجهزة الاتصالات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2640    -->
+       <record id='2640' model='egtax.activity_type'>
+          <field name='code'>2640</field>
+          <field name='desc_en'>Electronic devices industry</field>
+          <field name='desc_ar'>صناعة الاجهزة الاليكترونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2651    -->
+       <record id='2651' model='egtax.activity_type'>
+          <field name='code'>2651</field>
+          <field name='desc_en'>Manufacturing measuring, testing, navigation and control devices</field>
+          <field name='desc_ar'>صناعة اجهزة القياس والاختبار و الملاحة والتحكم</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2652    -->
+       <record id='2652' model='egtax.activity_type'>
+          <field name='code'>2652</field>
+          <field name='desc_en'>Watch and alarm clock industry</field>
+          <field name='desc_ar'>صناعة الساعات والمنبهات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2660    -->
+       <record id='2660' model='egtax.activity_type'>
+          <field name='code'>2660</field>
+          <field name='desc_en'>Radiation, medical and therapeutic electronic devices industry</field>
+          <field name='desc_ar'>صناعة الاجهزة الاشعاعية والطبية والعلاجية اللاليكترونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2670    -->
+       <record id='2670' model='egtax.activity_type'>
+          <field name='code'>2670</field>
+          <field name='desc_en'>Optical equipment and imaging equipment industry</field>
+          <field name='desc_ar'>صناعة المعدات البصرية واجهزة التصوير</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2680    -->
+       <record id='2680' model='egtax.activity_type'>
+          <field name='code'>2680</field>
+          <field name='desc_en'>Optical and magnetic conveyor industry</field>
+          <field name='desc_ar'>صناعة الوسائل الناقلة البصرية والمغنطيسية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2710    -->
+       <record id='2710' model='egtax.activity_type'>
+          <field name='code'>2710</field>
+          <field name='desc_en'>Manufacture of motors, generators, electrical transformers, devices and control panels for electricity distribution</field>
+          <field name='desc_ar'>صناعة المحركات والمولدات والمحولات الكهربائية واجهزة ولوحات التحكم فى توزيع الكهرباء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2720    -->
+       <record id='2720' model='egtax.activity_type'>
+          <field name='code'>2720</field>
+          <field name='desc_en'>Manufacture of dry and stored batteries</field>
+          <field name='desc_ar'>صناعة البطاريات الجافة والمختزنة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2731    -->
+       <record id='2731' model='egtax.activity_type'>
+          <field name='code'>2731</field>
+          <field name='desc_en'>Industrial fiber cable industry</field>
+          <field name='desc_ar'>صناعة كابلات الالياف الصناعية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2732    -->
+       <record id='2732' model='egtax.activity_type'>
+          <field name='code'>2732</field>
+          <field name='desc_en'>Other electrical and electronic wires and cables</field>
+          <field name='desc_ar'>صناعة الاسلاك الكهربائية والاليكترونية الاخرى والكابلات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2733    -->
+       <record id='2733' model='egtax.activity_type'>
+          <field name='code'>2733</field>
+          <field name='desc_en'>Wire devices industry</field>
+          <field name='desc_ar'>صناعة اجهزة الاسلاك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2740    -->
+       <record id='2740' model='egtax.activity_type'>
+          <field name='code'>2740</field>
+          <field name='desc_en'>Electrical lighting devices industry</field>
+          <field name='desc_ar'>صناعة اجهزة الانارة الكهربائية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2750    -->
+       <record id='2750' model='egtax.activity_type'>
+          <field name='code'>2750</field>
+          <field name='desc_en'>Home appliances industry</field>
+          <field name='desc_ar'>صناعة الاجهزة المنزلية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2790    -->
+       <record id='2790' model='egtax.activity_type'>
+          <field name='code'>2790</field>
+          <field name='desc_en'>Other electrical appliances industry</field>
+          <field name='desc_ar'>صناعة الاجهزة الكهربائية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2811    -->
+       <record id='2811' model='egtax.activity_type'>
+          <field name='code'>2811</field>
+          <field name='desc_en'>Manufacture of generators and engines, with the exception of aircraft, vehicles and motorcycles</field>
+          <field name='desc_ar'>صناعة المولدات والمحركات باسقثناء الطائرات والمركبات ومحركات الموتيسيكلات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2812    -->
+       <record id='2812' model='egtax.activity_type'>
+          <field name='code'>2812</field>
+          <field name='desc_en'>Liquid power devices industry</field>
+          <field name='desc_ar'>صناعة اجهزة الطاقة السائلة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2813    -->
+       <record id='2813' model='egtax.activity_type'>
+          <field name='code'>2813</field>
+          <field name='desc_en'>Manufacture of pumps, compressors, tapes and other valves</field>
+          <field name='desc_ar'>صناعة المضخات والضواغط والاشرطة والصمامات الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2814    -->
+       <record id='2814' model='egtax.activity_type'>
+          <field name='code'>2814</field>
+          <field name='desc_en'>Gears, carriers and driving devices industry</field>
+          <field name='desc_ar'>صناعة التروس والحاملات واجهزة القيادة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2815    -->
+       <record id='2815' model='egtax.activity_type'>
+          <field name='code'>2815</field>
+          <field name='desc_en'>Manufacture of furnaces, furnaces and their incinerators</field>
+          <field name='desc_ar'>صناعة الافران و الاتونات ومحرقاتها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2816    -->
+       <record id='2816' model='egtax.activity_type'>
+          <field name='code'>2816</field>
+          <field name='desc_en'>The elevators and equipment needed for it</field>
+          <field name='desc_ar'>صناعة المصاعد والمعدات الازمة لها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2817    -->
+       <record id='2817' model='egtax.activity_type'>
+          <field name='code'>2817</field>
+          <field name='desc_en'>Manufacture of office equipment and equipment (excluding electronic computers and their accessories)</field>
+          <field name='desc_ar'>صناعة الاجهزة والمعدات المكتبية ( باستثناء الحاسبات الاليكترونية ومستلزماتها )</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2818    -->
+       <record id='2818' model='egtax.activity_type'>
+          <field name='code'>2818</field>
+          <field name='desc_en'>Manufacture of manual power steering equipment</field>
+          <field name='desc_ar'>صناعة المعدات اليدوية لتوجية الطاقة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2819    -->
+       <record id='2819' model='egtax.activity_type'>
+          <field name='code'>2819</field>
+          <field name='desc_en'>Other equipment industry of various purposes</field>
+          <field name='desc_ar'>صناعة المعدات الاخرى ذات الاغراض المتنوعة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2821    -->
+       <record id='2821' model='egtax.activity_type'>
+          <field name='code'>2821</field>
+          <field name='desc_en'>Agricultural and forestry equipment industry</field>
+          <field name='desc_ar'>صناعة المعدات الزراعية والخاصة بالغابات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2822    -->
+       <record id='2822' model='egtax.activity_type'>
+          <field name='code'>2822</field>
+          <field name='desc_en'>Manufacture of equipment and machinery for forming metals</field>
+          <field name='desc_ar'>صناعة معدات واجهزة تشكيل المعادن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2823    -->
+       <record id='2823' model='egtax.activity_type'>
+          <field name='code'>2823</field>
+          <field name='desc_en'>Metal equipment industry</field>
+          <field name='desc_ar'>صناعة معدات المعادن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2824    -->
+       <record id='2824' model='egtax.activity_type'>
+          <field name='code'>2824</field>
+          <field name='desc_en'>Mining and quarrying and building equipment industry</field>
+          <field name='desc_ar'>صناعة معدات المناجم و المحاجر والبناء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2825    -->
+       <record id='2825' model='egtax.activity_type'>
+          <field name='code'>2825</field>
+          <field name='desc_en'>Manufacture of food, beverage and tobacco industries equipment</field>
+          <field name='desc_ar'>صناعة معدات الصناعات الغذائية والمشرؤبات والتبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2826    -->
+       <record id='2826' model='egtax.activity_type'>
+          <field name='code'>2826</field>
+          <field name='desc_en'>Manufacture of ready-made clothes, accessories, and leather production</field>
+          <field name='desc_ar'>صناعة معدات الملابس الجاهزة وهدوات الزينة وانتاج الجلود</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2829    -->
+       <record id='2829' model='egtax.activity_type'>
+          <field name='code'>2829</field>
+          <field name='desc_en'>Manufacture of other special-purpose equipment</field>
+          <field name='desc_ar'>صناعة المعدات الاخرى ذات الاغراض الخاصة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2910    -->
+       <record id='2910' model='egtax.activity_type'>
+          <field name='code'>2910</field>
+          <field name='desc_en'>Manufacture of motor vehicles</field>
+          <field name='desc_ar'>صناعة المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2920    -->
+       <record id='2920' model='egtax.activity_type'>
+          <field name='code'>2920</field>
+          <field name='desc_en'>Manufacture of motor vehicle bodies and the manufacture of trailers and semi-trailers</field>
+          <field name='desc_ar'>صناعة هياكل المركبات ذات المحركات وصناعة المقطورات ونصف المقطورات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 2930    -->
+       <record id='2930' model='egtax.activity_type'>
+          <field name='code'>2930</field>
+          <field name='desc_en'>Manufacture of accessories and spare parts for motor vehicles</field>
+          <field name='desc_ar'>صناعة مستلزمات وقطع غيار المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3011    -->
+       <record id='3011' model='egtax.activity_type'>
+          <field name='code'>3011</field>
+          <field name='desc_en'>Building ship hulls and rafts</field>
+          <field name='desc_ar'>بناء هياكل السفن و الطوافات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3012    -->
+       <record id='3012' model='egtax.activity_type'>
+          <field name='code'>3012</field>
+          <field name='desc_en'>Manufacture of pleasure boats and sport boats</field>
+          <field name='desc_ar'>صناعة قوارب النزهة والقوارب الرياضية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3020    -->
+       <record id='3020' model='egtax.activity_type'>
+          <field name='code'>3020</field>
+          <field name='desc_en'>Railroad locomotives and rolling stock industry</field>
+          <field name='desc_ar'>صناعة قاطرات السكك الحديدية والمعدات الدارجة على السكك الحديدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3030    -->
+       <record id='3030' model='egtax.activity_type'>
+          <field name='code'>3030</field>
+          <field name='desc_en'>Air and spacecraft industry</field>
+          <field name='desc_ar'>صناعة المركبات الهوائية والفضائية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3040    -->
+       <record id='3040' model='egtax.activity_type'>
+          <field name='code'>3040</field>
+          <field name='desc_en'>Manufacture of military military vehicles</field>
+          <field name='desc_ar'>صناعة المركبات العسكرية الحربية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3091    -->
+       <record id='3091' model='egtax.activity_type'>
+          <field name='code'>3091</field>
+          <field name='desc_en'>Industry</field>
+          <field name='desc_ar'>صناعة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3092    -->
+       <record id='3092' model='egtax.activity_type'>
+          <field name='code'>3092</field>
+          <field name='desc_en'>Manufacture of ordinary bicycles and infirm vehicles</field>
+          <field name='desc_ar'>صناعة الدراجات العادية ومركبات العجزة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3099    -->
+       <record id='3099' model='egtax.activity_type'>
+          <field name='code'>3099</field>
+          <field name='desc_en'>Other transportation equipment industry not classified elsewhere</field>
+          <field name='desc_ar'>صناعة معدات النقل الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3100    -->
+       <record id='3100' model='egtax.activity_type'>
+          <field name='code'>3100</field>
+          <field name='desc_en'>Furniture Industry</field>
+          <field name='desc_ar'>صناعة الاثاث</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3211    -->
+       <record id='3211' model='egtax.activity_type'>
+          <field name='code'>3211</field>
+          <field name='desc_en'>Manufacture of jewelry and related items</field>
+          <field name='desc_ar'>صناعة المجوهرات والاصناف المتصلة بها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3212    -->
+       <record id='3212' model='egtax.activity_type'>
+          <field name='code'>3212</field>
+          <field name='desc_en'>Manufacture of imitation jewelry and related items</field>
+          <field name='desc_ar'>صناعة المجوهرات المقلدة والاصناف المتصلة بها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3220    -->
+       <record id='3220' model='egtax.activity_type'>
+          <field name='code'>3220</field>
+          <field name='desc_en'>Musical instrument industry</field>
+          <field name='desc_ar'>صناعة الالات الموسيقية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3230    -->
+       <record id='3230' model='egtax.activity_type'>
+          <field name='code'>3230</field>
+          <field name='desc_en'>Sports products industry</field>
+          <field name='desc_ar'>صناعة المنتجات الرياضية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3240    -->
+       <record id='3240' model='egtax.activity_type'>
+          <field name='code'>3240</field>
+          <field name='desc_en'>Make games and play</field>
+          <field name='desc_ar'>صناعة الالعاب واللعب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3250    -->
+       <record id='3250' model='egtax.activity_type'>
+          <field name='code'>3250</field>
+          <field name='desc_en'>Manufacturing of dental and medical equipment and tools</field>
+          <field name='desc_ar'>صناعة المعدات والادوات الطبية والخاصة بالاسنان</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3290    -->
+       <record id='3290' model='egtax.activity_type'>
+          <field name='code'>3290</field>
+          <field name='desc_en'>Other industries not classified elsewhere</field>
+          <field name='desc_ar'>الصناعات الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3311    -->
+       <record id='3311' model='egtax.activity_type'>
+          <field name='code'>3311</field>
+          <field name='desc_en'>Repair of manufactured metal products</field>
+          <field name='desc_ar'>اصلاح المنتجات المعدنية المصنعة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3312    -->
+       <record id='3312' model='egtax.activity_type'>
+          <field name='code'>3312</field>
+          <field name='desc_en'>Machinery repair</field>
+          <field name='desc_ar'>اصلاح الالات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3313    -->
+       <record id='3313' model='egtax.activity_type'>
+          <field name='code'>3313</field>
+          <field name='desc_en'>Repair of electronic and optical devices</field>
+          <field name='desc_ar'>اصلاح الاجهزة الاليكترونية و البصرية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3314    -->
+       <record id='3314' model='egtax.activity_type'>
+          <field name='code'>3314</field>
+          <field name='desc_en'>Electronic devices repair</field>
+          <field name='desc_ar'>اصلاح الاجهزة الاليكترونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3315    -->
+       <record id='3315' model='egtax.activity_type'>
+          <field name='code'>3315</field>
+          <field name='desc_en'>Repair of transport devices, except for motor vehicles</field>
+          <field name='desc_ar'>اصلاح اجهزة النقل باستثناء المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3319    -->
+       <record id='3319' model='egtax.activity_type'>
+          <field name='code'>3319</field>
+          <field name='desc_en'>Repair other devices</field>
+          <field name='desc_ar'>اصلاح الاجهزة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3320    -->
+       <record id='3320' model='egtax.activity_type'>
+          <field name='code'>3320</field>
+          <field name='desc_en'>Installation of industrial equipment and devices</field>
+          <field name='desc_ar'>تركيب المعدات و الاجهزة الصناعية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3510    -->
+       <record id='3510' model='egtax.activity_type'>
+          <field name='code'>3510</field>
+          <field name='desc_en'>Electric generators, transformers and power distributors</field>
+          <field name='desc_ar'>المولدات الكهربائية ومحولات وموزعات الكهرباء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3520    -->
+       <record id='3520' model='egtax.activity_type'>
+          <field name='code'>3520</field>
+          <field name='desc_en'>Manufacture of sulfur gas and distribution of gaseous fuels by means of main pipes</field>
+          <field name='desc_ar'>صناعة غاز الاستصباح وتوزيع انواع الوقود الغازية عن طريق مواسير رئيسية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3530    -->
+       <record id='3530' model='egtax.activity_type'>
+          <field name='code'>3530</field>
+          <field name='desc_en'>Steam supply and air conditioning</field>
+          <field name='desc_ar'>توريد البخار واجهزة تكييف الهواء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3600    -->
+       <record id='3600' model='egtax.activity_type'>
+          <field name='code'>3600</field>
+          <field name='desc_en'>Water collection, treatment and supply</field>
+          <field name='desc_ar'>تجميع ومعالجة وتوريد المياة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3700    -->
+       <record id='3700' model='egtax.activity_type'>
+          <field name='code'>3700</field>
+          <field name='desc_en'>Sewer</field>
+          <field name='desc_ar'>المجارى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3811    -->
+       <record id='3811' model='egtax.activity_type'>
+          <field name='code'>3811</field>
+          <field name='desc_en'>Collection of non-hazardous waste</field>
+          <field name='desc_ar'>تجميع المخلفات غير الخطرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3812    -->
+       <record id='3812' model='egtax.activity_type'>
+          <field name='code'>3812</field>
+          <field name='desc_en'>Collection of hazardous waste</field>
+          <field name='desc_ar'>تجميع المخلفات الخطرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3821    -->
+       <record id='3821' model='egtax.activity_type'>
+          <field name='code'>3821</field>
+          <field name='desc_en'>Treatment and disposal of non-hazardous waste</field>
+          <field name='desc_ar'>معالجة والتصرف فى المخلفات غير الخطرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3822    -->
+       <record id='3822' model='egtax.activity_type'>
+          <field name='code'>3822</field>
+          <field name='desc_en'>Treatment and disposal of hazardous waste</field>
+          <field name='desc_ar'>معالجة والتصرف فى المخلفات الخطرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3830    -->
+       <record id='3830' model='egtax.activity_type'>
+          <field name='code'>3830</field>
+          <field name='desc_en'>Material handling</field>
+          <field name='desc_ar'>معالجة المواد</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 3900    -->
+       <record id='3900' model='egtax.activity_type'>
+          <field name='code'>3900</field>
+          <field name='desc_en'>Recycling activities and services and the disposal of other waste</field>
+          <field name='desc_ar'>انشطة وخدمات اعادة التدوير والتصرف فى النفايات الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4100    -->
+       <record id='4100' model='egtax.activity_type'>
+          <field name='code'>4100</field>
+          <field name='desc_en'>Building constructions</field>
+          <field name='desc_ar'>انشاءات المبانى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4210    -->
+       <record id='4210' model='egtax.activity_type'>
+          <field name='code'>4210</field>
+          <field name='desc_en'>Road and railway constructions</field>
+          <field name='desc_ar'>الانشاءات الخاصة بالطرق والسكك الحديدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4220    -->
+       <record id='4220' model='egtax.activity_type'>
+          <field name='code'>4220</field>
+          <field name='desc_en'>Construction for projects of public benefit</field>
+          <field name='desc_ar'>الانشاءات الخاصة بالمشاريع ذات المنفعة العامة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4290    -->
+       <record id='4290' model='egtax.activity_type'>
+          <field name='code'>4290</field>
+          <field name='desc_en'>Construction for other civil engineering projects</field>
+          <field name='desc_ar'>الانشاءات الخاصة بالمشاريع الهندسية المدنية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4311    -->
+       <record id='4311' model='egtax.activity_type'>
+          <field name='code'>4311</field>
+          <field name='desc_en'>Remove the installations</field>
+          <field name='desc_ar'>ازالة المنشات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4312    -->
+       <record id='4312' model='egtax.activity_type'>
+          <field name='code'>4312</field>
+          <field name='desc_en'>Preparing sites</field>
+          <field name='desc_ar'>اعداد المواقع</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4321    -->
+       <record id='4321' model='egtax.activity_type'>
+          <field name='code'>4321</field>
+          <field name='desc_en'>Electrical installations</field>
+          <field name='desc_ar'>التركيبات الكهربائية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4322    -->
+       <record id='4322' model='egtax.activity_type'>
+          <field name='code'>4322</field>
+          <field name='desc_en'>Plumbing, heating and air-conditioning installations</field>
+          <field name='desc_ar'>التركيبات الخاصة بالسباكة والتدفئة ومكيفات الهواء</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4329    -->
+       <record id='4329' model='egtax.activity_type'>
+          <field name='code'>4329</field>
+          <field name='desc_en'>Other structural installations</field>
+          <field name='desc_ar'>التركيبات الانشائية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4330    -->
+       <record id='4330' model='egtax.activity_type'>
+          <field name='code'>4330</field>
+          <field name='desc_en'>Completion and finishing of buildings</field>
+          <field name='desc_ar'>استكمال وتشطيب المبانى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4390    -->
+       <record id='4390' model='egtax.activity_type'>
+          <field name='code'>4390</field>
+          <field name='desc_en'>Other specialized construction activities</field>
+          <field name='desc_ar'>انشطة الانشاءات المتخصصة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4510    -->
+       <record id='4510' model='egtax.activity_type'>
+          <field name='code'>4510</field>
+          <field name='desc_en'>Sale of motor vehicles</field>
+          <field name='desc_ar'>بيع المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4520    -->
+       <record id='4520' model='egtax.activity_type'>
+          <field name='code'>4520</field>
+          <field name='desc_en'>Maintenance and repair of motor vehicles</field>
+          <field name='desc_ar'>صيانة واصلاح المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4530    -->
+       <record id='4530' model='egtax.activity_type'>
+          <field name='code'>4530</field>
+          <field name='desc_en'>Sale of motor vehicle parts and accessories</field>
+          <field name='desc_ar'>بيع قطع غيار ومستلزمات المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4540    -->
+       <record id='4540' model='egtax.activity_type'>
+          <field name='code'>4540</field>
+          <field name='desc_en'>Sale, maintenance and repair of motorcycles, parts and accessories thereof</field>
+          <field name='desc_ar'>بيع وصيانة واصلاح الدراجات النارية وقطع الغيار والمستلزمات الخاصة بها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4610    -->
+       <record id='4610' model='egtax.activity_type'>
+          <field name='code'>4610</field>
+          <field name='desc_en'>Wholesale trade on the basis of a contract or a fee</field>
+          <field name='desc_ar'>تجارة الجملة على اساس عقد او نظير رسم</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4620    -->
+       <record id='4620' model='egtax.activity_type'>
+          <field name='code'>4620</field>
+          <field name='desc_en'>Wholesale trade in agricultural raw materials and live animals</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالمواد الاولية الزراعية والحيوانات الحية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4630    -->
+       <record id='4630' model='egtax.activity_type'>
+          <field name='code'>4630</field>
+          <field name='desc_en'>Wholesale trade of food, beverages and tobacco</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالاغذية والمشرؤبات والتبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4641    -->
+       <record id='4641' model='egtax.activity_type'>
+          <field name='code'>4641</field>
+          <field name='desc_en'>Wholesale trade of clothes, fabrics and shoes</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالملابس والاقمشة والاحذية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4649    -->
+       <record id='4649' model='egtax.activity_type'>
+          <field name='code'>4649</field>
+          <field name='desc_en'>Wholesale trade for other household appliances</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالادوات المنزلية الاخرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4651    -->
+       <record id='4651' model='egtax.activity_type'>
+          <field name='code'>4651</field>
+          <field name='desc_en'>Wholesale trade of computer hardware, accessories and computer software</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة باجهزة الكمبيوتر ومستلزماتها وبرامج الكمبيوتر</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4652    -->
+       <record id='4652' model='egtax.activity_type'>
+          <field name='code'>4652</field>
+          <field name='desc_en'>Wholesale trade of electronic devices, communications devices and accessories</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالاجهزة الاليكترونية واجهزة الاتصالات ومستلزماتها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4653    -->
+       <record id='4653' model='egtax.activity_type'>
+          <field name='code'>4653</field>
+          <field name='desc_en'>Wholesale trade for agricultural equipment, machinery and supplies</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالمعدات والالات والتوريدات الزراعية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4659    -->
+       <record id='4659' model='egtax.activity_type'>
+          <field name='code'>4659</field>
+          <field name='desc_en'>Wholesale trade of equipment and other devices</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالمعدات والاجهزة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4661    -->
+       <record id='4661' model='egtax.activity_type'>
+          <field name='code'>4661</field>
+          <field name='desc_en'>Wholesale trade of dry, liquid and gaseous fuels and related products</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالوقود الجاف والسائل والغازى والمنتجات المرتبطة بذلك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4662    -->
+       <record id='4662' model='egtax.activity_type'>
+          <field name='code'>4662</field>
+          <field name='desc_en'>Wholesale trade in precious metals and minerals</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالمعادن والمعادن النفيسة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4663    -->
+       <record id='4663' model='egtax.activity_type'>
+          <field name='code'>4663</field>
+          <field name='desc_en'>Wholesale trade, supplies and equipment for building materials, hardware, plumbing and heating appliances</field>
+          <field name='desc_ar'>تجارة الجملة والتوريدات والاجهزة الخاصة بمواد البناء والادوات المعدنية والسباكة واجهزة التدفئة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4669    -->
+       <record id='4669' model='egtax.activity_type'>
+          <field name='code'>4669</field>
+          <field name='desc_en'>Wholesale trade for waste, waste and other products not classified elsewhere</field>
+          <field name='desc_ar'>تجارة الجملة الخاصة بالنفايات والمخلفات والمنتجات الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4690    -->
+       <record id='4690' model='egtax.activity_type'>
+          <field name='code'>4690</field>
+          <field name='desc_en'>Non-specialized wholesale trade</field>
+          <field name='desc_ar'>تجارة الجملة غير المتخصصة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4711    -->
+       <record id='4711' model='egtax.activity_type'>
+          <field name='code'>4711</field>
+          <field name='desc_en'>Retail sale in non-specialized stores of food, beverages or tobacco</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر غير المتخصصة للاغذية والمشروبات اوالتبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4719    -->
+       <record id='4719' model='egtax.activity_type'>
+          <field name='code'>4719</field>
+          <field name='desc_en'>Other retail types in non-specialized stores</field>
+          <field name='desc_ar'>انواع البيع بالتجزئةالاخرى بالمتاجر غير المتخصصة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4721    -->
+       <record id='4721' model='egtax.activity_type'>
+          <field name='code'>4721</field>
+          <field name='desc_en'>Retail sale in specialized food stores</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للاغذية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4722    -->
+       <record id='4722' model='egtax.activity_type'>
+          <field name='code'>4722</field>
+          <field name='desc_en'>Retail sale in specialized stores for drinks</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للمشروبات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4723    -->
+       <record id='4723' model='egtax.activity_type'>
+          <field name='code'>4723</field>
+          <field name='desc_en'>Retail sale in specialized stores of tobacco products</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة لمنتجات التبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4730    -->
+       <record id='4730' model='egtax.activity_type'>
+          <field name='code'>4730</field>
+          <field name='desc_en'>Retail sale of specialized vehicles for fuel</field>
+          <field name='desc_ar'>البيع بالتجزئة بالاماكن المتخصصة لوقود المركبات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4741    -->
+       <record id='4741' model='egtax.activity_type'>
+          <field name='code'>4741</field>
+          <field name='desc_en'>Retail sale in stores specialized in computer hardware, accessories, computer software, and communications equipment</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة فى اجهزة الحاسب الالى ومستلزماتة وبرامج الكمبيوتر واجهزة الاتصالات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4751    -->
+       <record id='4751' model='egtax.activity_type'>
+          <field name='code'>4751</field>
+          <field name='desc_en'>Retail sale in clothing stores</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة فى الملابس</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4752    -->
+       <record id='4752' model='egtax.activity_type'>
+          <field name='code'>4752</field>
+          <field name='desc_en'>Retail sale in specialized stores of hardware, paint and glass</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للادوات المعدنية و الطلاء والزجاج</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4753    -->
+       <record id='4753' model='egtax.activity_type'>
+          <field name='code'>4753</field>
+          <field name='desc_en'>Retail sale in specialized stores of carpets, blankets, wall and floor coverings</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للسجاد والبطاطين واغطية الحوائط والارضيات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4759    -->
+       <record id='4759' model='egtax.activity_type'>
+          <field name='code'>4759</field>
+          <field name='desc_en'>Retail sale in specialized stores of household electrical appliances, furniture, lighting equipment and other household appliances</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للاجهزة الكهربائية المنزلية والاثاث واجخزة الانارة والادوات المنزلية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4761    -->
+       <record id='4761' model='egtax.activity_type'>
+          <field name='code'>4761</field>
+          <field name='desc_en'>Retail sale in specialized stores of books, newspapers, and stationery</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للكتب والصحف والادوات المكتبية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4762    -->
+       <record id='4762' model='egtax.activity_type'>
+          <field name='code'>4762</field>
+          <field name='desc_en'>Retail sale in specialized stores of music and video recordings</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للتسجيلاتالموسشيقية والمرئية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4763    -->
+       <record id='4763' model='egtax.activity_type'>
+          <field name='code'>4763</field>
+          <field name='desc_en'>Retail sale in specialized stores of sports equipment</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للادوات الرياضية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4764    -->
+       <record id='4764' model='egtax.activity_type'>
+          <field name='code'>4764</field>
+          <field name='desc_en'>Retail sale in specialized games and toys stores</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للالعاب واللعب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4771    -->
+       <record id='4771' model='egtax.activity_type'>
+          <field name='code'>4771</field>
+          <field name='desc_en'>Retail sale in specialized stores of shoes, clothing and leather products</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للاحذية والملابس والمنتجات الجلدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4772    -->
+       <record id='4772' model='egtax.activity_type'>
+          <field name='code'>4772</field>
+          <field name='desc_en'>Retail sale in specialized stores of pharmaceutical, medical and pharmaceutical products, ornamental and cosmetic products</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للمنتجات والعقاقير الصيدلانية والطبية وادوات الزينة والمنتجات التجميلية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4773    -->
+       <record id='4773' model='egtax.activity_type'>
+          <field name='code'>4773</field>
+          <field name='desc_en'>Retail sale in specialized stores of other new products</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة للمنتجات الجديدة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4774    -->
+       <record id='4774' model='egtax.activity_type'>
+          <field name='code'>4774</field>
+          <field name='desc_en'>Retail sale of used products</field>
+          <field name='desc_ar'>البيع بالتجزئة للمنتجات المستعملة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4781    -->
+       <record id='4781' model='egtax.activity_type'>
+          <field name='code'>4781</field>
+          <field name='desc_en'>Retail sale through kiosks and markets of food, soft drinks and tobacco products</field>
+          <field name='desc_ar'>البيع بالتجزئة من خلال الاكشاك والاسواق للمواد الغذائية والمشروبات الخفيفة ومنتجات التبغ</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4782    -->
+       <record id='4782' model='egtax.activity_type'>
+          <field name='code'>4782</field>
+          <field name='desc_en'>Retail sale through kiosks and markets of clothes, fabrics and shoes</field>
+          <field name='desc_ar'>البيع بالتجزئة من خلال الاكشاك والاسواق للملابس والاقمشة والاحذية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4789    -->
+       <record id='4789' model='egtax.activity_type'>
+          <field name='code'>4789</field>
+          <field name='desc_en'>Retail sale via stalls of other products</field>
+          <field name='desc_ar'>البيع بالتجزئة من خلال الاكشاك للمنتجات الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4742    -->
+       <record id='4742' model='egtax.activity_type'>
+          <field name='code'>4742</field>
+          <field name='desc_en'>Retail sale in stores specialized in audio-visual equipment</field>
+          <field name='desc_ar'>البيع بالتجزئة بالمتاجر المتخصصة فى الاجهزة السمعية والبصرية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4791    -->
+       <record id='4791' model='egtax.activity_type'>
+          <field name='code'>4791</field>
+          <field name='desc_en'>Retail sale via mail requests or through the Internet</field>
+          <field name='desc_ar'>البيع بالتجزئة عبر طلبات البريد او من خلال الانترنت</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4799    -->
+       <record id='4799' model='egtax.activity_type'>
+          <field name='code'>4799</field>
+          <field name='desc_en'>Other types of retail sales that do not take place in stores, kiosks or markets</field>
+          <field name='desc_ar'>انواع البيع بالتجزئةالاخرى التى لاتتم بالنتاجر او الاكشاك او الاسواق</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4911    -->
+       <record id='4911' model='egtax.activity_type'>
+          <field name='code'>4911</field>
+          <field name='desc_en'>Inland passenger transportation</field>
+          <field name='desc_ar'>النقل الداخلى للركاب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4912    -->
+       <record id='4912' model='egtax.activity_type'>
+          <field name='code'>4912</field>
+          <field name='desc_en'>Shipping by rail</field>
+          <field name='desc_ar'>الشحن عن طريق السكك الحديدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4921    -->
+       <record id='4921' model='egtax.activity_type'>
+          <field name='code'>4921</field>
+          <field name='desc_en'>Transporting land passengers outside and inside cities</field>
+          <field name='desc_ar'>نقل الركاب البرى خارج وداخل المدن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4922    -->
+       <record id='4922' model='egtax.activity_type'>
+          <field name='code'>4922</field>
+          <field name='desc_en'>Other types of passenger transport by land</field>
+          <field name='desc_ar'>انواع نقل الركاب البرية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4923    -->
+       <record id='4923' model='egtax.activity_type'>
+          <field name='code'>4923</field>
+          <field name='desc_en'>Land transportation of goods by bus</field>
+          <field name='desc_ar'>النقل البرى للبضائع عن طريق الحافلات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 4930    -->
+       <record id='4930' model='egtax.activity_type'>
+          <field name='code'>4930</field>
+          <field name='desc_en'>Pipeline transportation</field>
+          <field name='desc_ar'>النقل عبر خطوط الانابيب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5011    -->
+       <record id='5011' model='egtax.activity_type'>
+          <field name='code'>5011</field>
+          <field name='desc_en'>Transportation of marine and coastal passengers</field>
+          <field name='desc_ar'>نقل الركاب البحرى والساحلى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5012    -->
+       <record id='5012' model='egtax.activity_type'>
+          <field name='code'>5012</field>
+          <field name='desc_en'>Marine and coastal cargo transportation</field>
+          <field name='desc_ar'>نقل البضائع البحرى والساحلى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5021    -->
+       <record id='5021' model='egtax.activity_type'>
+          <field name='code'>5021</field>
+          <field name='desc_en'>Inland passenger water transport</field>
+          <field name='desc_ar'>النقل الداخلى المائى للركاب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5022    -->
+       <record id='5022' model='egtax.activity_type'>
+          <field name='code'>5022</field>
+          <field name='desc_en'>Inland water transport of goods</field>
+          <field name='desc_ar'>النقل الداخلى المائى للبضائع</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5110    -->
+       <record id='5110' model='egtax.activity_type'>
+          <field name='code'>5110</field>
+          <field name='desc_en'>Air transport of passengers</field>
+          <field name='desc_ar'>النقل الجوى للركاب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5120    -->
+       <record id='5120' model='egtax.activity_type'>
+          <field name='code'>5120</field>
+          <field name='desc_en'>Air freight transport</field>
+          <field name='desc_ar'>النقل الجوى للبضائع</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5210    -->
+       <record id='5210' model='egtax.activity_type'>
+          <field name='code'>5210</field>
+          <field name='desc_en'>Keep and store</field>
+          <field name='desc_ar'>الاحتفاظ والتخزين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5221    -->
+       <record id='5221' model='egtax.activity_type'>
+          <field name='code'>5221</field>
+          <field name='desc_en'>Service activities related to road transport</field>
+          <field name='desc_ar'>انشطة الخدمات المتصلة بالنقل البرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5222    -->
+       <record id='5222' model='egtax.activity_type'>
+          <field name='code'>5222</field>
+          <field name='desc_en'>Emergency service activities related to maritime transport</field>
+          <field name='desc_ar'>انشطة الخدمات الطارئة المتصلة بالنقل البحرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5223    -->
+       <record id='5223' model='egtax.activity_type'>
+          <field name='code'>5223</field>
+          <field name='desc_en'>Emergency service activities related to air transport</field>
+          <field name='desc_ar'>انشطة الخدمات الطارئة المتصلة بالنقل الجوى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5224    -->
+       <record id='5224' model='egtax.activity_type'>
+          <field name='code'>5224</field>
+          <field name='desc_en'>Cargo handling</field>
+          <field name='desc_ar'>مناولة البضائع</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5229    -->
+       <record id='5229' model='egtax.activity_type'>
+          <field name='code'>5229</field>
+          <field name='desc_en'>Other activities in support of the transfer</field>
+          <field name='desc_ar'>الانشطة الاخرى الداعمة للنقل</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5310    -->
+       <record id='5310' model='egtax.activity_type'>
+          <field name='code'>5310</field>
+          <field name='desc_en'>Mail activities</field>
+          <field name='desc_ar'>انشطة البريد</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5320    -->
+       <record id='5320' model='egtax.activity_type'>
+          <field name='code'>5320</field>
+          <field name='desc_en'>Parcel delivery activities</field>
+          <field name='desc_ar'>انشطة تسليم الطرود</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5510    -->
+       <record id='5510' model='egtax.activity_type'>
+          <field name='code'>5510</field>
+          <field name='desc_en'>Short-term placement activities (rental - housing</field>
+          <field name='desc_ar'>انشطة التسكين قصيرة المدة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5520    -->
+       <record id='5520' model='egtax.activity_type'>
+          <field name='code'>5520</field>
+          <field name='desc_en'>Campgrounds, parking lots, and locomotives</field>
+          <field name='desc_ar'>اراضى المخيمات ومواقف مركبات التنزهة والقاطرات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5590    -->
+       <record id='5590' model='egtax.activity_type'>
+          <field name='code'>5590</field>
+          <field name='desc_en'>Other types of placement</field>
+          <field name='desc_ar'>انواع التسكين الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5610    -->
+       <record id='5610' model='egtax.activity_type'>
+          <field name='code'>5610</field>
+          <field name='desc_en'>Restaurant service and food delivery activities by mobile means</field>
+          <field name='desc_ar'>انشطة خدمات المطاعم وتوصيل الطعام بالوسائل المتحركة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5621    -->
+       <record id='5621' model='egtax.activity_type'>
+          <field name='code'>5621</field>
+          <field name='desc_en'>Event catering</field>
+          <field name='desc_ar'>تقديم الطعام بالمناسبات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5629    -->
+       <record id='5629' model='egtax.activity_type'>
+          <field name='code'>5629</field>
+          <field name='desc_en'>Other catering services activities</field>
+          <field name='desc_ar'>انشطة خدمات تقديم الطعام الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5630    -->
+       <record id='5630' model='egtax.activity_type'>
+          <field name='code'>5630</field>
+          <field name='desc_en'>Light beverage service activities</field>
+          <field name='desc_ar'>انشطة خدمات تقديم المشروبات الخفيفة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5811    -->
+       <record id='5811' model='egtax.activity_type'>
+          <field name='code'>5811</field>
+          <field name='desc_en'>Publishing books</field>
+          <field name='desc_ar'>نشر الكتب</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5812    -->
+       <record id='5812' model='egtax.activity_type'>
+          <field name='code'>5812</field>
+          <field name='desc_en'>Publish the directory and address lists</field>
+          <field name='desc_ar'>نشر الدليل وقوائم العناوين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5813    -->
+       <record id='5813' model='egtax.activity_type'>
+          <field name='code'>5813</field>
+          <field name='desc_en'>Publishing newspapers, magazines and periodicals</field>
+          <field name='desc_ar'>نشر الصحف والمجلات والدوريات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5819    -->
+       <record id='5819' model='egtax.activity_type'>
+          <field name='code'>5819</field>
+          <field name='desc_en'>Other publishing activities</field>
+          <field name='desc_ar'>انشطة النشر الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5820    -->
+       <record id='5820' model='egtax.activity_type'>
+          <field name='code'>5820</field>
+          <field name='desc_en'>Computer Software Publishing</field>
+          <field name='desc_ar'>نشر برامج الحاسب الالى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5911    -->
+       <record id='5911' model='egtax.activity_type'>
+          <field name='code'>5911</field>
+          <field name='desc_en'>Film, video and television program production activities</field>
+          <field name='desc_ar'>انشطة انتاج الافلام السينمائية والفيديو وبرامج التليفزيون</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5912    -->
+       <record id='5912' model='egtax.activity_type'>
+          <field name='code'>5912</field>
+          <field name='desc_en'>Subsequent activities for the production of movies, videos and television programs</field>
+          <field name='desc_ar'>الانشطة الاحقة لانتاج الافلام السينمائية والفيديو وبرامج التليفزيون</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5913    -->
+       <record id='5913' model='egtax.activity_type'>
+          <field name='code'>5913</field>
+          <field name='desc_en'>Motion picture, video and television program distribution activities</field>
+          <field name='desc_ar'>انشطة توزيع الافلام السينمائية والفيديو وبرامج التليفزيون</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5914    -->
+       <record id='5914' model='egtax.activity_type'>
+          <field name='code'>5914</field>
+          <field name='desc_en'>Film screening activities</field>
+          <field name='desc_ar'>انشطة عرض الافلام السينمائية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 5920    -->
+       <record id='5920' model='egtax.activity_type'>
+          <field name='code'>5920</field>
+          <field name='desc_en'>Production and publishing of sound and music recordings</field>
+          <field name='desc_ar'>انشطة انتاج ونشر التسجيلات الصوتية والموسيقية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6010    -->
+       <record id='6010' model='egtax.activity_type'>
+          <field name='code'>6010</field>
+          <field name='desc_en'>Broadcasting over radio stations</field>
+          <field name='desc_ar'>البث عبر محطات الراديو</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6020    -->
+       <record id='6020' model='egtax.activity_type'>
+          <field name='code'>6020</field>
+          <field name='desc_en'>Television program preparation and broadcast activities</field>
+          <field name='desc_ar'>انشطة اعداد برامج التليفزيون وبثها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6110    -->
+       <record id='6110' model='egtax.activity_type'>
+          <field name='code'>6110</field>
+          <field name='desc_en'>Wired telecommunications activities</field>
+          <field name='desc_ar'>انشطة الاتصالات السلكية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6120    -->
+       <record id='6120' model='egtax.activity_type'>
+          <field name='code'>6120</field>
+          <field name='desc_en'>Wireless communication activities</field>
+          <field name='desc_ar'>انشطة الاتصالات اللاسلكية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6130    -->
+       <record id='6130' model='egtax.activity_type'>
+          <field name='code'>6130</field>
+          <field name='desc_en'>Satellite communication activities</field>
+          <field name='desc_ar'>انشطة الاتصالات عبر الاقمار الصناعية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6190    -->
+       <record id='6190' model='egtax.activity_type'>
+          <field name='code'>6190</field>
+          <field name='desc_en'>Other telecommunications activities</field>
+          <field name='desc_ar'>انشطة الاتصالات السلكية و اللاسلكية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6201    -->
+       <record id='6201' model='egtax.activity_type'>
+          <field name='code'>6201</field>
+          <field name='desc_en'>Computer program preparation activities</field>
+          <field name='desc_ar'>انشطة اعداد برامج الحاسب الالى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6202    -->
+       <record id='6202' model='egtax.activity_type'>
+          <field name='code'>6202</field>
+          <field name='desc_en'>Computer consultancy experience and facilities management activities related to computer fields</field>
+          <field name='desc_ar'>الخبرة الاستشارية فى مجال الحاسب الالى وانشطة ادارة التسهيلات المتصلة بمجالات الحاسب الالى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6209    -->
+       <record id='6209' model='egtax.activity_type'>
+          <field name='code'>6209</field>
+          <field name='desc_en'>Other activities related to information technology and computer services</field>
+          <field name='desc_ar'>الانشطة الاخرى المتصلة بتكنولوجيا المعلومات وخدمات الحاسب الالى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6311    -->
+       <record id='6311' model='egtax.activity_type'>
+          <field name='code'>6311</field>
+          <field name='desc_en'>Data processing, hosting and related activities</field>
+          <field name='desc_ar'>معالجة البيانات والاستضافة والانشطة المتصلة بذلك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6312    -->
+       <record id='6312' model='egtax.activity_type'>
+          <field name='code'>6312</field>
+          <field name='desc_en'>Electronic portals</field>
+          <field name='desc_ar'>البوابات الاليكترونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6391    -->
+       <record id='6391' model='egtax.activity_type'>
+          <field name='code'>6391</field>
+          <field name='desc_en'>Activities of press agencies</field>
+          <field name='desc_ar'>انشطة الوكالات الصحفية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6399    -->
+       <record id='6399' model='egtax.activity_type'>
+          <field name='code'>6399</field>
+          <field name='desc_en'>Other activities for information services that are not classified in other locations</field>
+          <field name='desc_ar'>الانشطة الاخرى لخدمات تقديم المعلومات غير المصنفة فى مواقع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6411    -->
+       <record id='6411' model='egtax.activity_type'>
+          <field name='code'>6411</field>
+          <field name='desc_en'>Central banks</field>
+          <field name='desc_ar'>المصارف المركزية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6419    -->
+       <record id='6419' model='egtax.activity_type'>
+          <field name='code'>6419</field>
+          <field name='desc_en'>Other financial intermediaries</field>
+          <field name='desc_ar'>الوساطات المالية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6420    -->
+       <record id='6420' model='egtax.activity_type'>
+          <field name='code'>6420</field>
+          <field name='desc_en'>Activities of holding companies</field>
+          <field name='desc_ar'>انشطة الشركات القابضة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6430    -->
+       <record id='6430' model='egtax.activity_type'>
+          <field name='code'>6430</field>
+          <field name='desc_en'>Credit activities, provision of credits, and similar financial entities</field>
+          <field name='desc_ar'>انشطةالائتمان وتوفير الاعتمادات والكيانات المالية المشابهة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6491    -->
+       <record id='6491' model='egtax.activity_type'>
+          <field name='code'>6491</field>
+          <field name='desc_en'>Financial leasing</field>
+          <field name='desc_ar'>التاجير المالى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6492    -->
+       <record id='6492' model='egtax.activity_type'>
+          <field name='code'>6492</field>
+          <field name='desc_en'>Other forms of loans granted</field>
+          <field name='desc_ar'>اشكال القروض الممنوحة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6499    -->
+       <record id='6499' model='egtax.activity_type'>
+          <field name='code'>6499</field>
+          <field name='desc_en'>Other financial services activities, with the exception of insurance and credit provision activities for pensions not classified in other locations</field>
+          <field name='desc_ar'>انشطة الخدمات المالية الاخرى , باستثناء التامين وانشطة توفير الاعتمادات للمعاشات التقاعدية غير المصنفة فى مواقع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6511    -->
+       <record id='6511' model='egtax.activity_type'>
+          <field name='code'>6511</field>
+          <field name='desc_en'>life insurance</field>
+          <field name='desc_ar'>التامين على الحياة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6512    -->
+       <record id='6512' model='egtax.activity_type'>
+          <field name='code'>6512</field>
+          <field name='desc_en'>Non-life insurance</field>
+          <field name='desc_ar'>التامين على غير الحياة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6520    -->
+       <record id='6520' model='egtax.activity_type'>
+          <field name='code'>6520</field>
+          <field name='desc_en'>re Insurance</field>
+          <field name='desc_ar'>اعادة التامين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6530    -->
+       <record id='6530' model='egtax.activity_type'>
+          <field name='code'>6530</field>
+          <field name='desc_en'>Providing credits for pensions</field>
+          <field name='desc_ar'>توفير الاعتمادات للمعاشات التقاعدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6611    -->
+       <record id='6611' model='egtax.activity_type'>
+          <field name='code'>6611</field>
+          <field name='desc_en'>Financial markets management</field>
+          <field name='desc_ar'>ادارة الاسواق المالية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6612    -->
+       <record id='6612' model='egtax.activity_type'>
+          <field name='code'>6612</field>
+          <field name='desc_en'>Security and commodity contracts brokerage</field>
+          <field name='desc_ar'>الامن وسمسرة عقود السلع</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6619    -->
+       <record id='6619' model='egtax.activity_type'>
+          <field name='code'>6619</field>
+          <field name='desc_en'>Auxiliary activities for financial services</field>
+          <field name='desc_ar'>الانشطة المساعدة للخدمات المالية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6621    -->
+       <record id='6621' model='egtax.activity_type'>
+          <field name='code'>6621</field>
+          <field name='desc_en'>Risk and damage assessment</field>
+          <field name='desc_ar'>تقدير المخاطر والتلفيات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6622    -->
+       <record id='6622' model='egtax.activity_type'>
+          <field name='code'>6622</field>
+          <field name='desc_en'>Activities of insurance and brokerage agents</field>
+          <field name='desc_ar'>انشطة وكلاء التامين والسمسرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6629    -->
+       <record id='6629' model='egtax.activity_type'>
+          <field name='code'>6629</field>
+          <field name='desc_en'>Other activities auxiliary to insurance and provision for pensions</field>
+          <field name='desc_ar'>الانشطة الاخرى المساعدة للتامين وتوفير الاعتمادات للمعاشات التقاعدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6630    -->
+       <record id='6630' model='egtax.activity_type'>
+          <field name='code'>6630</field>
+          <field name='desc_en'>Financial credit management activities</field>
+          <field name='desc_ar'>انشطة ادارة الاعتمادات المالية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6810    -->
+       <record id='6810' model='egtax.activity_type'>
+          <field name='code'>6810</field>
+          <field name='desc_en'>Real estate activities with own or leased property</field>
+          <field name='desc_ar'>الانشطة العقارية فى الممتلكات المملوكة او المؤجرة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6820    -->
+       <record id='6820' model='egtax.activity_type'>
+          <field name='code'>6820</field>
+          <field name='desc_en'>Real estate activities on the basis of a contract or a fee</field>
+          <field name='desc_ar'>الانشطة العقارية على اساس عقد او نظير رسم</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6910    -->
+       <record id='6910' model='egtax.activity_type'>
+          <field name='code'>6910</field>
+          <field name='desc_en'>Legal activities</field>
+          <field name='desc_ar'>الانشطة القانونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 6920    -->
+       <record id='6920' model='egtax.activity_type'>
+          <field name='code'>6920</field>
+          <field name='desc_en'>Accounting, auditing, bookkeeping and tax advice activities</field>
+          <field name='desc_ar'>الانشطة المحاسبية والمراجعة ومسك الدفاتر والاستشارات الضرائبية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7010    -->
+       <record id='7010' model='egtax.activity_type'>
+          <field name='code'>7010</field>
+          <field name='desc_en'>The main office activities</field>
+          <field name='desc_ar'>انشطة المكاتب الرئيسية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7020    -->
+       <record id='7020' model='egtax.activity_type'>
+          <field name='code'>7020</field>
+          <field name='desc_en'>Management consultancy activities</field>
+          <field name='desc_ar'>الانشطة الاستشارية الخاصة بالادارة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7110    -->
+       <record id='7110' model='egtax.activity_type'>
+          <field name='code'>7110</field>
+          <field name='desc_en'>Architectural and engineering activities and related technical consulting</field>
+          <field name='desc_ar'>الانشطة المعمارية والهندسية و الاستشارات الفنية المتصلة بذلك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7120    -->
+       <record id='7120' model='egtax.activity_type'>
+          <field name='code'>7120</field>
+          <field name='desc_en'>Technical tests and analyzes</field>
+          <field name='desc_ar'>الاختبارات والتحليلات الفنية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7210    -->
+       <record id='7210' model='egtax.activity_type'>
+          <field name='code'>7210</field>
+          <field name='desc_en'>Research and experimental development in the field of natural and engineering sciences</field>
+          <field name='desc_ar'>البحث والتطوير التجريبى فى مجال العلوم الطبيعية والهندسية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7220    -->
+       <record id='7220' model='egtax.activity_type'>
+          <field name='code'>7220</field>
+          <field name='desc_en'>Experimental research and development in the field of social and human sciences</field>
+          <field name='desc_ar'>البحث والتطوير التجريبى فى مجال العلوم الاجتماعية والانسانية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7310    -->
+       <record id='7310' model='egtax.activity_type'>
+          <field name='code'>7310</field>
+          <field name='desc_en'>Advertising</field>
+          <field name='desc_ar'>الاعلان</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7320    -->
+       <record id='7320' model='egtax.activity_type'>
+          <field name='code'>7320</field>
+          <field name='desc_en'>Market studies and public opinion polls</field>
+          <field name='desc_ar'>دراسات السوق واستطلاعات الراى العام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7410    -->
+       <record id='7410' model='egtax.activity_type'>
+          <field name='code'>7410</field>
+          <field name='desc_en'>Specialized design activities</field>
+          <field name='desc_ar'>انشطة التصميمات المتخصصة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7420    -->
+       <record id='7420' model='egtax.activity_type'>
+          <field name='code'>7420</field>
+          <field name='desc_en'>Photographic activities</field>
+          <field name='desc_ar'>الانشطة الفوتوغرافية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7490    -->
+       <record id='7490' model='egtax.activity_type'>
+          <field name='code'>7490</field>
+          <field name='desc_en'>Other specialized, scientific and artistic activities not classified elsewhere</field>
+          <field name='desc_ar'>الانشطة الاخرى التخصصية والعلمية والفنية غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7500    -->
+       <record id='7500' model='egtax.activity_type'>
+          <field name='code'>7500</field>
+          <field name='desc_en'>Veterinary activities</field>
+          <field name='desc_ar'>الانشطة البيطرية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7710    -->
+       <record id='7710' model='egtax.activity_type'>
+          <field name='code'>7710</field>
+          <field name='desc_en'>Renting motor vehicles</field>
+          <field name='desc_ar'>تاجيرواستئجار المركبات ذات المحركات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7721    -->
+       <record id='7721' model='egtax.activity_type'>
+          <field name='code'>7721</field>
+          <field name='desc_en'>Renting and renting sports and leisure products and tools</field>
+          <field name='desc_ar'>تاجير واستئجار منتجات والادوات الرياضية والترفيهية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7722    -->
+       <record id='7722' model='egtax.activity_type'>
+          <field name='code'>7722</field>
+          <field name='desc_en'>Rental of video tapes and CDs</field>
+          <field name='desc_ar'>تاجير شرائط واسطوانات الفيديو</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7729    -->
+       <record id='7729' model='egtax.activity_type'>
+          <field name='code'>7729</field>
+          <field name='desc_en'>Renting and renting other personal and household products</field>
+          <field name='desc_ar'>تاجيرواستئجار المنتجات الشخصية والمنزلية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7730    -->
+       <record id='7730' model='egtax.activity_type'>
+          <field name='code'>7730</field>
+          <field name='desc_en'>Renting and leasing of other physical devices and equipment</field>
+          <field name='desc_ar'>تاجير واستئجار الاجهزة والمعدات المادية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7740    -->
+       <record id='7740' model='egtax.activity_type'>
+          <field name='code'>7740</field>
+          <field name='desc_en'>Rent forms of intellectual property and similar products, except for copyright works</field>
+          <field name='desc_ar'>استئجار اشكال الملكية الفكرية والمنتجات المشابهة باستثناء اعمال حقوق المؤلف</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7810    -->
+       <record id='7810' model='egtax.activity_type'>
+          <field name='code'>7810</field>
+          <field name='desc_en'>Activities of recruitment and appointment agencies</field>
+          <field name='desc_ar'>انشطة وكالات التوظيف والتعيين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7820    -->
+       <record id='7820' model='egtax.activity_type'>
+          <field name='code'>7820</field>
+          <field name='desc_en'>Activities of temporary employment agencies</field>
+          <field name='desc_ar'>انشطة وكالات التوظيف المؤقت</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7830    -->
+       <record id='7830' model='egtax.activity_type'>
+          <field name='code'>7830</field>
+          <field name='desc_en'>Providing other human resources</field>
+          <field name='desc_ar'>توفير المصادر البشرية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7911    -->
+       <record id='7911' model='egtax.activity_type'>
+          <field name='code'>7911</field>
+          <field name='desc_en'>Tourism agency services</field>
+          <field name='desc_ar'>خدمات وكالات السياحة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7912    -->
+       <record id='7912' model='egtax.activity_type'>
+          <field name='code'>7912</field>
+          <field name='desc_en'>Activities of tour guides</field>
+          <field name='desc_ar'>انشطة المرشدين السياحيين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 7990    -->
+       <record id='7990' model='egtax.activity_type'>
+          <field name='code'>7990</field>
+          <field name='desc_en'>Other types of reservations and related activities</field>
+          <field name='desc_ar'>انواع الحجوزات الاخرى والانشط المتصلة بذلك</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8010    -->
+       <record id='8010' model='egtax.activity_type'>
+          <field name='code'>8010</field>
+          <field name='desc_en'>Private security activities</field>
+          <field name='desc_ar'>انشطة الامن الخاص</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8020    -->
+       <record id='8020' model='egtax.activity_type'>
+          <field name='code'>8020</field>
+          <field name='desc_en'>Security systems services activities</field>
+          <field name='desc_ar'>انشطة خدمات انظمة الامن</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8030    -->
+       <record id='8030' model='egtax.activity_type'>
+          <field name='code'>8030</field>
+          <field name='desc_en'>Investigation activities</field>
+          <field name='desc_ar'>انشطة التحرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8110    -->
+       <record id='8110' model='egtax.activity_type'>
+          <field name='code'>8110</field>
+          <field name='desc_en'>Support activities for joint facilities</field>
+          <field name='desc_ar'>انشطة دعم التسهيلات المشتركة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8121    -->
+       <record id='8121' model='egtax.activity_type'>
+          <field name='code'>8121</field>
+          <field name='desc_en'>General cleaning of buildings</field>
+          <field name='desc_ar'>النظافة العامة للمبانى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8129    -->
+       <record id='8129' model='egtax.activity_type'>
+          <field name='code'>8129</field>
+          <field name='desc_en'>Building cleaning activities and other industrial facilities</field>
+          <field name='desc_ar'>انشطة تنظيف المبانى والمنشات الصناعية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8130    -->
+       <record id='8130' model='egtax.activity_type'>
+          <field name='code'>8130</field>
+          <field name='desc_en'>Gardening services and maintenance activities</field>
+          <field name='desc_ar'>انشطة خدمات رعاية وصيانة الحدائق</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8211    -->
+       <record id='8211' model='egtax.activity_type'>
+          <field name='code'>8211</field>
+          <field name='desc_en'>Joint office support services activities</field>
+          <field name='desc_ar'>انشطة خدمات الدعم المكتبية المشتركة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8219    -->
+       <record id='8219' model='egtax.activity_type'>
+          <field name='code'>8219</field>
+          <field name='desc_en'>Photocopying, document processing and other specialized office support services activities</field>
+          <field name='desc_ar'>النسخ وتجهيز المستندات وانشطة خدمات الدعم المكتبية المتخصصة الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8220    -->
+       <record id='8220' model='egtax.activity_type'>
+          <field name='code'>8220</field>
+          <field name='desc_en'>Information center services</field>
+          <field name='desc_ar'>خدمات مراكز الاستعلامات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8230    -->
+       <record id='8230' model='egtax.activity_type'>
+          <field name='code'>8230</field>
+          <field name='desc_en'>Organizing trade conferences and exhibitions</field>
+          <field name='desc_ar'>تنظيم المؤتمرات والمعارض التجارية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8291    -->
+       <record id='8291' model='egtax.activity_type'>
+          <field name='code'>8291</field>
+          <field name='desc_en'>Activities of collection agencies and lending offices</field>
+          <field name='desc_ar'>انشطة وكالات التحصيل ومكاتب الاقراض</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8292    -->
+       <record id='8292' model='egtax.activity_type'>
+          <field name='code'>8292</field>
+          <field name='desc_en'>Packaging activities</field>
+          <field name='desc_ar'>انشطة التغليف</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8299    -->
+       <record id='8299' model='egtax.activity_type'>
+          <field name='code'>8299</field>
+          <field name='desc_en'>Other support services activities that are not classified in other locations</field>
+          <field name='desc_ar'>انشطة خدمات الدعم الاخرى الخاصة بالاعمال التجارية غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8411    -->
+       <record id='8411' model='egtax.activity_type'>
+          <field name='code'>8411</field>
+          <field name='desc_en'>Public administration activities</field>
+          <field name='desc_ar'>انشطة الادارات العامة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8412    -->
+       <record id='8412' model='egtax.activity_type'>
+          <field name='code'>8412</field>
+          <field name='desc_en'>Organizing activities to provide health care, education, educational services and other social services, with the exception of social security</field>
+          <field name='desc_ar'>تنظيم انشطة تقديم العناية الصحية والتعليم والخدمات التثقيفية والخدمات الاجتماعية الاخرى باستثناء الضمان الاجتماعى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8413    -->
+       <record id='8413' model='egtax.activity_type'>
+          <field name='code'>8413</field>
+          <field name='desc_en'>Organize and contribute to effective business operations</field>
+          <field name='desc_ar'>تنظيم والمساهمة فى عمليات الاعمال التجارية الفعالة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8421    -->
+       <record id='8421' model='egtax.activity_type'>
+          <field name='code'>8421</field>
+          <field name='desc_en'>Foreign affairs</field>
+          <field name='desc_ar'>الشئون الخارجية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8422    -->
+       <record id='8422' model='egtax.activity_type'>
+          <field name='code'>8422</field>
+          <field name='desc_en'>Defense activities</field>
+          <field name='desc_ar'>انشطة الدفاع</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8423    -->
+       <record id='8423' model='egtax.activity_type'>
+          <field name='code'>8423</field>
+          <field name='desc_en'>Security and public order activities</field>
+          <field name='desc_ar'>انشطة الامن والنظام العام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8430    -->
+       <record id='8430' model='egtax.activity_type'>
+          <field name='code'>8430</field>
+          <field name='desc_en'>Compulsory social insurance activities</field>
+          <field name='desc_ar'>انشطة التامين الاجتماعى الاجبارى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8510    -->
+       <record id='8510' model='egtax.activity_type'>
+          <field name='code'>8510</field>
+          <field name='desc_en'>Primary and pre-primary education</field>
+          <field name='desc_ar'>التعليم الابتدائى وقبل الابتدائى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8521    -->
+       <record id='8521' model='egtax.activity_type'>
+          <field name='code'>8521</field>
+          <field name='desc_en'>General secondary education</field>
+          <field name='desc_ar'>التعليم الثانوى العام</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8522    -->
+       <record id='8522' model='egtax.activity_type'>
+          <field name='code'>8522</field>
+          <field name='desc_en'>Technical and vocational secondary education</field>
+          <field name='desc_ar'>التعليم الثانوى الفنى والهنى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8530    -->
+       <record id='8530' model='egtax.activity_type'>
+          <field name='code'>8530</field>
+          <field name='desc_en'>Higher Education</field>
+          <field name='desc_ar'>التعليم العالى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8541    -->
+       <record id='8541' model='egtax.activity_type'>
+          <field name='code'>8541</field>
+          <field name='desc_en'>Sports and rehabilitation education</field>
+          <field name='desc_ar'>التعليم الرياضى والتاهيلى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8542    -->
+       <record id='8542' model='egtax.activity_type'>
+          <field name='code'>8542</field>
+          <field name='desc_en'>Cultural education</field>
+          <field name='desc_ar'>التعليم الثقافى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8549    -->
+       <record id='8549' model='egtax.activity_type'>
+          <field name='code'>8549</field>
+          <field name='desc_en'>Other types of education not classified elsewhere</field>
+          <field name='desc_ar'>انواع التعليم الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8550    -->
+       <record id='8550' model='egtax.activity_type'>
+          <field name='code'>8550</field>
+          <field name='desc_en'>Activities in support of education</field>
+          <field name='desc_ar'>الانشطة الداعمة للتعليم</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8610    -->
+       <record id='8610' model='egtax.activity_type'>
+          <field name='code'>8610</field>
+          <field name='desc_en'>Hospital activities</field>
+          <field name='desc_ar'>انشطة المستشفيات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8620    -->
+       <record id='8620' model='egtax.activity_type'>
+          <field name='code'>8620</field>
+          <field name='desc_en'>Activities related to medicine and dentistry</field>
+          <field name='desc_ar'>الانشطة المتصلة بالطب وطب الاسنان</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8690    -->
+       <record id='8690' model='egtax.activity_type'>
+          <field name='code'>8690</field>
+          <field name='desc_en'>Other activities related to human health</field>
+          <field name='desc_ar'>الانشطة الاخرى المتصلة بصحة الانسان</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8710    -->
+       <record id='8710' model='egtax.activity_type'>
+          <field name='code'>8710</field>
+          <field name='desc_en'>Nursing facilities for sanatoriums</field>
+          <field name='desc_ar'>تسهيلات العناية بالتمريض بالمصحات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8720    -->
+       <record id='8720' model='egtax.activity_type'>
+          <field name='code'>8720</field>
+          <field name='desc_en'>Nursing care facilities for special needs clinics, mental illnesses and physical abuse</field>
+          <field name='desc_ar'>تسهيلات العناية بالتمريض بالمصحات الخاصة بذوى الاحتياجات الخاصة والامراض العقلية والانتهاكات البدنية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8730    -->
+       <record id='8730' model='egtax.activity_type'>
+          <field name='code'>8730</field>
+          <field name='desc_en'>Spa facilities for the elderly and disabled</field>
+          <field name='desc_ar'>تسهيلات العناية بالمصحات الخاصة بالعجائز والمقعدين</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8790    -->
+       <record id='8790' model='egtax.activity_type'>
+          <field name='code'>8790</field>
+          <field name='desc_en'>Other spa care facilities</field>
+          <field name='desc_ar'>تسهيلات العناية الاخرى بالمصحات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8810    -->
+       <record id='8810' model='egtax.activity_type'>
+          <field name='code'>8810</field>
+          <field name='desc_en'>Social work activities for the infirm and disabled that take place without accommodation</field>
+          <field name='desc_ar'>انشطة الاعمال الاجتماعية للعجزة والمقعدين التى تتم بدون اقامة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 8890    -->
+       <record id='8890' model='egtax.activity_type'>
+          <field name='code'>8890</field>
+          <field name='desc_en'>Other social business activities that take place without residence</field>
+          <field name='desc_ar'>انشطة الاعمال الاجتماعية الاخرى التى تتم بدون اقامة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9000    -->
+       <record id='9000' model='egtax.activity_type'>
+          <field name='code'>9000</field>
+          <field name='desc_en'>Creative and recreational art activities</field>
+          <field name='desc_ar'>انشطة الفن الابداعى والترفية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9101    -->
+       <record id='9101' model='egtax.activity_type'>
+          <field name='code'>9101</field>
+          <field name='desc_en'>Library and archive activities</field>
+          <field name='desc_ar'>انشطة المكتبات والارشيف</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9102    -->
+       <record id='9102' model='egtax.activity_type'>
+          <field name='code'>9102</field>
+          <field name='desc_en'>Museum activities and restoration of historic sites and buildings</field>
+          <field name='desc_ar'>انشطة المتاحف وعمليات ترميم المواقع والمبانى التاريخية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9103    -->
+       <record id='9103' model='egtax.activity_type'>
+          <field name='code'>9103</field>
+          <field name='desc_en'>Botanical and zoological gardens and natural wildlife activities</field>
+          <field name='desc_ar'>حدائق النباتات والحيوانات وانشطة الحياة البرية الطبيعية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9200    -->
+       <record id='9200' model='egtax.activity_type'>
+          <field name='code'>9200</field>
+          <field name='desc_en'>Betting activities and gambling</field>
+          <field name='desc_ar'>انشطة المراهنات والعاب القمار</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9311    -->
+       <record id='9311' model='egtax.activity_type'>
+          <field name='code'>9311</field>
+          <field name='desc_en'>Providing sports facilities</field>
+          <field name='desc_ar'>توفير التسهيلات الرياضية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9312    -->
+       <record id='9312' model='egtax.activity_type'>
+          <field name='code'>9312</field>
+          <field name='desc_en'>Sports club activities</field>
+          <field name='desc_ar'>انشطة النوادى الرياضية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9319    -->
+       <record id='9319' model='egtax.activity_type'>
+          <field name='code'>9319</field>
+          <field name='desc_en'>Other sports activities</field>
+          <field name='desc_ar'>الانشطة الرياضية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9321    -->
+       <record id='9321' model='egtax.activity_type'>
+          <field name='code'>9321</field>
+          <field name='desc_en'>Recreational activities and performances in parks</field>
+          <field name='desc_ar'>الانشطة الترفيهية والعروض التى تتم بالمتنزهات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9329    -->
+       <record id='9329' model='egtax.activity_type'>
+          <field name='code'>9329</field>
+          <field name='desc_en'>Other leisure and entertainment activities not classified elsewhere</field>
+          <field name='desc_ar'>الانشطة الترفيهية والمسلية الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9411    -->
+       <record id='9411' model='egtax.activity_type'>
+          <field name='code'>9411</field>
+          <field name='desc_en'>The activities of commercial enterprises, employers and professional membership organizations</field>
+          <field name='desc_ar'>انشطة المؤسسات التجارية وارباب العمل ومنظمات العضوية المهنية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9412    -->
+       <record id='9412' model='egtax.activity_type'>
+          <field name='code'>9412</field>
+          <field name='desc_en'>Activities of professional membership organizations</field>
+          <field name='desc_ar'>انشطة منظمات العضوية المهنية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9420    -->
+       <record id='9420' model='egtax.activity_type'>
+          <field name='code'>9420</field>
+          <field name='desc_en'>Trade union activities</field>
+          <field name='desc_ar'>انشطة النقابات التجارية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9491    -->
+       <record id='9491' model='egtax.activity_type'>
+          <field name='code'>9491</field>
+          <field name='desc_en'>Activities of religious organizations</field>
+          <field name='desc_ar'>انشطة المنظمات الدينية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9492    -->
+       <record id='9492' model='egtax.activity_type'>
+          <field name='code'>9492</field>
+          <field name='desc_en'>Activities of political organizations</field>
+          <field name='desc_ar'>انشطة المنظمات السياسية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9499    -->
+       <record id='9499' model='egtax.activity_type'>
+          <field name='code'>9499</field>
+          <field name='desc_en'>Activities of other membership organizations not classified elsewhere</field>
+          <field name='desc_ar'>انشطة المنظمات الاخرى ذات العضوية غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9511    -->
+       <record id='9511' model='egtax.activity_type'>
+          <field name='code'>9511</field>
+          <field name='desc_en'>Computer repair and accessories</field>
+          <field name='desc_ar'>اصلاح الحاسبات الالية ومستلزماتها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9512    -->
+       <record id='9512' model='egtax.activity_type'>
+          <field name='code'>9512</field>
+          <field name='desc_en'>Communication equipment repair</field>
+          <field name='desc_ar'>اصلاح اجهزة الاتصالات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9521    -->
+       <record id='9521' model='egtax.activity_type'>
+          <field name='code'>9521</field>
+          <field name='desc_en'>Electronic devices repair</field>
+          <field name='desc_ar'>اصلاح الاجهزة الاليكترونية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9522    -->
+       <record id='9522' model='egtax.activity_type'>
+          <field name='code'>9522</field>
+          <field name='desc_en'>Repair of tools, household appliances, and garden care equipment</field>
+          <field name='desc_ar'>اصلاح الادوات والاجهزة المنزلية ومعدات العناية بالحدائق</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9523    -->
+       <record id='9523' model='egtax.activity_type'>
+          <field name='code'>9523</field>
+          <field name='desc_en'>Shoe and leather products repair</field>
+          <field name='desc_ar'>اصلاح الاحذية والمنتجات الجلدية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9524    -->
+       <record id='9524' model='egtax.activity_type'>
+          <field name='code'>9524</field>
+          <field name='desc_en'>Repair of furniture and household items</field>
+          <field name='desc_ar'>اصلاح الاثاث والمستلزمات المنزلية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9529    -->
+       <record id='9529' model='egtax.activity_type'>
+          <field name='code'>9529</field>
+          <field name='desc_en'>Repair of other household and personal products</field>
+          <field name='desc_ar'>اصلاح المنتجات المنزلية والشخصية الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9601    -->
+       <record id='9601' model='egtax.activity_type'>
+          <field name='code'>9601</field>
+          <field name='desc_en'>Wash and clean textile and fur products</field>
+          <field name='desc_ar'>غسيل المنسوجات والمنتجات الفرائية وتنظيفها تنظيفا جافا</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9602    -->
+       <record id='9602' model='egtax.activity_type'>
+          <field name='code'>9602</field>
+          <field name='desc_en'>Hair styling and other cosmetics</field>
+          <field name='desc_ar'>تصفيف الشعر وانواع التجميل الاخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9603    -->
+       <record id='9603' model='egtax.activity_type'>
+          <field name='code'>9603</field>
+          <field name='desc_en'>Funeral and related activities</field>
+          <field name='desc_ar'>انشطة الجنائز وما يتصل بها</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9609    -->
+       <record id='9609' model='egtax.activity_type'>
+          <field name='code'>9609</field>
+          <field name='desc_en'>Other personal services activities not classified elsewhere</field>
+          <field name='desc_ar'>انشطة الخدمات الشخصية الاخرى غير المصنفة فى مواضع اخرى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9700    -->
+       <record id='9700' model='egtax.activity_type'>
+          <field name='code'>9700</field>
+          <field name='desc_en'>Home employment activities</field>
+          <field name='desc_ar'>انشطة توظيف العمالة المنزلية</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9810    -->
+       <record id='9810' model='egtax.activity_type'>
+          <field name='code'>9810</field>
+          <field name='desc_en'>Activities of producing unearthed products and services for home appliances for personal use</field>
+          <field name='desc_ar'>انشطة انتاج المنتجات والخدمات غير المتميزة الخاصة بالاجهزة المنزلية للاستخدام الشخصى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9820    -->
+       <record id='9820' model='egtax.activity_type'>
+          <field name='code'>9820</field>
+          <field name='desc_en'>Activities of producing unearthed products and services for home appliances for personal use</field>
+          <field name='desc_ar'>انشطة انتاج المنتجات والخدمات غير المتميزة الخاصة بالاجهزة المنزلية للاستخدام الشخصى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record 9900    -->
+       <record id='9900' model='egtax.activity_type'>
+          <field name='code'>9900</field>
+          <field name='desc_en'>Activities of non-regional organizations and bodies</field>
+          <field name='desc_ar'>انشطة المنظمات والهيئات غير الاقليمية</field>
+          <!--todo_add_field-->
+       </record>
+
+     </data>
+</odoo>
+

@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <data noupdate="0">
+
+
+        <record id="egtax_cat_2Z" model="uom.category">
+            <field name="name">egtax Millivolt ( mV )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="2Z" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_2Z"/>
+            <field name="name">Millivolt ( mV )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">2Z</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_4K" model="uom.category">
+            <field name="name">egtax Milliampere ( mA )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="4K" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_4K"/>
+            <field name="name">Milliampere ( mA )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">4K</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_4O" model="uom.category">
+            <field name="name">egtax Microfarad ( microF )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="4O" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_4O"/>
+            <field name="name">Microfarad ( microF )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">4O</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_A87" model="uom.category">
+            <field name="name">egtax Gigaohm ( GOhm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="A87" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_A87"/>
+            <field name="name">Gigaohm ( GOhm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">A87</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_A93" model="uom.category">
+            <field name="name">egtax Gram/Cubic meter ( g/m3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="A93" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_A93"/>
+            <field name="name">Gram/Cubic meter ( g/m3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">A93</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_A94" model="uom.category">
+            <field name="name">egtax Gram/cubic centimeter ( g/cm3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="A94" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_A94"/>
+            <field name="name">Gram/cubic centimeter ( g/cm3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">A94</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_AMP" model="uom.category">
+            <field name="name">egtax Ampere ( A )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="AMP" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_AMP"/>
+            <field name="name">Ampere ( A )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">AMP</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_ANN" model="uom.category">
+            <field name="name">egtax Years ( yr )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="ANN" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_ANN"/>
+            <field name="name">Years ( yr )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">ANN</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_B22" model="uom.category">
+            <field name="name">egtax Kiloampere ( kA )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="B22" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_B22"/>
+            <field name="name">Kiloampere ( kA )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">B22</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_B49" model="uom.category">
+            <field name="name">egtax Kiloohm ( kOhm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="B49" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_B49"/>
+            <field name="name">Kiloohm ( kOhm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">B49</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_B75" model="uom.category">
+            <field name="name">egtax Megohm ( MOhm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="B75" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_B75"/>
+            <field name="name">Megohm ( MOhm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">B75</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_B78" model="uom.category">
+            <field name="name">egtax Megavolt ( MV )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="B78" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_B78"/>
+            <field name="name">Megavolt ( MV )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">B78</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_B84" model="uom.category">
+            <field name="name">egtax Microampere ( microA )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="B84" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_B84"/>
+            <field name="name">Microampere ( microA )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">B84</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_BAR" model="uom.category">
+            <field name="name">egtax bar ( bar )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="BAR" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_BAR"/>
+            <field name="name">bar ( bar )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">BAR</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_BG" model="uom.category">
+            <field name="name">egtax Bag ( Bag )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="BG" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_BG"/>
+            <field name="name">Bag ( Bag )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">BG</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_BO" model="uom.category">
+            <field name="name">egtax Bottle ( Bt. )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="BO" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_BO"/>
+            <field name="name">Bottle ( Bt. )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">BO</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_C10" model="uom.category">
+            <field name="name">egtax Millifarad ( mF )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="C10" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_C10"/>
+            <field name="name">Millifarad ( mF )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">C10</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_C39" model="uom.category">
+            <field name="name">egtax Nanoampere ( nA )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="C39" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_C39"/>
+            <field name="name">Nanoampere ( nA )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">C39</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_C41" model="uom.category">
+            <field name="name">egtax Nanofarad ( nF )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="C41" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_C41"/>
+            <field name="name">Nanofarad ( nF )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">C41</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_C45" model="uom.category">
+            <field name="name">egtax Nanometer ( nm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="C45" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_C45"/>
+            <field name="name">Nanometer ( nm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">C45</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_C62" model="uom.category">
+            <field name="name">egtax Activity unit ( AU )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="C62" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_C62"/>
+            <field name="name">Activity unit ( AU )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">C62</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CA" model="uom.category">
+            <field name="name">egtax Canister ( Can )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CA" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CA"/>
+            <field name="name">Canister ( Can )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CA</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CMK" model="uom.category">
+            <field name="name">egtax Square centimeter ( cm2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CMK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CMK"/>
+            <field name="name">Square centimeter ( cm2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CMK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CMQ" model="uom.category">
+            <field name="name">egtax Cubic centimeter ( cm3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CMQ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CMQ"/>
+            <field name="name">Cubic centimeter ( cm3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CMQ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CMT" model="uom.category">
+            <field name="name">egtax Centimeter ( cm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CMT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CMT"/>
+            <field name="name">Centimeter ( cm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CMT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CS" model="uom.category">
+            <field name="name">egtax Case ( Case )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CS" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CS"/>
+            <field name="name">Case ( Case )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CS</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CT" model="uom.category">
+            <field name="name">egtax Carton ( Car )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CT"/>
+            <field name="name">Carton ( Car )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_CTL" model="uom.category">
+            <field name="name">egtax Centiliter ( Cl )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="CTL" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_CTL"/>
+            <field name="name">Centiliter ( Cl )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">CTL</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_D10" model="uom.category">
+            <field name="name">egtax Siemens per meter ( S/m )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="D10" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_D10"/>
+            <field name="name">Siemens per meter ( S/m )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">D10</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_D33" model="uom.category">
+            <field name="name">egtax Tesla ( D )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="D33" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_D33"/>
+            <field name="name">Tesla ( D )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">D33</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_D41" model="uom.category">
+            <field name="name">egtax Ton/Cubic meter ( t/m3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="D41" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_D41"/>
+            <field name="name">Ton/Cubic meter ( t/m3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">D41</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_DAY" model="uom.category">
+            <field name="name">egtax Days ( d )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="DAY" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_DAY"/>
+            <field name="name">Days ( d )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">DAY</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_DMT" model="uom.category">
+            <field name="name">egtax Decimeter ( dm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="DMT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_DMT"/>
+            <field name="name">Decimeter ( dm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">DMT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_EA" model="uom.category">
+            <field name="name">egtax each (ST) ( ST )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="EA" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_EA"/>
+            <field name="name">each (ST) ( ST )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">EA</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_FAR" model="uom.category">
+            <field name="name">egtax Farad ( F )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="FAR" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_FAR"/>
+            <field name="name">Farad ( F )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">FAR</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_FOT" model="uom.category">
+            <field name="name">egtax Foot ( Foot )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="FOT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_FOT"/>
+            <field name="name">Foot ( Foot )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">FOT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_FTK" model="uom.category">
+            <field name="name">egtax Square foot ( ft2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="FTK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_FTK"/>
+            <field name="name">Square foot ( ft2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">FTK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_FTQ" model="uom.category">
+            <field name="name">egtax Cubic foot ( ft3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="FTQ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_FTQ"/>
+            <field name="name">Cubic foot ( ft3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">FTQ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_G42" model="uom.category">
+            <field name="name">egtax Microsiemens per centimeter ( microS/cm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="G42" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_G42"/>
+            <field name="name">Microsiemens per centimeter ( microS/cm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">G42</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_GL" model="uom.category">
+            <field name="name">egtax Gram/liter ( g/l )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="GL" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_GL"/>
+            <field name="name">Gram/liter ( g/l )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">GL</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_GLL" model="uom.category">
+            <field name="name">egtax gallon ( gal )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="GLL" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_GLL"/>
+            <field name="name">gallon ( gal )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">GLL</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_GM" model="uom.category">
+            <field name="name">egtax Gram/square meter ( g/m2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="GM" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_GM"/>
+            <field name="name">Gram/square meter ( g/m2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">GM</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_GRM" model="uom.category">
+            <field name="name">egtax Gram ( g )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="GRM" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_GRM"/>
+            <field name="name">Gram ( g )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">GRM</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_H63" model="uom.category">
+            <field name="name">egtax Milligram/Square centimeter ( mg/cm2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="H63" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_H63"/>
+            <field name="name">Milligram/Square centimeter ( mg/cm2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">H63</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_HLT" model="uom.category">
+            <field name="name">egtax Hectoliter ( hl )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="HLT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_HLT"/>
+            <field name="name">Hectoliter ( hl )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">HLT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_HTZ" model="uom.category">
+            <field name="name">egtax Hertz (1/second) ( Hz )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="HTZ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_HTZ"/>
+            <field name="name">Hertz (1/second) ( Hz )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">HTZ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_HUR" model="uom.category">
+            <field name="name">egtax Hours ( hrs )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="HUR" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_HUR"/>
+            <field name="name">Hours ( hrs )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">HUR</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_IE" model="uom.category">
+            <field name="name">egtax Number of Persons ( PRS )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="IE" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_IE"/>
+            <field name="name">Number of Persons ( PRS )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">IE</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_INH" model="uom.category">
+            <field name="name">egtax Inch ( “” )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="INH" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_INH"/>
+            <field name="name">Inch ( “” )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">INH</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_INK" model="uom.category">
+            <field name="name">egtax Square inch ( Inch2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="INK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_INK"/>
+            <field name="name">Square inch ( Inch2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">INK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KGM" model="uom.category">
+            <field name="name">egtax Kilogram ( KG )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KGM" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KGM"/>
+            <field name="name">Kilogram ( KG )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KGM</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KHZ" model="uom.category">
+            <field name="name">egtax Kilohertz ( kHz )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KHZ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KHZ"/>
+            <field name="name">Kilohertz ( kHz )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KHZ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KMH" model="uom.category">
+            <field name="name">egtax Kilometer/hour ( km/h )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KMH" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KMH"/>
+            <field name="name">Kilometer/hour ( km/h )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KMH</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KMK" model="uom.category">
+            <field name="name">egtax Square kilometer ( km2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KMK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KMK"/>
+            <field name="name">Square kilometer ( km2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KMK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KMQ" model="uom.category">
+            <field name="name">egtax Kilogram/cubic meter ( kg/m3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KMQ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KMQ"/>
+            <field name="name">Kilogram/cubic meter ( kg/m3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KMQ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KMT" model="uom.category">
+            <field name="name">egtax Kilometer ( km )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KMT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KMT"/>
+            <field name="name">Kilometer ( km )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KMT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KSM" model="uom.category">
+            <field name="name">egtax Kilogram/Square meter ( kg/m2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KSM" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KSM"/>
+            <field name="name">Kilogram/Square meter ( kg/m2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KSM</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KVT" model="uom.category">
+            <field name="name">egtax Kilovolt ( kV )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KVT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KVT"/>
+            <field name="name">Kilovolt ( kV )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KVT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_KWT" model="uom.category">
+            <field name="name">egtax Kilowatt ( KW )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="KWT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_KWT"/>
+            <field name="name">Kilowatt ( KW )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">KWT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_LTR" model="uom.category">
+            <field name="name">egtax Liter ( l )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="LTR" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_LTR"/>
+            <field name="name">Liter ( l )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">LTR</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_M" model="uom.category">
+            <field name="name">egtax Meter ( m )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="M" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_M"/>
+            <field name="name">Meter ( m )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">M</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MAW" model="uom.category">
+            <field name="name">egtax Megawatt ( VA )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MAW" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MAW"/>
+            <field name="name">Megawatt ( VA )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MAW</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MGM" model="uom.category">
+            <field name="name">egtax Milligram ( mg )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MGM" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MGM"/>
+            <field name="name">Milligram ( mg )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MGM</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MHZ" model="uom.category">
+            <field name="name">egtax Megahertz ( MHz )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MHZ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MHZ"/>
+            <field name="name">Megahertz ( MHz )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MHZ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MIN" model="uom.category">
+            <field name="name">egtax Minute ( min )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MIN" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MIN"/>
+            <field name="name">Minute ( min )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MIN</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MMK" model="uom.category">
+            <field name="name">egtax Square millimeter ( mm2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MMK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MMK"/>
+            <field name="name">Square millimeter ( mm2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MMK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MMQ" model="uom.category">
+            <field name="name">egtax Cubic millimeter ( mm3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MMQ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MMQ"/>
+            <field name="name">Cubic millimeter ( mm3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MMQ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MMT" model="uom.category">
+            <field name="name">egtax Millimeter ( mm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MMT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MMT"/>
+            <field name="name">Millimeter ( mm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MMT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MON" model="uom.category">
+            <field name="name">egtax Months ( Months )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MON" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MON"/>
+            <field name="name">Months ( Months )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MON</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MTK" model="uom.category">
+            <field name="name">egtax Square meter ( m2 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MTK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MTK"/>
+            <field name="name">Square meter ( m2 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MTK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_MTQ" model="uom.category">
+            <field name="name">egtax Cubic meter ( m3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="MTQ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_MTQ"/>
+            <field name="name">Cubic meter ( m3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">MTQ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_OHM" model="uom.category">
+            <field name="name">egtax Ohm ( Ohm )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="OHM" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_OHM"/>
+            <field name="name">Ohm ( Ohm )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">OHM</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_ONZ" model="uom.category">
+            <field name="name">egtax Ounce ( oz )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="ONZ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_ONZ"/>
+            <field name="name">Ounce ( oz )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">ONZ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_PAL" model="uom.category">
+            <field name="name">egtax Pascal ( Pa )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="PAL" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_PAL"/>
+            <field name="name">Pascal ( Pa )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">PAL</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_PF" model="uom.category">
+            <field name="name">egtax Pallet ( PAL )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="PF" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_PF"/>
+            <field name="name">Pallet ( PAL )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">PF</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_PK" model="uom.category">
+            <field name="name">egtax Pack ( PAK )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="PK" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_PK"/>
+            <field name="name">Pack ( PAK )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">PK</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_SH" model="uom.category">
+            <field name="name">egtax Shrink ( Shrink )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="SH" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_SH"/>
+            <field name="name">Shrink ( Shrink )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">SH</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_SMI" model="uom.category">
+            <field name="name">egtax Mile ( mile )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="SMI" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_SMI"/>
+            <field name="name">Mile ( mile )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">SMI</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_TNE" model="uom.category">
+            <field name="name">egtax Tonne ( t )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="TNE" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_TNE"/>
+            <field name="name">Tonne ( t )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">TNE</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_VLT" model="uom.category">
+            <field name="name">egtax Volt ( V )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="VLT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_VLT"/>
+            <field name="name">Volt ( V )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">VLT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_WEE" model="uom.category">
+            <field name="name">egtax Weeks ( Weeks )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="WEE" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_WEE"/>
+            <field name="name">Weeks ( Weeks )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">WEE</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_WTT" model="uom.category">
+            <field name="name">egtax Watt ( W )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="WTT" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_WTT"/>
+            <field name="name">Watt ( W )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">WTT</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_X03" model="uom.category">
+            <field name="name">egtax Meter/Hour ( m/h )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="X03" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_X03"/>
+            <field name="name">Meter/Hour ( m/h )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">X03</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_YDQ" model="uom.category">
+            <field name="name">egtax Cubic yard ( yd3 )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="YDQ" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_YDQ"/>
+            <field name="name">Cubic yard ( yd3 )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">YDQ</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+
+        <record id="egtax_cat_YRD" model="uom.category">
+            <field name="name">egtax Yards ( yd )</field>
+            <field name="einv_module">egtax</field>
+        </record>
+
+
+        <record id="YRD" model="uom.uom">
+            <field name="category_id" ref="egtax_cat_YRD"/>
+            <field name="name">Yards ( yd )</field>
+            <field name="factor" eval="1.0"/>
+            <field name="einv_code">YRD</field>
+            <field name="einv_module">egtax</field>
+            <field name="uom_type">reference</field>
+        </record>
+        <!-- _________________-->
+
+     </data>
+</odoo>
+

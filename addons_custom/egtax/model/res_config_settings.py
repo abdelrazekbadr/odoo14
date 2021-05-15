@@ -16,13 +16,17 @@ class ResConfigSettings(models.TransientModel):
     client_secret = fields.Char(string="Client Secret", help="")
     apiBaseUrl = fields.Char(string="API  URL", help="",default="https://api.sit.invoicing.eta.gov.eg")
     idSrvBaseUrl = fields.Char(string="Server URL", help="",default="https://id.sit.eta.gov.eg")
+    product_coding_schema = fields.Char(string="Coding Schema", help="", default="GS1")
     client_token = fields.Char(string="Client Token", readonly=False, help="")
     auto_post = fields.Boolean(string="Auto Post", help="")
     last_token_date = fields.Date(string="Last token date", readonly=False, help="")
-    signature_type = fields.Selection(selection=[('i,', 'Issuer '), ('s', 'Service Provider')], string="Signature type",
+    signature_type = fields.Selection(selection=[('i', 'Issuer '), ('s', 'Service Provider')], string="Signature type",
                                       help="")
     signature_value = fields.Text(string="Signature value", help="")
 
+    activity_id = fields.Many2one('egtax.activity_type', string="Activity Type", required=True)
+    activity_code = fields.Char(string="Activity Code", help="")
+    #default_coding_schema = fields.Char(string="Defult Coding", help="", default="GS1")
     # Usage => param = self.env['ir.config_parameter'].sudo().get_param('egtax.apiBaseUrl') or False
     @api.model
     def get_values(self):
@@ -30,7 +34,7 @@ class ResConfigSettings(models.TransientModel):
         config = self.env['ir.config_parameter'].sudo()
 
         res.update(
-            scope=config.get_param('egtax.scope') or "InvoicingAPI",
+            scope=config.get_param('egtax.scope') or "InvoicingAPI",#config.get_param('egtax.activity_id'),
             grant_type=config.get_param('egtax.grant_type') or "client_credentials",
             client_id=config.get_param('egtax.client_id'),
             client_secret=config.get_param('egtax.client_secret'),
@@ -40,7 +44,11 @@ class ResConfigSettings(models.TransientModel):
             auto_post=bool(config.get_param('egtax.auto_post')) ,
             last_token_date=config.get_param('egtax.last_token_date'),
             signature_type=config.get_param('egtax.signature_type'),
-            signature_value=config.get_param('egtax.signature_value')
+            signature_value=config.get_param('egtax.signature_value'),
+            activity_id= int(config.get_param('egtax.activity_id')),
+            activity_code = config.get_param('egtax.activity_code'),
+            product_coding_schema = config.get_param('egtax.product_coding_schema') or 'GS1'
+            #default_coding_schema = config.get_param('egtax.default_coding_schema') or 'GS1'
         )
 
         return res
@@ -59,6 +67,13 @@ class ResConfigSettings(models.TransientModel):
         config.set_param('egtax.last_token_date', self.last_token_date)
         config.set_param('egtax.signature_type', self.signature_type)
         config.set_param('egtax.signature_value', self.signature_value)
+
+        config.set_param('egtax.activity_id', self.activity_id.id)
+        config.set_param('egtax.activity_code', self.activity_id.code)
+
+        config.set_param('egtax.product_coding_schema',self.product_coding_schema)
+
+        #config.set_param('egtax.default_coding_schema', self.default_coding_schema)
 
         super(ResConfigSettings, self).set_values()
 
