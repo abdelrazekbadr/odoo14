@@ -10,7 +10,7 @@
 #
 #     result = doc_data_from_dict(json.loads(json_string))
 
-from eta_api_utils import * 
+from utils import *
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, List, Optional, TypeVar, Callable, Type, cast

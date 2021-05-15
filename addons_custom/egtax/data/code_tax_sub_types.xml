@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <data noupdate="1">
+
+     <!--    Record T1    -->
+       <record id='T1' model='egtax.tax_type'>
+          <field name='code'>T1</field>
+          <field name='desc_en'>Value added tax</field>
+          <field name='desc_ar'>ضريبه القيمه المضافه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T2    -->
+       <record id='T2' model='egtax.tax_type'>
+          <field name='code'>T2</field>
+          <field name='desc_en'>Table tax (percentage)</field>
+          <field name='desc_ar'>ضريبه الجدول (نسبيه)</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T3    -->
+       <record id='T3' model='egtax.tax_type'>
+          <field name='code'>T3</field>
+          <field name='desc_en'>Table tax (Fixed Amount)</field>
+          <field name='desc_ar'>ضريبه الجدول (قطعيه)</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T4    -->
+       <record id='T4' model='egtax.tax_type'>
+          <field name='code'>T4</field>
+          <field name='desc_en'>Withholding tax (WHT)</field>
+          <field name='desc_ar'>الخصم تحت حساب الضريبه</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T5    -->
+       <record id='T5' model='egtax.tax_type'>
+          <field name='code'>T5</field>
+          <field name='desc_en'>Stamping tax (percentage)</field>
+          <field name='desc_ar'>ضريبه الدمغه (نسبيه)</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T6    -->
+       <record id='T6' model='egtax.tax_type'>
+          <field name='code'>T6</field>
+          <field name='desc_en'>Stamping Tax (amount)</field>
+          <field name='desc_ar'>ضريبه الدمغه (قطعيه بمقدار ثابت )</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T7    -->
+       <record id='T7' model='egtax.tax_type'>
+          <field name='code'>T7</field>
+          <field name='desc_en'>Entertainment tax</field>
+          <field name='desc_ar'>ضريبة الملاهى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T8    -->
+       <record id='T8' model='egtax.tax_type'>
+          <field name='code'>T8</field>
+          <field name='desc_en'>Resource development fee</field>
+          <field name='desc_ar'>رسم تنميه الموارد</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T9    -->
+       <record id='T9' model='egtax.tax_type'>
+          <field name='code'>T9</field>
+          <field name='desc_en'>Table tax (percentage)</field>
+          <field name='desc_ar'>رسم خدمة</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T10    -->
+       <record id='T10' model='egtax.tax_type'>
+          <field name='code'>T10</field>
+          <field name='desc_en'>Municipality Fees</field>
+          <field name='desc_ar'>رسم المحليات</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T11    -->
+       <record id='T11' model='egtax.tax_type'>
+          <field name='code'>T11</field>
+          <field name='desc_en'>Medical insurance fee</field>
+          <field name='desc_ar'>رسم التامين الصحى</field>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record T12    -->
+       <record id='T12' model='egtax.tax_type'>
+          <field name='code'>T12</field>
+          <field name='desc_en'>Other fees</field>
+          <field name='desc_ar'>رسوم أخري</field>
+          <!--todo_add_field-->
+       </record>
+
+     </data>
+</odoo>
+

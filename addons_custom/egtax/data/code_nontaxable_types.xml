@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <data noupdate="1">
+
+     <!--    Record V001    -->
+       <record id='V001' model='egtax.tax_type'>
+          <field name='code'>V001</field>
+          <field name='desc_en'>Export</field>
+          <field name='desc_ar'>تصدير للخارج</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V002    -->
+       <record id='V002' model='egtax.tax_type'>
+          <field name='code'>V002</field>
+          <field name='desc_en'>Export to free areas and other areas</field>
+          <field name='desc_ar'>تصدير مناطق حرة وأخرى</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V003    -->
+       <record id='V003' model='egtax.tax_type'>
+          <field name='code'>V003</field>
+          <field name='desc_en'>Exempted good or service</field>
+          <field name='desc_ar'>سلعة أو خدمة معفاة</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V004    -->
+       <record id='V004' model='egtax.tax_type'>
+          <field name='code'>V004</field>
+          <field name='desc_en'>A non-taxable good or service</field>
+          <field name='desc_ar'>سلعة أو خدمة غير خاضعة للضريبة</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V005    -->
+       <record id='V005' model='egtax.tax_type'>
+          <field name='code'>V005</field>
+          <field name='desc_en'>Exemptions for diplomats, consulates and embassies</field>
+          <field name='desc_ar'>إعفاءات دبلوماسين والقنصليات والسفارات</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V006    -->
+       <record id='V006' model='egtax.tax_type'>
+          <field name='code'>V006</field>
+          <field name='desc_en'>Defence and National security Exemptions</field>
+          <field name='desc_ar'>إعفاءات الدفاع والأمن القومى</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V007    -->
+       <record id='V007' model='egtax.tax_type'>
+          <field name='code'>V007</field>
+          <field name='desc_en'>Agreements exemptions</field>
+          <field name='desc_ar'>إعفاءات اتفاقيات</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V008    -->
+       <record id='V008' model='egtax.tax_type'>
+          <field name='code'>V008</field>
+          <field name='desc_en'>Special Exemptios and other reasons</field>
+          <field name='desc_ar'>إعفاءات خاصة و أخرى</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V009    -->
+       <record id='V009' model='egtax.tax_type'>
+          <field name='code'>V009</field>
+          <field name='desc_en'>General Item sales</field>
+          <field name='desc_ar'>سلع عامة</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record V010    -->
+       <record id='V010' model='egtax.tax_type'>
+          <field name='code'>V010</field>
+          <field name='desc_en'>Other Rates</field>
+          <field name='desc_ar'>نسب ضريبة أخرى</field>
+          <field name='parent_id' eval= "ref('T1')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Tbl01    -->
+       <record id='Tbl01' model='egtax.tax_type'>
+          <field name='code'>Tbl01</field>
+          <field name='desc_en'>Table tax (percentage)</field>
+          <field name='desc_ar'>ضريبه الجدول (نسبيه)</field>
+          <field name='parent_id' eval= "ref('T2')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Tbl02    -->
+       <record id='Tbl02' model='egtax.tax_type'>
+          <field name='code'>Tbl02</field>
+          <field name='desc_en'>Table tax (Fixed Amount)</field>
+          <field name='desc_ar'>ضريبه الجدول (النوعية)</field>
+          <field name='parent_id' eval= "ref('T3')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W001    -->
+       <record id='W001' model='egtax.tax_type'>
+          <field name='code'>W001</field>
+          <field name='desc_en'>Contracting</field>
+          <field name='desc_ar'>المقاولات</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W002    -->
+       <record id='W002' model='egtax.tax_type'>
+          <field name='code'>W002</field>
+          <field name='desc_en'>Supplies</field>
+          <field name='desc_ar'>التوريدات</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W003    -->
+       <record id='W003' model='egtax.tax_type'>
+          <field name='code'>W003</field>
+          <field name='desc_en'>Purachases</field>
+          <field name='desc_ar'>المشتريات</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W004    -->
+       <record id='W004' model='egtax.tax_type'>
+          <field name='code'>W004</field>
+          <field name='desc_en'>Services</field>
+          <field name='desc_ar'>الخدمات</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W005    -->
+       <record id='W005' model='egtax.tax_type'>
+          <field name='code'>W005</field>
+          <field name='desc_en'>Sumspaid by the cooperative societies for car transportation to their members</field>
+          <field name='desc_ar'>المبالغالتي تدفعها الجميعات التعاونية للنقل بالسيارات لاعضائها</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W006    -->
+       <record id='W006' model='egtax.tax_type'>
+          <field name='code'>W006</field>
+          <field name='desc_en'>Commissionagency & brokerage</field>
+          <field name='desc_ar'>الوكالةبالعمولة والسمسرة</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W007    -->
+       <record id='W007' model='egtax.tax_type'>
+          <field name='code'>W007</field>
+          <field name='desc_en'>Discounts& grants & additional exceptional incentives granted by smoke &cement companies</field>
+          <field name='desc_ar'>الخصوماتوالمنح والحوافز الاستثنائية ةالاضافية التي تمنحها شركات الدخان والاسمنت </field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W008    -->
+       <record id='W008' model='egtax.tax_type'>
+          <field name='code'>W008</field>
+          <field name='desc_en'>Alldiscounts & grants & commissions granted by petroleum &telecommunications & other companies</field>
+          <field name='desc_ar'>جميعالخصومات والمنح والعمولات  التيتمنحها  شركات البترول والاتصالات ...وغيرها من الشركات المخاطبة بنظام الخصم</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W009    -->
+       <record id='W009' model='egtax.tax_type'>
+          <field name='code'>W009</field>
+          <field name='desc_en'>Supporting export subsidies</field>
+          <field name='desc_ar'>مساندة دعم الصادرات التي يمنحها صندوق تنمية الصادرات </field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W010    -->
+       <record id='W010' model='egtax.tax_type'>
+          <field name='code'>W010</field>
+          <field name='desc_en'>Professional fees</field>
+          <field name='desc_ar'>اتعاب مهنية</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W011    -->
+       <record id='W011' model='egtax.tax_type'>
+          <field name='code'>W011</field>
+          <field name='desc_en'>Commission & brokerage _A_57</field>
+          <field name='desc_ar'>العمولة والسمسرة _م_57</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W012    -->
+       <record id='W012' model='egtax.tax_type'>
+          <field name='code'>W012</field>
+          <field name='desc_en'>Hospitals collecting from doctors</field>
+          <field name='desc_ar'>تحصيل المستشفيات من الاطباء</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W013    -->
+       <record id='W013' model='egtax.tax_type'>
+          <field name='code'>W013</field>
+          <field name='desc_en'>Royalties</field>
+          <field name='desc_ar'>الاتاوات</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W014    -->
+       <record id='W014' model='egtax.tax_type'>
+          <field name='code'>W014</field>
+          <field name='desc_en'>Customs clearance</field>
+          <field name='desc_ar'>تخليص جمركي </field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W015    -->
+       <record id='W015' model='egtax.tax_type'>
+          <field name='code'>W015</field>
+          <field name='desc_en'>Exemption</field>
+          <field name='desc_ar'>أعفاء</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record W016    -->
+       <record id='W016' model='egtax.tax_type'>
+          <field name='code'>W016</field>
+          <field name='desc_en'>advance payments</field>
+          <field name='desc_ar'>دفعات مقدمه</field>
+          <field name='parent_id' eval= "ref('T4')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record ST01    -->
+       <record id='ST01' model='egtax.tax_type'>
+          <field name='code'>ST01</field>
+          <field name='desc_en'>Stamping tax (percentage)</field>
+          <field name='desc_ar'>ضريبه الدمغه (نسبيه)</field>
+          <field name='parent_id' eval= "ref('T5')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record ST02    -->
+       <record id='ST02' model='egtax.tax_type'>
+          <field name='code'>ST02</field>
+          <field name='desc_en'>Stamping Tax (amount)</field>
+          <field name='desc_ar'>ضريبه الدمغه (قطعيه بمقدار ثابت)</field>
+          <field name='parent_id' eval= "ref('T6')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Ent01    -->
+       <record id='Ent01' model='egtax.tax_type'>
+          <field name='code'>Ent01</field>
+          <field name='desc_en'>Entertainment tax (rate)</field>
+          <field name='desc_ar'>ضريبة الملاهى (نسبة)</field>
+          <field name='parent_id' eval= "ref('T7')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Ent02    -->
+       <record id='Ent02' model='egtax.tax_type'>
+          <field name='code'>Ent02</field>
+          <field name='desc_en'>Entertainment tax (amount)</field>
+          <field name='desc_ar'>ضريبة الملاهى (قطعية)</field>
+          <field name='parent_id' eval= "ref('T7')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record RD01    -->
+       <record id='RD01' model='egtax.tax_type'>
+          <field name='code'>RD01</field>
+          <field name='desc_en'>Resource development fee (rate)</field>
+          <field name='desc_ar'>رسم تنميه الموارد (نسبة)</field>
+          <field name='parent_id' eval= "ref('T8')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record RD02    -->
+       <record id='RD02' model='egtax.tax_type'>
+          <field name='code'>RD02</field>
+          <field name='desc_en'>Resource development fee (amount)</field>
+          <field name='desc_ar'>رسم تنميه الموارد (قطعية)</field>
+          <field name='parent_id' eval= "ref('T8')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record SC01    -->
+       <record id='SC01' model='egtax.tax_type'>
+          <field name='code'>SC01</field>
+          <field name='desc_en'>Service charges (rate)</field>
+          <field name='desc_ar'>رسم خدمة (نسبة)</field>
+          <field name='parent_id' eval= "ref('T9')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record SC02    -->
+       <record id='SC02' model='egtax.tax_type'>
+          <field name='code'>SC02</field>
+          <field name='desc_en'>Service charges (amount)</field>
+          <field name='desc_ar'>رسم خدمة (قطعية)</field>
+          <field name='parent_id' eval= "ref('T9')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Mn01    -->
+       <record id='Mn01' model='egtax.tax_type'>
+          <field name='code'>Mn01</field>
+          <field name='desc_en'>Municipality Fees (rate)</field>
+          <field name='desc_ar'>رسم المحليات (نسبة)</field>
+          <field name='parent_id' eval= "ref('T10')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Mn02    -->
+       <record id='Mn02' model='egtax.tax_type'>
+          <field name='code'>Mn02</field>
+          <field name='desc_en'>Municipality Fees (amount)</field>
+          <field name='desc_ar'>رسم المحليات (قطعية)</field>
+          <field name='parent_id' eval= "ref('T10')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record MI01    -->
+       <record id='MI01' model='egtax.tax_type'>
+          <field name='code'>MI01</field>
+          <field name='desc_en'>Medical insurance fee (rate)</field>
+          <field name='desc_ar'>رسم التامين الصحى (نسبة)</field>
+          <field name='parent_id' eval= "ref('T11')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record MI02    -->
+       <record id='MI02' model='egtax.tax_type'>
+          <field name='code'>MI02</field>
+          <field name='desc_en'>Medical insurance fee (amount)</field>
+          <field name='desc_ar'>رسم التامين الصحى (قطعية)</field>
+          <field name='parent_id' eval= "ref('T11')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record OF01    -->
+       <record id='OF01' model='egtax.tax_type'>
+          <field name='code'>OF01</field>
+          <field name='desc_en'>Other fees (rate)</field>
+          <field name='desc_ar'>رسوم أخرى (نسبة)</field>
+          <field name='parent_id' eval= "ref('T12')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record OF02    -->
+       <record id='OF02' model='egtax.tax_type'>
+          <field name='code'>OF02</field>
+          <field name='desc_en'>Other fees (amount)</field>
+          <field name='desc_ar'>رسوم أخرى (قطعية)</field>
+          <field name='parent_id' eval= "ref('T12')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record ST03    -->
+       <record id='ST03' model='egtax.tax_type'>
+          <field name='code'>ST03</field>
+          <field name='desc_en'>Stamping tax (percentage)</field>
+          <field name='desc_ar'>ضريبه الدمغه (نسبيه)</field>
+          <field name='parent_id' eval= "ref('T13')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record ST04    -->
+       <record id='ST04' model='egtax.tax_type'>
+          <field name='code'>ST04</field>
+          <field name='desc_en'>Stamping Tax (amount)</field>
+          <field name='desc_ar'>ضريبه الدمغه (قطعيه بمقدار ثابت)</field>
+          <field name='parent_id' eval= "ref('T14')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Ent03    -->
+       <record id='Ent03' model='egtax.tax_type'>
+          <field name='code'>Ent03</field>
+          <field name='desc_en'>Entertainment tax (rate)</field>
+          <field name='desc_ar'>ضريبة الملاهى (نسبة)</field>
+          <field name='parent_id' eval= "ref('T15')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Ent04    -->
+       <record id='Ent04' model='egtax.tax_type'>
+          <field name='code'>Ent04</field>
+          <field name='desc_en'>Entertainment tax (amount)</field>
+          <field name='desc_ar'>ضريبة الملاهى (قطعية)</field>
+          <field name='parent_id' eval= "ref('T15')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record RD03    -->
+       <record id='RD03' model='egtax.tax_type'>
+          <field name='code'>RD03</field>
+          <field name='desc_en'>Resource development fee (rate)</field>
+          <field name='desc_ar'>رسم تنميه الموارد (نسبة)</field>
+          <field name='parent_id' eval= "ref('T16')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record RD04    -->
+       <record id='RD04' model='egtax.tax_type'>
+          <field name='code'>RD04</field>
+          <field name='desc_en'>Resource development fee (amount)</field>
+          <field name='desc_ar'>رسم تنميه الموارد (قطعية)</field>
+          <field name='parent_id' eval= "ref('T16')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record SC03    -->
+       <record id='SC03' model='egtax.tax_type'>
+          <field name='code'>SC03</field>
+          <field name='desc_en'>Service charges (rate)</field>
+          <field name='desc_ar'>رسم خدمة (نسبة)</field>
+          <field name='parent_id' eval= "ref('T17')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record SC04    -->
+       <record id='SC04' model='egtax.tax_type'>
+          <field name='code'>SC04</field>
+          <field name='desc_en'>Service charges (amount)</field>
+          <field name='desc_ar'>رسم خدمة (قطعية)</field>
+          <field name='parent_id' eval= "ref('T17')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Mn03    -->
+       <record id='Mn03' model='egtax.tax_type'>
+          <field name='code'>Mn03</field>
+          <field name='desc_en'>Municipality Fees (rate)</field>
+          <field name='desc_ar'>رسم المحليات (نسبة)</field>
+          <field name='parent_id' eval= "ref('T18')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record Mn04    -->
+       <record id='Mn04' model='egtax.tax_type'>
+          <field name='code'>Mn04</field>
+          <field name='desc_en'>Municipality Fees (amount)</field>
+          <field name='desc_ar'>رسم المحليات (قطعية)</field>
+          <field name='parent_id' eval= "ref('T18')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record MI03    -->
+       <record id='MI03' model='egtax.tax_type'>
+          <field name='code'>MI03</field>
+          <field name='desc_en'>Medical insurance fee (rate)</field>
+          <field name='desc_ar'>رسم التامين الصحى (نسبة)</field>
+          <field name='parent_id' eval= "ref('T19')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record MI04    -->
+       <record id='MI04' model='egtax.tax_type'>
+          <field name='code'>MI04</field>
+          <field name='desc_en'>Medical insurance fee (amount)</field>
+          <field name='desc_ar'>رسم التامين الصحى (قطعية)</field>
+          <field name='parent_id' eval= "ref('T19')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record OF03    -->
+       <record id='OF03' model='egtax.tax_type'>
+          <field name='code'>OF03</field>
+          <field name='desc_en'>Other fees (rate)</field>
+          <field name='desc_ar'>رسوم أخرى (نسبة)</field>
+          <field name='parent_id' eval= "ref('T20')"/>
+          <!--todo_add_field-->
+       </record>
+
+     <!--    Record OF04    -->
+       <record id='OF04' model='egtax.tax_type'>
+          <field name='code'>OF04</field>
+          <field name='desc_en'>Other fees (amount)</field>
+          <field name='desc_ar'>رسوم أخرى (قطعية)</field>
+          <field name='parent_id' eval= "ref('T20')"/>
+          <!--todo_add_field-->
+       </record>
+
+     </data>
+</odoo>
+
