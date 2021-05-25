@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+<!--        <record id="view_product_template_tree" model="ir.ui.view">-->
+<!--            <field name="name">product_template_tree</field>-->
+<!--            <field name="model">product.template</field>-->
+<!--            <field name="type">tree</field>-->
+<!--            <field name="inherit_id" ref="account.product_template_view_tree"/>-->
+<!--            <field name="priority" eval="8"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                 <field name="barcode" position="after">-->
+<!--                     <field name="einv_coding_schema" />-->
+<!--                 </field>-->
+<!--            </field>-->
+<!--        </record>-->
+        <!-- form view -->
+        <record id="view_product_template_form" model="ir.ui.view">
+            <field name="name">product_template_form</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+               <field name="barcode" position="after">
+                     <field name="einv_coding_schema" />
+                 </field>
+            </field>
+        </record>
+    </data>
+</odoo>

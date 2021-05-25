@@ -1,0 +1,154 @@
+{
+  "documents": [
+    {
+      "taxpayerActivityCode": "",
+      "salesOrderReference": "",
+      "issuer": {
+        "address": {
+          "branchID": "",
+          "country": "EG",
+          "governate": "Alexandria",
+          "regionCity": "Alexandria",
+          "street": "Alex - ST1",
+          "buildingNumber": "Alex - ST2",
+          "postalCode": "94523x",
+          "floor": "",
+          "room": "",
+          "landmark": "",
+          "additionalInformation": ""
+        },
+        "type": "B",
+        "id": "12345",
+        "name": "Genius Valley"
+      },
+      "receiver": {
+        "address": {
+          "branchID": "",
+          "country": "SA",
+          "governate": "Riyadh",
+          "regionCity": "Riyadh",
+          "street": "Near 7896 Abdullah Bin Hasan Al Shaikh",
+          "buildingNumber": "17",
+          "postalCode": "",
+          "floor": "",
+          "room": "",
+          "landmark": "",
+          "additionalInformation": ""
+        },
+        "type": "F",
+        "id": "1122334455",
+        "name": "Customer.io"
+      },
+      "documentType": "i",
+      "documentTypeVersion": "1.0",
+      "dateTimeIssued": "2021-04-29T00:00:00Z",
+      "internalID": "xx",
+      "purchaseOrderReference": "",
+      "purchaseOrderDescription": "",
+      "salesOrderDescription": "",
+      "proformaInvoiceNumber": "",
+      "payment": {
+        "bankName": "",
+        "bankAddress": "",
+        "bankAccountNo": "",
+        "bankAccountIBAN": "",
+        "swiftCode": "",
+        "terms": ""
+      },
+      "delivery": {
+        "approach": "",
+        "packaging": "",
+        "dateValidity": "",
+        "exportPort": "",
+        "countryOfOrigin": "",
+        "grossWeight": 0.0,
+        "netWeight": 0.0,
+        "terms": ""
+      },
+      "invoiceLines": [
+        {
+          "description": "[1000] pr1",
+          "itemType": "GS1",
+          "itemCode": "10001000",
+          "unitType": "",
+          "quantity": 1.0,
+          "internalCode": "1000",
+          "salesTotal": 150.0,
+          "total": 172.5,
+          "valueDifference": 0.0,
+          "totalTaxableFees": 0.0,
+          "netTotal": 150.0,
+          "itemsDiscount": 0.0,
+          "unitValue": {
+            "currencySold": "SAR",
+            "amountEGP": 150.0,
+            "amountSold": 150.0,
+            "currencyExchangeRate": 1.0
+          },
+          "discount": {
+            "rate": 0.0,
+            "amount": 0.0
+          },
+          "taxableItems": [
+            {
+              "taxType": "T12",
+              "amount": 22.5,
+              "subType": "",
+              "rate": 15.0
+            }
+          ]
+        },
+        {
+          "description": "[1001] pr2",
+          "itemType": "GS1",
+          "itemCode": "10011001",
+          "unitType": "",
+          "quantity": 2.0,
+          "internalCode": "1001",
+          "salesTotal": 200.0,
+          "total": 207.0,
+          "valueDifference": 0.0,
+          "totalTaxableFees": 0.0,
+          "netTotal": 180.0,
+          "itemsDiscount": 0.0,
+          "unitValue": {
+            "currencySold": "SAR",
+            "amountEGP": 100.0,
+            "amountSold": 100.0,
+            "currencyExchangeRate": 1.0
+          },
+          "discount": {
+            "rate": 10.0,
+            "amount": 10.0
+          },
+          "taxableItems": [
+            {
+              "taxType": "T12",
+              "amount": 27.0,
+              "subType": "",
+              "rate": 15.0
+            }
+          ]
+        }
+      ],
+      "totalDiscountAmount": 20.0,
+      "totalSalesAmount": 350.0,
+      "netAmount": 330.0,
+      "taxTotals": [
+        {
+          "taxType": "",
+          "amount": 0.0
+        }
+      ],
+      "totalAmount": 379.5,
+      "extraDiscountAmount": 0.0,
+      "totalItemsDiscountAmount": 20.0,
+      "signatures": [
+        {
+          "signatureType": "",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

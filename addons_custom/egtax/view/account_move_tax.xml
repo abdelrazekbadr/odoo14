@@ -103,7 +103,7 @@
 
                             <group>
                                 <field name="einv_tax_state_display" widget="badge"
-                                       decoration-success="state == 'posted'"
+                                       decoration-success="state == 'submitted' or state == 'valid'  "
                                        decoration-info="state == 'draft'" optional="show"/>
                                 <field name="einv_post_date"/>
                                 <field name="einv_uuid"/>
@@ -207,7 +207,24 @@
 
                             </page>
                             <page string="Errors detail">
-                                <field name="errors_detail"/>
+<!--                                <field name="errors_detail_ids"/>-->
+                                  <field name="errors_detail_ids"
+                                       widget="section_and_note_one2many"
+                                       mode="tree">
+                                    <tree  string="Errors Detail" default_order="date desc,id">
+                                        <!-- Displayed fields -->
+                                        <field name="code"/>
+                                        <field name="name"/>
+                                        <field name="date" />
+<!--                                        <field eval="date.strftime('%Y-%m-%d %H:%M')" name="date"/>-->
+                                        <field name="message"/>
+                                        <field name="target" optional="hide"/>
+                                        <field name="error_uri" optional="hide"/>
+
+                                    </tree>
+
+
+                                </field>
                             </page>
                             <page string="JSON Preview">
                                 <field name="einv_doc_json"></field>
@@ -334,7 +351,7 @@
         <record id="action_account_move_tax" model="ir.actions.act_window">
             <field name="name">e-Invoices</field>
             <field name="res_model">account.move</field>
-            <field name="domain">[('move_type', '=', 'out_invoice')]</field>
+            <field name="domain">['|',('move_type', '=', 'out_invoice'),('move_type', '=', 'out_refund')]</field>
             <field name="context">{'default_move_type': 'out_invoice'}</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('view_account_move_tax_tree')}),

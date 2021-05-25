@@ -75,6 +75,8 @@
                                     <field name="product_coding_schema"/>
 <!--                                    <field name="default_coding_schema"/>-->
                                     <field name="client_token"/>
+                                    <field name="token_type"/>
+                                    <field name="expire_in"/>
                                     <field name="auto_post"/>
                                     <field name="last_token_date"/>
                                     <field name="signature_type"/>

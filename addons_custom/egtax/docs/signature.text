@@ -1,0 +1,190 @@
+
+#Process
+https://sdk.invoicing.eta.gov.eg/signature-creation/
+
+The overall steps to take when preparing a single document for submission are:
+
+1- Create document XML or JSON (no signature element yet) for a single document
+2- Create canonical version of the XML or JSON as per algorithm described
+3- Apply sha256 hash on the byte array created from canonical version byte array (using UTF-8)
+4- Sign the hash created using CADES-BES signature (for some implementations like SignedCMS in .NET previous step and this one are done together as part of SignedCMS signing)
+5- Include Base64 encoded CADES-BES signature into original document XML or document JSON in a new element.
+
+//https://www.example-code.com/Csharp/itida_egypt_cades_bes_json_canonicalization.asp
+// This example assumes the Chilkat API to have been previously unlocked.
+// See Global Unlock Sample for sample code.
+
+Chilkat.Crypt2 crypt = new Chilkat.Crypt2();
+
+Chilkat.Cert cert = new Chilkat.Cert();
+
+// There are many ways to load the certificate.
+// This example was created for a customer using an ePass2003 USB token.
+// Assuming the USB token is the only source of a hardware-based private key..
+bool success = cert.LoadFromSmartcard("");
+if (success != true) {
+    Debug.WriteLine(cert.LastErrorText);
+    return;
+}
+
+// Tell the crypt class to use this cert.
+success = crypt.SetSigningCert(cert);
+if (success != true) {
+    Debug.WriteLine(crypt.LastErrorText);
+    return;
+}
+
+Chilkat.JsonObject cmsOptions = new Chilkat.JsonObject();
+// Setting "DigestData" causes OID 1.2.840.113549.1.7.5 (digestData) to be used.
+cmsOptions.UpdateBool("DigestData",true);
+cmsOptions.UpdateBool("OmitAlgorithmIdNull",true);
+
+// Indicate that we are passing normal JSON and we want Chilkat do automatically
+// do the ITIDA JSON canonicalization:
+cmsOptions.UpdateBool("CanonicalizeITIDA",true);
+
+crypt.CmsOptions = cmsOptions.Emit();
+
+// The CadesEnabled property applies to all methods that create CMS/PKCS7 signatures.
+// To create a CAdES-BES signature, set this property equal to true.
+crypt.CadesEnabled = true;
+
+crypt.HashAlgorithm = "sha256";
+
+Chilkat.JsonObject jsonSigningAttrs = new Chilkat.JsonObject();
+jsonSigningAttrs.UpdateInt("contentType",1);
+jsonSigningAttrs.UpdateInt("signingTime",1);
+jsonSigningAttrs.UpdateInt("messageDigest",1);
+jsonSigningAttrs.UpdateInt("signingCertificateV2",1);
+crypt.SigningAttributes = jsonSigningAttrs.Emit();
+
+// By default, all the certs in the chain of authentication are included in the signature.
+// If desired, we can choose to only include the signing certificate:
+crypt.IncludeCertChain = false;
+
+// Pass a JSON document such as the following.  Chilkat will do the ITIDA canonicalization.
+// (It is the canonicalized JSON that gets signed.)
+
+// {
+//    "documents":[
+//       {
+//          "issuer":{
+//             "address":{
+//                "branchID":"0",
+//                "country":"EG",
+//                "regionCity":"Cairo",
+//                "postalCode":"",
+//                "buildingNumber":"0",
+//                "street":"123rd Street",
+//                "governate":"GOVERNATE"
+//             },
+//             "type":"B",
+//             "id":"209999899",
+//             "name":"Xyz SAE"
+//          },
+//          "receiver":{
+//             "address":{
+//                "country":"EG",
+//                "regionCity":"CAIRO",
+//                "postalCode":"11435",
+//                "buildingNumber":"0",
+//                "street":"Autostrad Road Abc",
+//                "governate":"GOVERNATE"
+//             },
+//             "type":"B",
+//             "id":"999999999",
+//             "name":"XYZ EGYPT FOR TRADE"
+//          },
+//          "documentType":"I",
+//          "documentTypeVersion":"1.0",
+//          "dateTimeIssued":"2020-11-15T11:04:53Z",
+//          "taxpayerActivityCode":"1073",
+//          "internalID":"ZZZZ999",
+//          "purchaseOrderReference":"2009199918",
+//          "salesOrderReference":"",
+//          "payment":{
+//             "bankName":"",
+//             "bankAddress":"",
+//             "bankAccountNo":"",
+//             "bankAccountIBAN":"",
+//             "swiftCode":"",
+//             "terms":""
+//          },
+//          "delivery":{
+//             "approach":"",
+//             "packaging":"",
+//             "dateValidity":"",
+//             "exportPort":"",
+//             "countryOfOrigin":"EG",
+//             "grossWeight":0,
+//             "netWeight":0,
+//             "terms":""
+//          },
+//          "invoiceLines":[
+//             {
+//                "description":"CDM Widget 48GX99X12BA",
+//                "itemType":"GS1",
+//                "itemCode":"7622213335056",
+//                "unitType":"CS",
+//                "quantity":1.00,
+//                "unitValue":{
+//                   "currencySold":"EGP",
+//                   "amountEGP":588.67,
+//                   "amountSold":0,
+//                   "currencyExchangeRate":0
+//                },
+//                "salesTotal":588.67,
+//                "total":603.97,
+//                "valueDifference":0,
+//                "totalTaxableFees":0,
+//                "netTotal":529.8,
+//                "itemsDiscount":0,
+//                "discount":{
+//                   "rate":10.00,
+//                   "amount":58.87
+//                },
+//                "taxableItems":[
+//                   {
+//                      "taxType":"T1",
+//                      "amount":74.17,
+//                      "subType":"No sub",
+//                      "rate":14.00
+//                   }
+//                ],
+//                "internalCode":"9099994"
+//             }
+//          ],
+//          "totalSales":588.67,
+//          "totalSalesAmount":588.67,
+//          "totalDiscountAmount":58.87,
+//          "netAmount":529.80,
+//          "taxTotals":[
+//             {
+//                "taxType":"T1",
+//                "amount":74.17
+//             }
+//          ],
+//          "extraDiscountAmount":0,
+//          "totalItemsDiscountAmount":0,
+//          "totalAmount":603.97,
+//       }
+//    ]
+// }
+//
+
+string jsonToSign = "{ ... }";
+
+// Create the CAdES-BES signature.
+crypt.EncodingMode = "base64";
+
+// Make sure we sign the utf-8 byte representation of the JSON string
+crypt.Charset = "utf-8";
+
+string sigBase64 = crypt.SignStringENC(jsonToSign);
+if (crypt.LastMethodSuccess == false) {
+    Debug.WriteLine(crypt.LastErrorText);
+    return;
+}
+
+Debug.WriteLine("Base64 signature:");
+Debug.WriteLine(sigBase64);

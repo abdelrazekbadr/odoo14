@@ -1,0 +1,35 @@
+{
+  "result": [
+    {
+      "uuid": "dsds",
+      "submissionUUID": "aa",
+      "longId": "aa",
+      "internalId": "aa",
+      "typeName": "aa",
+      "typeVersionName": "aa",
+      "issuerId": "aa",
+      "issuerName": "aa",
+      "receiverId": "aa",
+      "receiverName": "aa",
+      "dateTimeIssued": "aa",
+      "dateTimeReceived": "aa",
+      "totalSales": 1.5,
+      "totalDiscount": 1.5,
+      "netAmount": 1.5,
+      "total": 1.5,
+      "status": "aa",
+      "cancelRequestDate": "aa",
+      "rejectRequestDate": "aa",
+      "cancelRequestDelayedDate": "aa",
+      "rejectRequestDelayedDate": "aa",
+      "declineCancelRequestDate": "aa",
+      "declineRejectRequestDate": "aa"
+    }
+  ],
+  "metadata": [
+    {
+      "totalPages": 1,
+      "totalCount": 1
+    }
+  ]
+}

@@ -23,8 +23,9 @@ def from_str(x: Any) -> str:
 
 
 def from_datetime(x: Any) -> datetime:
-    val=dateutil.parser.parse(x)
-    return val
+    if x:
+        return dateutil.parser.parse(x)
+
 
 
 def from_float(x: Any) -> float:
@@ -33,7 +34,9 @@ def from_float(x: Any) -> float:
 
 
 def to_float(x: Any) -> float:
-    assert isinstance(x, float)
+    if not isinstance(x, float):
+        print(x)
+    assert isinstance(x, float),x
     return x
 
 

@@ -1,4 +1,17 @@
 
+
+- filter einv on confirmed invoice & last 1 month & e-ivoice start date
+- Add country relation on egtax setting
+- Cancel Invoice api
+- when load update recent document status [7-30] days
+- Redesign doc structure with signature
+- C# window service /USB Token Reader
+
+- Handel response submit document -->done
+- Handel errors returns -->done
+- add coding schema in product -->done
+- Handel API login token -->done
+- Validate submit for only document - don't upload document in draft state -->done
 - Add new model unit_types & UI XML -->done
 - Add XML records data for unit_types -->done
 
@@ -12,10 +25,7 @@
 
 - add tax_types relation on exist model account.tax =>done
 
-- Add untit type in invoiceline , product default unit
+- Add untit type in invoiceline , product default unit ==>done
 
--generator map unit type to UoM odoo
+-generator map unit type to UoM odoo -->done
 
-- add country relation on egtax setting
-- handel response submit document
-- handel errors returns
