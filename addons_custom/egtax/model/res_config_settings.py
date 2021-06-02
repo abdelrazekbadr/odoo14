@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # help:https://www.cybrosys.com/blog/odoo-13-technical-tips-tricks
 from odoo import models, fields, api, _
+from odoo.addons.egtax.api.utils import from_datetime
 from odoo.addons.egtax.enums.config_keys import ConfigKeys
 from odoo.exceptions import UserError, Warning
 
@@ -20,6 +21,7 @@ class ResConfigSettings(models.TransientModel):
     product_coding_schema = fields.Char(string="Coding Schema", help="", default="GS1")
     client_token = fields.Char(string="Client Token", readonly=False, help="")
     auto_post = fields.Boolean(string="Auto Post", help="")
+    auto_receive = fields.Boolean(string="Auto Receive", help="")
     last_token_date = fields.Datetime(string="Last token date", readonly=True, help="")
     signature_type = fields.Selection(selection=[('i', 'Issuer '), ('s', 'Service Provider')], string="Signature type",
                                       help="")
@@ -49,7 +51,8 @@ class ResConfigSettings(models.TransientModel):
             idSrvBaseUrl=config.get_param(ConfigKeys.ID_SRV_BASE_URL.value) or "https://id.sit.eta.gov.eg",
             client_token=config.get_param(ConfigKeys.CLIENT_TOKEN.value),
             auto_post=bool(config.get_param(ConfigKeys.AUTO_POST.value)) ,
-            last_token_date=config.get_param(ConfigKeys.CLIENT_TOKEN_LAST_DATE.value),
+            auto_receive=bool(config.get_param(ConfigKeys.AUTO_RECEIVE.value)),
+            last_token_date=from_datetime(config.get_param(ConfigKeys.CLIENT_TOKEN_LAST_DATE.value)),
             signature_type=config.get_param(ConfigKeys.SIGNATURE_TYPE.value),
             signature_value=config.get_param(ConfigKeys.SIGNATURE_VALUE.value),
             activity_id= int(config.get_param(ConfigKeys.ACTIVITY_ID.value)),
@@ -68,11 +71,12 @@ class ResConfigSettings(models.TransientModel):
         config.set_param(ConfigKeys.SCOPE.value, self.scope)
         config.set_param(ConfigKeys.GRANT_TYPE.value, self.grant_type)
         config.set_param(ConfigKeys.CLIENT_ID.value, self.client_id)
-        config.set_param(ConfigKeys.client_secret.value, self.client_secret)
+        config.set_param(ConfigKeys.CLIENT_SECRET.value, self.client_secret)
         config.set_param(ConfigKeys.API_BASE_URL.value, self.apiBaseUrl)
         config.set_param(ConfigKeys.ID_SRV_BASE_URL.value, self.idSrvBaseUrl)
         config.set_param(ConfigKeys.CLIENT_TOKEN.value, self.client_token)
         config.set_param(ConfigKeys.AUTO_POST.value, self.auto_post)
+        config.set_param(ConfigKeys.AUTO_RECEIVE.value, self.auto_receive)
         config.set_param(ConfigKeys.CLIENT_TOKEN_LAST_DATE.value, self.last_token_date)
         config.set_param(ConfigKeys.SIGNATURE_TYPE.value, self.signature_type)
         config.set_param(ConfigKeys.SIGNATURE_VALUE.value, self.signature_value)

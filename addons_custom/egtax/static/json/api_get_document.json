@@ -1,0 +1,191 @@
+{
+    "uuid": "11221124",
+    "submissionUUID": "111222111224",
+    "longId": "11221124",
+    "internalId": "Bill/Test/2021/06/0001",
+    "typeName": "i",
+    "typeVersionName": "1.0",
+    "issuerId": "123456789",
+    "issuerName": "Laplace Software",
+    "receiverId": "12345",
+    "receiverName": "Genius Valley",
+    "dateTimeIssued": "2021-06-01T00:00:00Z",
+    "dateTimeReceived": "2021-06-01T00:00:00Z",
+    "totalSales": 1.5,
+    "totalDiscount": 1.5,
+    "netAmount": 1.5,
+    "total": 1.5,
+    "status": "valid",
+    "document": {
+            "dateTimeIssued": "2021-06-01T00:00:00Z",
+            "delivery": {
+                "approach": "",
+                "countryOfOrigin": "",
+                "dateValidity": "",
+                "exportPort": "",
+                "grossWeight": 0.0,
+                "netWeight": 0.0,
+                "packaging": "",
+                "terms": ""
+            },
+            "documentType": "i",
+            "documentTypeVersion": "1.0",
+            "extraDiscountAmount": 0.0,
+            "internalID": "Bill/Test/2021/05/0001",
+            "invoiceLines": [
+                {
+                    "description": "[1004] pr4",
+                    "discount": {
+                        "amount": 0.0,
+                        "rate": 5.0
+                    },
+                    "internalCode": "1004",
+                    "itemCode": "10041004",
+                    "itemType": "GS1",
+                    "itemsDiscount": 0.0,
+                    "netTotal": 2500.0,
+                    "quantity": 5.0,
+                    "salesTotal": 2500.0,
+                    "taxableItems": [
+                        {
+                            "amount": 250.0,
+                            "rate": 10.0,
+                            "subType": "",
+                            "taxType": "T12"
+                        }
+                    ],
+                    "total": 2750.0,
+                    "totalTaxableFees": 0.0,
+                    "unitType": "CS",
+                    "unitValue": {
+                        "amountEGP": 500.0,
+                        "amountSold": 500.0,
+                        "currencyExchangeRate": 0.0,
+                        "currencySold": "SAR"
+                    },
+                    "valueDifference": 0.0
+                },
+                {
+                    "description": "[1001] pr2",
+                    "discount": {
+                        "amount": 0.0,
+                        "rate": 5.0
+                    },
+                    "internalCode": "1001",
+                    "itemCode": "10011001",
+                    "itemType": "GS1",
+                    "itemsDiscount": 0.0,
+                    "netTotal": 950.0,
+                    "quantity": 10.0,
+                    "salesTotal": 1000.0,
+                    "taxableItems": [
+                        {
+                            "amount": 142.5,
+                            "rate": 15.0,
+                            "subType": "",
+                            "taxType": "T1"
+                        }
+                    ],
+                    "total": 1092.5,
+                    "totalTaxableFees": 0.0,
+                    "unitType": "",
+                    "unitValue": {
+                        "amountEGP": 100.0,
+                        "amountSold": 100.0,
+                        "currencyExchangeRate": 0.0,
+                        "currencySold": "SAR"
+                    },
+                    "valueDifference": 0.0
+                }
+            ],
+            "receiver": {
+                "address": {
+                    "additionalInformation": "",
+                    "branchID": "",
+                    "buildingNumber": "ST2",
+                    "country": "EG",
+                    "floor": "",
+                    "governate": "Cairo",
+                    "landmark": "",
+                    "postalCode": "11111",
+                    "regionCity": "Cairo",
+                    "room": "",
+                    "street": "Cairo - ST1"
+                },
+                "id": "12345",
+                "name": "Genius Valley",
+                "type": "B"
+            },
+            "netAmount": 3450.0,
+            "payment": {
+                "bankAccountIBAN": "",
+                "bankAccountNo": "",
+                "bankAddress": "",
+                "bankName": "",
+                "swiftCode": "",
+                "terms": ""
+            },
+            "proformaInvoiceNumber": "",
+            "purchaseOrderDescription": "",
+            "purchaseOrderReference": "",
+            "issuer": {
+                "address": {
+                    "additionalInformation": "",
+                    "branchID": "",
+                    "buildingNumber": "ST2",
+                    "country": "EG",
+                    "floor": "",
+                    "governate": "Cairo",
+                    "landmark": "",
+                    "postalCode": "11111",
+                    "regionCity": "Cairo",
+                    "room": "",
+                    "street": "Cairo - ST1"
+                },
+                "id": "123456789",
+                "name": "Laplace Software",
+                "type": "B"
+            },
+            "salesOrderDescription": "",
+            "salesOrderReference": "",
+            "signatures": [
+                {
+                    "signatureType": "i",
+                    "value": "##$%$#"
+                }
+            ],
+            "taxTotals": [
+                {
+                    "amount": 250.0,
+                    "taxType": "T12"
+                },
+                {
+                    "amount": 142.5,
+                    "taxType": "T1"
+                }
+            ],
+            "taxpayerActivityCode": "6209",
+            "totalAmount": 3842.5,
+            "totalDiscountAmount": 50.0,
+            "totalItemsDiscountAmount": 50.0,
+            "totalSalesAmount": 3500.0
+        } ,
+    "transformationStatus": "aa",
+    "validationResults": {
+        "status":"xx",
+        "validationSteps":[
+            {
+                 "name":"xx",
+                  "status":"xx",
+                  "error":{
+                       "code":"",
+                       "name":"",
+                       "target":""
+
+
+                   }
+
+            }
+            ]
+    }
+}

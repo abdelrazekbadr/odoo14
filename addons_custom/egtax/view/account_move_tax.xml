@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
                 <tree string="Documents" create="false" delete="false">
                     <header>
-                        <button name="action_post_tax" type="object" string="Post Tax" icon="fa-paper-plane-o"
+                        <button name="action_einv_post_docs" type="object" string="Send e-Invoice" icon="fa-paper-plane-o"
                                 class="ml-2 mr-2"/>
 
                         <!--                         <button name="action_post" states="draft" icon="fa-check" title="Post" type="object" groups="account.group_account_invoice"/>-->
@@ -60,8 +60,14 @@
             <!--            <field name="inherit_id" ref="account.view_move_form"/>-->
             <!--            <field name="inherit_id" ref=""/>-->
             <field name="arch" type="xml">
-                <form string="Document" create="false" edit="false" delete="false">
+                <form string="Document" create="false" edit="true" delete="false">
                     <header>
+                           <button name="fetch_recent_docs" type="object" string="Receive Invoices"
+                                class="ml-2 mr-2"/>
+
+                         <button name="action_einv_cancel_doc" type="object" string="Cancel e-Invoice"
+                                class="ml-2 mr-2"/>
+
                     </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
@@ -228,6 +234,9 @@
                             </page>
                             <page string="JSON Preview">
                                 <field name="einv_doc_json"></field>
+                            </page>
+                              <page string="Test Create Invoice">
+                                <field name="einv_doc_json_Test"></field>
                             </page>
                         </notebook>
 

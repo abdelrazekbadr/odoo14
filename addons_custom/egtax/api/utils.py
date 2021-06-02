@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, time
 from typing import Any, List, Optional, TypeVar, Callable, Type, cast
 import dateutil.parser
 
@@ -18,13 +18,20 @@ def sum_group_by(dataset, group_by_key, sum_value_keys):
 
 
 def from_str(x: Any) -> str:
+    if not x:
+        return ''
     assert isinstance(x, str)
     return x
 
 
 def from_datetime(x: Any) -> datetime:
     if x:
-        return dateutil.parser.parse(x)
+        try:
+             return dateutil.parser.parse(x.replace('Z','')) #timezone already applied
+        except:
+            return datetime.min
+
+    return  datetime.min
 
 
 

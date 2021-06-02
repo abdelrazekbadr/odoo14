@@ -1,0 +1,27 @@
+{
+  "submissionUUID": "",
+  "acceptedDocuments": [
+    {
+      "uuid": "",
+      "longId": "",
+      "internalId": ""
+    }
+  ],
+  "rejectedDocuments": [
+    {
+      "internalId": "",
+      "error": {
+        "code": "",
+        "message": "",
+        "target": "",
+        "details": [
+          {
+            "code": "",
+            "message": "",
+            "target": ""
+          }
+        ]
+      }
+    }
+  ]
+}

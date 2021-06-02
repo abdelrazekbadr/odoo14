@@ -1,4 +1,7 @@
 
+- add simulation for submit doc api / manula/automatic
+
+- check for api response invalid token and retry once again
 
 - filter einv on confirmed invoice & last 1 month & e-ivoice start date
 - Add country relation on egtax setting
@@ -7,6 +10,7 @@
 - Redesign doc structure with signature
 - C# window service /USB Token Reader
 
+- Generate API token test  retrieve random uuid --done
 - Handel response submit document -->done
 - Handel errors returns -->done
 - add coding schema in product -->done

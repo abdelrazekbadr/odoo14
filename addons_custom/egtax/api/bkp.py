@@ -21,7 +21,7 @@ from odoo.exceptions import UserError
 _logger = logging.getLogger(__name__)
 
 
-class EInvAPI(models.AbstractModel):
+class EInvAPIBakup(models.AbstractModel):
     _name = "egtax.einv_api"
     _description = "Eg E-Invoice API "
 
@@ -178,6 +178,7 @@ class EInvAPI(models.AbstractModel):
         # # this gets the page text
         # data = res.read()
 
+
     # region API Submit Document
     # https://sdk.invoicing.eta.gov.eg/api/05-submit-documents/
     @api.model
@@ -188,17 +189,17 @@ class EInvAPI(models.AbstractModel):
         url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1/documentsubmissions"
         token = self.validate_token()
         # payload = self.get_doc_payload(True)
-        headers = {'Content-Type': 'application/json', 'Authorization': f'bearer {token}'}
+        headers = {'Content-Type': 'application/json','Authorization': f'bearer {token}'}
 
         try:
-            json_payload = json.dumps(payload)
+            json_payload=json.dumps(payload)
             json_data = json.loads(json.dumps(payload))
-            response = requests.post(url, headers=headers, json=payload)  # data=payload,
+            response = requests.post(url, headers=headers, json=payload)#data=payload,
             _logger.info(f'{url} called')
 
             if response.status_code == 200:
-                result = ""
-                rpc = response.json().get('jsonrpc')
+                result=""
+                rpc=response.json().get('jsonrpc')
                 result = response.json().get('result') if rpc else response.json()
 
                 if not result:
@@ -259,14 +260,15 @@ class EInvAPI(models.AbstractModel):
 
     def get_doc_payload(self, docs_ids, validate=False):
         if not docs_ids:
-            return {}  # return empty dict
+            return  {} # return empty dict
 
         docs = DocData()
         docs.documents = list()
         selected_records = self.env['account.move'].browse(docs_ids)
         for invoice in selected_records:
             if validate and invoice.state != 'posted':
-                continue  # skip invoice which state is not posted
+                continue # skip invoice which state is not posted
+
 
             doc = self.map_doc(invoice)
             # Issuer
@@ -562,7 +564,7 @@ class EInvAPI(models.AbstractModel):
     def change_doc_status(self, state, reason):
         self.ensure_one()
         invoice = self.env['account.move'].search([('id', '=', self.id)], limit=1)
-        if invoice.einv_uuid and invoice.einv_tax_state == 'valid':
+        if invoice.einv_uuid:
             url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1.0/documents/{invoice.einv_uuid}/state"
             token = self.validate_token()
             payload = {'status': f'{state}', 'reason': f'{reason}'}
@@ -572,6 +574,7 @@ class EInvAPI(models.AbstractModel):
             try:
                 response = requests.put(url, headers=headers, json=payload)
                 _logger.info(f'{url} called')
+
 
                 if response.status_code == 200:
                     if state == 'cancelled':
@@ -604,7 +607,6 @@ class EInvAPI(models.AbstractModel):
 
     def action_einv_reject_doc(self):
         self.api_reject_doc()
-
     # endregion
 
     # region  Decline Cancellation By (Receiver) | Decline Rejection By(Issuer)
@@ -629,9 +631,9 @@ class EInvAPI(models.AbstractModel):
                     elif request_name == 'rejection':
                         invoice.einv_decline_reject_request_date = datetime.now()
                 else:
-                    errorMsg = f'Request to get token failed.\nCode:{response.status_code} ' \
-                               f'\nContent: {response.content}'
-                    _logger.error(errorMsg)
+                    errorMsg=f'Request to get token failed.\nCode:{response.status_code} ' \
+                             f'\nContent: {response.content}'
+                    _logger.error( errorMsg)
 
                     result = response.json()
                     error = Error.from_dict(result)
@@ -660,7 +662,6 @@ class EInvAPI(models.AbstractModel):
 
     def action_einv_decline_reject_doc(self):
         self.api_decline_rejection()
-
     # endregion
 
     # region  Get recent document
@@ -958,7 +959,7 @@ class EInvAPI(models.AbstractModel):
     # endregion
 
 
-class EgtaxApiController(http.Controller):
+class EgtaxApiController2(http.Controller):
 
     @http.route('/web/einv/api/doc/download/<string:res_model>/<int:res_id>', type='http', auth="public")
     # @serialize_exception
@@ -1001,9 +1002,8 @@ class EgtaxApiController(http.Controller):
             result = {'error': str(e)}
             return Response(json.dumps(result), mimetype='application/json', status=400)
 
-    @http.route('/api/v1.0/documents/state/<string:uuid>/decline/cancelation', type='http', auth="public",
-                methods=['PUT'], csrf=False)
-    def decline_cancelation(self, uuid, **kwargs):
+    @http.route('/api/v1.0/documents/state/<string:uuid>/decline/cancelation', type='http', auth="public", methods=['PUT'], csrf=False)
+    def decline_cancelation(self,uuid, **kwargs):
         headers = [('Content-Type', 'application/json')]
 
         # body =http.request.params
@@ -1042,12 +1042,12 @@ class EgtaxApiController(http.Controller):
         return Response(json.dumps(response), mimetype='application/json', status=200, headers=headers)
 
     @http.route('/api/v1.0/documents/<string:uuid>/state', type='json', auth="public", methods=['PUT'], csrf=False)
-    def change_doc_state(self, uuid, **kwargs):
+    def change_doc_state(self,uuid, **kwargs):
         headers = [('Content-Type', 'application/json')]
 
         request = http.request
         print(http.request.jsonrequest)
-        # json = http.request.jsonrequest
+        #json = http.request.jsonrequest
         # try:
         #     docs = DocData.from_dict(body)
         # except:
@@ -1067,37 +1067,25 @@ class EgtaxApiController(http.Controller):
 
         return response
 
-        # return Response(json.dumps(response), mimetype='application/json', status=200,headers=headers)
+        #return Response(json.dumps(response), mimetype='application/json', status=200,headers=headers)
 
-    @http.route('/api/v1/documentsubmissions', type='json', auth="public", methods=['POST'], website=True, csrf=False)
+    @http.route('/api/v1/documentsubmissions', type='json', auth="public", methods=['POST'],website=True, csrf=False)
     def submit_doc(self, **kwargs):
         headers = [('Content-Type', 'application/json')]
 
         request = http.request
-        # json = http.request.jsonrequest
+        #json = http.request.jsonrequest
         # try:
         #     docs = DocData.from_dict(body)
         # except:
         #     _logger.error("/api/v1/documentsubmissions")
         #     print(body)
         # try:
-        body=DocData.from_dict(http.request.jsonrequest)
-        res = SubmitResponse()
-        res.submission_uuid = f'{uuid.uuid4().hex}'
-
-        for doc in body.documents:
-            accept_doc=AcceptedDocument()
-            accept_doc.uuid=f'{uuid.uuid4().hex}'
-            accept_doc.long_id = f'{uuid.uuid4().hex}'
-            accept_doc.internal_id = doc.internal_id
-            res.accepted_documents.append(accept_doc)
-
-        response = res.to_dict()
-        # response = {
-        #     'submissionUUID': f'{uuid.uuid1().hex}',
-        #     'acceptedDocuments': [],
-        #     'rejectedDocuments': []
-        # }
+        response = {
+            'submissionUUID': f'{uuid.uuid1().hex}',
+            'acceptedDocuments': [],
+            'rejectedDocuments': []
+        }
         # return Response(response=json.dumps(response), mimetype='application/json',status=400)
 
         # return Response(json.dumps(response), status=400)
@@ -1105,36 +1093,36 @@ class EgtaxApiController(http.Controller):
 
         return response
 
-        # return Response(json.dumps(response), mimetype='application/json', status=200,headers=headers)
+        #return Response(json.dumps(response), mimetype='application/json', status=200,headers=headers)
 
     @http.route('/connect/token', type='http', auth="public", methods=['Post'], csrf=False)
     def access_token(self, **kwargs):
         headers = [('Content-Type', 'application/json')]
 
         request = http.request
-        # print(http.request.jsonrequest)
-        # json = http.request.jsonrequest
+        #print(http.request.jsonrequest)
+        #json = http.request.jsonrequest
         # try:
         #     docs = DocData.from_dict(body)
         # except:
         #     _logger.error("/api/v1/documentsubmissions")
         #     print(body)
         # try:
-        print(f'access_token {uuid}')
+        print(f'change_doc_state {uuid}')
         response = {
-            'access_token': f'{uuid.uuid4().hex}',
-            'expires_in': 3600,
-            'scope': 'InvoicingAPI',
-            'token_type': 'client_credentials'
+            'error':'',
+            'code': '',
+            'message': '',
+            'target': ''
         }
         # return Response(response=json.dumps(response), mimetype='application/json',status=400)
 
         # return Response(json.dumps(response), status=400)
         # raise werkzeug.exceptions.BadRequest(json.dumps(response))
 
-        # return response
+        #return response
 
-        return Response(json.dumps(response), mimetype='application/json', status=200, headers=headers)
+        return Response(json.dumps(response), mimetype='application/json', status=200,headers=headers)
     # except Exception as e:
     #     _logger.exception("Fail to Called Token")
     #     result = {'error': str(e)}

@@ -22,14 +22,14 @@ import dateutil.parser
 # https://sdk.invoicing.eta.gov.eg/api/05-submit-documents/
 @dataclass
 class Delivery:
-    approach:str = ''
-    packaging:str = ''
-    date_validity:str = ''
-    export_port:str = ''
-    country_of_origin:str = ''
-    gross_weight:float = 0.0
-    net_weight:float = 0.0
-    terms:str = ''
+    approach = ''
+    packaging = ''
+    date_validity = ''
+    export_port = ''
+    country_of_origin = ''
+    gross_weight = 0.0
+    net_weight = 0.0
+    terms = ''
 
     @staticmethod
     def from_dict(obj: Any) -> 'Delivery':
@@ -60,8 +60,8 @@ class Delivery:
 
 @dataclass
 class Discount:
-    rate:float = 0.0
-    amount:float = 0.0
+    rate = 0.0
+    amount = 0.0
 
     @staticmethod
     def from_dict(obj: Any) -> 'Discount':
@@ -79,10 +79,10 @@ class Discount:
 
 @dataclass
 class TaxableItem:
-    tax_type:str = ''
-    amount:float = 0.0
-    sub_type:str = ''
-    rate:float = 0.0
+    tax_type = ''
+    amount = 0.0
+    sub_type = ''
+    rate = 0.0
 
     @staticmethod
     def from_dict(obj: Any) -> 'TaxableItem':
@@ -104,10 +104,10 @@ class TaxableItem:
 
 @dataclass
 class UnitValue:
-    currency_sold:str = ''
-    amount_egp:float = 0.0
-    amount_sold:float = 0.0
-    currency_exchange_rate:float = 0.0
+    currency_sold = ''
+    amount_egp = 0.0
+    amount_sold = 0.0
+    currency_exchange_rate = 0.0
 
     @staticmethod
     def from_dict(obj: Any) -> 'UnitValue':
@@ -129,21 +129,21 @@ class UnitValue:
 
 @dataclass
 class InvoiceLine:
-    description:str = ''
-    item_type:str = ''
-    item_code:str = ''
-    unit_type:str = ''
-    quantity:float = 0.0
-    internal_code:str = ''
-    sales_total:float = 0.0
-    total:float = 0.0
-    value_difference:float = 0.0
-    total_taxable_fees:float = 0.0
-    net_total:float = 0.0
-    items_discount:float = 0.0
-    unit_value :UnitValue= UnitValue()
-    discount:Discount = Discount()
-    taxable_items : List[TaxableItem]= field(default_factory=list)  # _list()  #: List[TaxableItem]
+    description = ''
+    item_type = ''
+    item_code = ''
+    unit_type = ''
+    quantity = 0.0
+    internal_code = ''
+    sales_total = 0.0
+    total = 0.0
+    value_difference = 0.0
+    total_taxable_fees = 0.0
+    net_total = 0.0
+    items_discount = 0.0
+    unit_value = UnitValue()
+    discount = Discount()
+    taxable_items = list()  #: List[TaxableItem]
 
     @staticmethod
     def from_dict(obj: Any) -> 'InvoiceLine':
@@ -189,17 +189,19 @@ class InvoiceLine:
 
 @dataclass
 class Address:
-    country:str = ''
-    governate:str = ''
-    region_city:str = ''
-    street:str = ''
-    building_number:str = ''
-    postal_code:str = ''
-    floor:str = ''
-    room:str = ''
-    landmark:str = ''
-    additional_information:str = ''
-    branch_id:str = ''
+    country = ''
+    governate = ''
+    region_city = ''
+    street = ''
+    building_number = ''
+    postal_code = ''
+    floor = ''
+    room = ''
+    landmark = ''
+    additional_information = ''
+    branch_id = ''
+    x:list[int]=field(default_factory=list)
+
 
     @staticmethod
     def from_dict(obj: Any) -> 'Address':
@@ -237,10 +239,10 @@ class Address:
 
 @dataclass
 class Partner:
-    address:Address = Address()
-    type:str = ''
-    id:str = ''
-    name:str = ''
+    address = Address()
+    type = ''
+    id = ''
+    name = ''
 
     @staticmethod
     def from_dict(obj: Any) -> 'Partner':
@@ -262,12 +264,12 @@ class Partner:
 
 @dataclass
 class Payment:
-    bank_name:str = ''
-    bank_address:str = ''
-    bank_account_no:str = ''
-    bank_account_iban:str = ''
-    swift_code:str = ''
-    terms:str = ''
+    bank_name = ''
+    bank_address = ''
+    bank_account_no = ''
+    bank_account_iban = ''
+    swift_code = ''
+    terms = ''
 
     @staticmethod
     def from_dict(obj: Any) -> 'Payment':
@@ -293,8 +295,8 @@ class Payment:
 
 @dataclass
 class Signature:
-    signature_type:str = ''
-    value:str = ''
+    signature_type = ''
+    value = ''
 
     @staticmethod
     def from_dict(obj: Any) -> 'Signature':
@@ -312,8 +314,8 @@ class Signature:
 
 @dataclass
 class TaxTotal:
-    tax_type: str = ''
-    amount: float = 0.0
+    tax_type: str
+    amount: float
 
     @staticmethod
     def from_dict(obj: Any) -> 'TaxTotal':
@@ -331,30 +333,33 @@ class TaxTotal:
 
 @dataclass
 class Document:
-    issuer:Partner = Partner()
-    receiver:Partner = Partner()
-    document_type:str = ''
-    document_type_version:str = ''
-    date_time_issued:str = ''
-    taxpayer_activity_code:str = ''
-    internal_id:str = ''
-    purchase_order_reference:str = ''
-    purchase_order_description:str = ''
-    sales_order_reference:str = ''
-    sales_order_description:str = ''
-    proforma_invoice_number:str = ''
-    references :List[str]= field(default_factory=list)  # _list()
-    payment:Payment = Payment()
-    delivery:Delivery = Delivery()
-    invoice_lines :List[InvoiceLine]= field(default_factory=list)  # _list() # 
-    total_discount_amount:float = 0.0
-    total_sales_amount:float = 0.0
-    net_amount:float = 0.0
-    tax_totals :List[TaxTotal]= field(default_factory=list)  # _list()  # 
-    total_amount:float = 0.0
-    extra_discount_amount:float = 0.0
-    total_items_discount_amount:float = 0.0
-    signatures :List[Signature]= field(default_factory=list)  # _list()  #: 
+    issuer = Partner()
+    receiver = Partner()
+    document_type = ''
+    document_type_version = ''
+    date_time_issued = ''
+    taxpayer_activity_code = ''
+    internal_id = ''
+    purchase_order_reference = ''
+    purchase_order_description = ''
+    sales_order_reference = ''
+    sales_order_description = ''
+    proforma_invoice_number = ''
+    references = list()
+    payment = Payment()
+    delivery = Delivery()
+    invoice_lines = list() # List[InvoiceLine] # List[InvoiceLine] # list()
+    total_discount_amount = 0.0
+    total_sales_amount = 0.0
+    net_amount = 0.0
+    tax_totals = list()  # List[TaxTotal]
+    total_amount = 0.0
+    extra_discount_amount = 0.0
+    total_items_discount_amount = 0.0
+    signatures = list()  #: List[Signature]
+
+    def __init__(self):
+        print('initializing a new Person object')
 
     @staticmethod
     def from_dict(obj: Any) -> 'Document':
@@ -371,7 +376,7 @@ class Document:
         sales_order_reference = from_str(obj.get("salesOrderReference"))
         sales_order_description = from_str(obj.get("salesOrderDescription"))
         proforma_invoice_number = from_str(obj.get("proformaInvoiceNumber"))
-        references = from_list(from_str, obj.get("references",[]))
+        references = from_list(from_str, obj.get("references"))
         payment = Payment.from_dict(obj.get("payment"))
         delivery = Delivery.from_dict(obj.get("delivery"))
         invoice_lines = from_list(InvoiceLine.from_dict, obj.get("invoiceLines"))
@@ -438,7 +443,7 @@ class TaxesList:
 
 @dataclass
 class DocData:
-    documents: List[Document]=field(default_factory=list)  # _list()  #:
+    documents = list()  #: List[Document]
 
     @staticmethod
     def from_dict(obj: Any) -> 'DocData':
@@ -461,9 +466,9 @@ class DocData:
 
 @dataclass
 class AcceptedDocument:
-    uuid: str = ''
-    long_id: str = ''
-    internal_id: str = ''
+    uuid: str
+    long_id: str
+    internal_id: str
 
     @staticmethod
     def from_dict(obj: Any) -> 'AcceptedDocument':
@@ -483,10 +488,10 @@ class AcceptedDocument:
 
 @dataclass
 class Error:
-    code: str = ''
-    message: str = ''
-    target: str = ''
-    details: Optional[List['Error']] = field(default_factory=list)
+    code: str
+    message: str
+    target: str
+    details: Optional[List['Error']] = None
 
     @staticmethod
     def from_dict(obj: Any) -> 'Error':
@@ -508,8 +513,8 @@ class Error:
 
 @dataclass
 class RejectedDocument:
-    internal_id: str = ''
-    error: Error =Error()
+    internal_id: str
+    error: Error
 
     @staticmethod
     def from_dict(obj: Any) -> 'RejectedDocument':
@@ -527,9 +532,9 @@ class RejectedDocument:
 
 @dataclass
 class SubmitResponse:
-    submission_uuid: str = ''
-    accepted_documents: List[AcceptedDocument] = field(default_factory=list)
-    rejected_documents: List[RejectedDocument] = field(default_factory=list)
+    submission_uuid: str
+    accepted_documents: List[AcceptedDocument]
+    rejected_documents: List[RejectedDocument]
 
     @staticmethod
     def from_dict(obj: Any) -> 'SubmitResponse':
@@ -553,9 +558,9 @@ class SubmitResponse:
 # https://sdk.invoicing.eta.gov.eg/api/12-get-document/#overview
 @dataclass
 class ValidationStep:
-    name: str = ''
-    status: str = ''
-    error: Error= Error()
+    name: str
+    status: str
+    error: Error
 
     @staticmethod
     def from_dict(obj: Any) -> 'ValidationStep':
@@ -575,8 +580,8 @@ class ValidationStep:
 
 @dataclass
 class ValidationResults:
-    status: str = ''
-    validation_steps: List[ValidationStep] = field(default_factory=list)
+    status: str
+    validation_steps: List[ValidationStep]
 
     @staticmethod
     def from_dict(obj: Any) -> 'ValidationResults':
@@ -594,26 +599,26 @@ class ValidationResults:
 
 @dataclass
 class GetDocResponse:
-    uuid: str = ''
-    submission_uuid: str = ''
-    long_id: str = ''
-    internal_id: str = ''
-    type_name: str = ''
-    type_version_name: str = ''
-    issuer_id: str = ''
-    issuer_name: str = ''
-    receiver_id: str = ''
-    receiver_name: str = ''
-    date_time_issued: str = ''
-    date_time_received: str = ''
-    total_sales: float = 0.0
-    total_discount: float = 0.0
-    net_amount: float = 0.0
-    total: float = 0.0
-    status: str = ''
-    document: Document = Document()
-    transformation_status: str = ''
-    validation_results: ValidationResults = ValidationResults()
+    uuid: str
+    submission_uuid: str
+    long_id: str
+    internal_id: str
+    type_name: str
+    type_version_name: str
+    issuer_id: str
+    issuer_name: str
+    receiver_id: str
+    receiver_name: str
+    date_time_issued: str
+    date_time_received: str
+    total_sales: float
+    total_discount: float
+    net_amount: float
+    total: float
+    status: str
+    document: Document
+    transformation_status: str
+    validation_results: ValidationResults
 
     @staticmethod
     def from_dict(obj: Any) -> 'GetDocResponse':
@@ -674,18 +679,18 @@ class GetDocResponse:
 # https://sdk.invoicing.eta.gov.eg/api/20-get-document-details/
 @dataclass
 class GetDocDetailsResponse:
-    long_id: str = ''
-    date_time_received: str = ''
-    status: str = ''
-    transformation_status: str = ''
-    cancel_request_date: str = ''
-    reject_request_date: str = ''
-    cancel_request_delayed_date: str = ''
-    reject_request_delayed_date: str = ''
-    decline_cancel_request_date: str = ''
-    decline_reject_request_date: str = ''
-    document: Document = Document()
-    validation_results: ValidationResults =ValidationResults()
+    long_id: str
+    date_time_received: str
+    status: str
+    transformation_status: str
+    cancel_request_date: str
+    reject_request_date: str
+    cancel_request_delayed_date: str
+    reject_request_delayed_date: str
+    decline_cancel_request_date: str
+    decline_reject_request_date: str
+    document: Document
+    validation_results: ValidationResults
 
     @staticmethod
     def from_dict(obj: Any) -> 'GetDocDetailsResponse':
@@ -749,29 +754,29 @@ class MetadataResult:
 
 @dataclass
 class DocumentSummary:
-    uuid: str = ''
-    submission_uuid: str = ''
-    long_id: str = ''
-    internal_id: str = ''
-    type_name: str = ''
-    type_version_name: str = ''
-    issuer_id: str = ''
-    issuer_name: str = ''
-    receiver_id: str = ''
-    receiver_name: str = ''
-    date_time_issued: str = ''
-    date_time_received: str = ''
-    total_sales: float = 0.0
-    total_discount: float = 0.0
-    net_amount: float = 0.0
-    total: float = 0.0
-    status: str = ''
-    cancel_request_date: str = ''
-    reject_request_date: str = ''
-    cancel_request_delayed_date: str = ''
-    reject_request_delayed_date: str = ''
-    decline_cancel_request_date: str = ''
-    decline_reject_request_date: str = ''
+    uuid: str
+    submission_uuid: str
+    long_id: str
+    internal_id: str
+    type_name: str
+    type_version_name: str
+    issuer_id: str
+    issuer_name: str
+    receiver_id: str
+    receiver_name: str
+    date_time_issued: str
+    date_time_received: str
+    total_sales: float
+    total_discount: float
+    net_amount: float
+    total: float
+    status: str
+    cancel_request_date: str
+    reject_request_date: str
+    cancel_request_delayed_date: str
+    reject_request_delayed_date: str
+    decline_cancel_request_date: str
+    decline_reject_request_date: str
 
     @staticmethod
     def from_dict(obj: Any) -> 'DocumentSummary':

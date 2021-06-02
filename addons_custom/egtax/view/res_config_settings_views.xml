@@ -78,6 +78,7 @@
                                     <field name="token_type"/>
                                     <field name="expire_in"/>
                                     <field name="auto_post"/>
+                                    <field name="auto_receive"/>
                                     <field name="last_token_date"/>
                                     <field name="signature_type"/>
                                     <field name="signature_value"/>
