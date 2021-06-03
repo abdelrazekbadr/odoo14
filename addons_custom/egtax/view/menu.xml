@@ -1,10 +1,10 @@
 <odoo>
     <data>
-        <menuitem id="egtax_top_menu" name="e-Invoices" action="action_account_move_tax" sequence="20"
-                  web_icon="egtax,static/description/icon.png"/>
+        <menuitem id="egtax_top_menu" name="e-Invoices" action="action_account_move_tax_customer" sequence="20"
+                  web_icon="egtax,static/description/icon.ico"/>
         <menuitem id="egtax_sub_menu" name="Operations" sequence="40" parent="egtax_top_menu"/>
         <menuitem id="egtax_config_menu" name="Configurations" sequence="50" parent="egtax_top_menu"/>
-
+        <menuitem id="egtax_sync_einv_menu" action="action_sync_einv" name="Sync" sequence="5" parent="egtax_top_menu" />
 
         <!--<action inherited from account-->
         <menuitem id="menu_finance_receivables_egtax" name="Customers" parent="egtax_top_menu" sequence="21">
@@ -21,7 +21,7 @@
             <menuitem id="menu_account_customer_egtax" name="Customers" action="account.res_partner_action_customer"
                       sequence="70"/>
 
-            <menuitem id="menu_egtax_e_inv" name="e-Invoices" action="action_account_move_tax" sequence="80"/>
+            <menuitem id="menu_egtax_e_inv_customer" name="e-Invoices" action="egtax.action_account_move_tax_customer" sequence="200"/>
         </menuitem>
 
         <menuitem id="menu_finance_payables_egtax" name="Vendors" parent="egtax_top_menu" sequence="22">
@@ -38,7 +38,7 @@
             <menuitem id="menu_account_supplier_egtax" name="Vendors" action="account.res_partner_action_supplier"
                       sequence="200"/>
 
-
+            <menuitem id="menu_egtax_e_inv_vendor" name="e-Invoices" action="action_account_move_tax_vendor" sequence="200"/>
         </menuitem>
 
     </data>

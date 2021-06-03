@@ -622,7 +622,7 @@ class EInvAPIBakup(models.AbstractModel):
 
             try:
                 response = requests.put(url, headers=headers)
-                _logger.info(f'{self.url} called')
+                _logger.info(f'{url} called')
                 if response.status_code == 200:
                     invoice.einv_tax_state = "valid"  # change state from '_request' to 'valid'
                     if request_name == 'cancelation':

@@ -585,7 +585,8 @@ class EInvAPI(models.AbstractModel):
                                f'\nContent: {response.content}'
                     _logger.error(errorMsg)
 
-                    result = response.json()
+                    rpc = response.json().get('jsonrpc')
+                    result = response.json().get('result') if rpc else response.json()
                     error = Error.from_dict(result)
                     self.write_log(invoice, error)
 
@@ -620,7 +621,7 @@ class EInvAPI(models.AbstractModel):
 
             try:
                 response = requests.put(url, headers=headers)
-                _logger.info(f'{self.url} called')
+                _logger.info(f'{url} called')
                 if response.status_code == 200:
                     invoice.einv_tax_state = "valid"  # change state from '_request' to 'valid'
                     if request_name == 'cancelation':
@@ -632,8 +633,9 @@ class EInvAPI(models.AbstractModel):
                     errorMsg = f'Request to get token failed.\nCode:{response.status_code} ' \
                                f'\nContent: {response.content}'
                     _logger.error(errorMsg)
+                    rpc = response.json().get('jsonrpc')
+                    result = response.json().get('result') if rpc else response.json()
 
-                    result = response.json()
                     error = Error.from_dict(result)
                     self.write_log(invoice, error)
 

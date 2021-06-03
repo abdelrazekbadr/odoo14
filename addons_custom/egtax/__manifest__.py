@@ -23,7 +23,7 @@ The specific and easy-to-use EG-Tax integration  in Odoo allows you to keep trac
     "data": [
         "security/groups.xml",
         "security/ir.model.access.csv",
-        "view/menu.xml",
+
         "view/res_config_settings_views.xml",
         "view/account_move_tax.xml",
         "view/code_tax_type.xml",
@@ -33,14 +33,13 @@ The specific and easy-to-use EG-Tax integration  in Odoo allows you to keep trac
         "view/uom.xml",
         "view/product.xml",
         "view/automated_actions.xml",
-
         "data/code_unit_types.xml",
         "data/code_tax_types.xml",
         "data/code_nontaxable_types.xml",
         "data/code_tax_sub_types.xml",
         "data/code_activity_types.xml",
         "data/uom_data.xml",
-
+        "view/menu.xml",
 
         # "view/invoice.xml",
         # "view/creditnote.xml",
