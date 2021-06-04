@@ -15,6 +15,7 @@ from odoo.http import request, Response, serialize_exception
 from odoo.modules import get_module_resource
 from ..api.documents import *
 from datetime import datetime, timedelta
+import time
 
 from odoo.exceptions import UserError
 
@@ -25,11 +26,11 @@ class EInvAPI(models.AbstractModel):
     _name = "egtax.einv_api"
     _description = "Eg E-Invoice API "
 
-    api_version = "v1"
-    api_version_number = "1.0"
-    api_country_code = "EG"
-    api_url_token = "/connect/token"
-    api_url_submit_doc = f"/api/{api_version}/documentsubmissions"
+    einv_version = "v1"
+    einv_version_number = "1.0"
+    einv_country_code = "EG"
+    einv_url_token = "/connect/token"
+    einv_url_submit_doc = f"/api/{einv_version}/documentsubmissions"
 
     # PUT /api/v1.0/documents/{UUID}/state
 
@@ -89,8 +90,10 @@ class EInvAPI(models.AbstractModel):
     def write_log(self, invoice, error):
         invoice.einv_error_code = error.code
         invoice.einv_error_message = error.message
+        invoice.einv_error_target = error.target
         # handle error error,error_description,error_uri
         self.write_error_details(invoice, error)
+
         if error.details:
             for err in error.details:
                 self.write_error_details(invoice, err)
@@ -99,11 +102,11 @@ class EInvAPI(models.AbstractModel):
         invoice.write({'errors_detail_ids':
                            [(0, 0,
                              {
-                                 'name': error.name or error.code or '',  # optional
+                                 'name': error.err_name or error.code or '',  # optional
                                  'code': error.code or '',
                                  'message': error.message or '',
                                  'target': error.target or '',
-                                 'error_uri': error.error_uri or '',  # optional TODO:Review error_uri
+                                 'error_uri': error.err_uri or '',  # optional TODO:Review error_uri
                                  'date': datetime.now()
                              }
                              )
@@ -113,7 +116,6 @@ class EInvAPI(models.AbstractModel):
     # endregion
 
     def api_auth(self):
-        # TODO validate current
         client_id = self.get_config(ConfigKeys.CLIENT_ID.value, '')
         client_secret = self.get_config(ConfigKeys.CLIENT_SECRET.value, '')
         basic_params = b64encode(bytes(f'{client_id}:{client_secret}', "utf-8")).decode("ascii")  # Review Coding
@@ -121,7 +123,7 @@ class EInvAPI(models.AbstractModel):
         # headers = {'Content-Type': 'application/json'}
         payload = {'grant_type': 'client_credentials', 'scope': 'InvoicingAPI'}  # TODO Read from config
         data = json.loads(json.dumps(payload))
-        url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}{self.api_url_token}"
+        url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}{self.einv_url_token}"
         try:
             response = requests.request("POST", url, headers=headers, data=payload)  #
             _logger.info(f'{url} called')
@@ -141,8 +143,8 @@ class EInvAPI(models.AbstractModel):
                 _logger.error(
                     f'Request to get token failed.\nCode:{response.status_code} \nContent: {response.content}')
                 self.write_log_all(response)
-
             return ''
+            #self._raise_query_error(Exception(f"Authentication error for id:{client_id}"))
         except Exception as e:
             self._raise_query_error(e)
 
@@ -181,23 +183,24 @@ class EInvAPI(models.AbstractModel):
     # region API Submit Document
     # https://sdk.invoicing.eta.gov.eg/api/05-submit-documents/
     @api.model
-    def api_submit_documents(self, payload):
+    def api_submit_documents(self, payload ,auto=False):
         """
-        submit documents
+        api_endpoint submit documents
         """
         url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1/documentsubmissions"
         token = self.validate_token()
+        if not token:
+            self._raise_query_error("Not valid access token")
+            return
         # payload = self.get_doc_payload(True)
+        #headers = {'Authorization': f'bearer {token}'}
         headers = {'Content-Type': 'application/json', 'Authorization': f'bearer {token}'}
 
         try:
-            json_payload = json.dumps(payload)
-            json_data = json.loads(json.dumps(payload))
             response = requests.post(url, headers=headers, json=payload)  # data=payload,
             _logger.info(f'{url} called')
 
             if response.status_code == 200:
-                result = ""
                 rpc = response.json().get('jsonrpc')
                 result = response.json().get('result') if rpc else response.json()
 
@@ -206,7 +209,7 @@ class EInvAPI(models.AbstractModel):
 
                 responseData = SubmitResponse.from_dict(result)
                 for doc in responseData.accepted_documents:
-                    self.update_doc_state(doc, responseData.submission_uuid, True)
+                    self.update_doc_state(doc, responseData.submission_uuid, accepted=True)
 
                 for doc in responseData.rejected_documents:
                     self.update_doc_state(doc, '', False)
@@ -218,6 +221,10 @@ class EInvAPI(models.AbstractModel):
 
         except Exception as e:
             self._raise_query_error(e)
+    def reset_error(self,invoice):
+        invoice.einv_error_code = ""
+        invoice.einv_error_message = ""
+        invoice.einv_error_detail = ""
 
     def action_einv_post_docs(self):
         docs_ids = self.env.context.get('active_ids', [])
@@ -225,15 +232,16 @@ class EInvAPI(models.AbstractModel):
             docs_ids = [self.id]
 
         if not docs_ids:  # empty
-            _logger.info("E-Invoive manual posting docs_ids are empty")
+            _logger.info("E-Invoice manual posting docs_ids are empty")
             return  # exit without complete because no document selected
         else:
             payload = self.get_doc_payload(docs_ids, True)
             self.api_submit_documents(payload)
 
     def post_docs_auto(self):  # run by planned action [task] in background
+        _logger.info("E-Invoice auto posting start")
         if not bool(self.get_config(ConfigKeys.AUTO_POST.value)):
-            _logger.info("E-Invoive auto posting not active")
+            _logger.info("E-Invoice auto posting not active")
             return  # exit without complete task
 
         start_date = from_datetime(self.get_config(ConfigKeys.START_DATE.value))
@@ -246,17 +254,19 @@ class EInvAPI(models.AbstractModel):
             [
                 ('move_type', 'in', ['out_invoice', 'out_refund']),
                 ('invoice_date', '>=', start_date),
-                ('invoice_date', '<=', end_date),  # invoice date must be have 24 hour
+                ('create_date', '<=', end_date),  # invoice date must be have 24 hour
                 ('state', '=', 'posted'),  # invoice confirmed
                 ('einv_is_submitted', '=', False)  # invoice not submitted
             ]).ids
         if not docs_ids:
-            _logger.info("E-Invoive auto posting docs_ids are empty")
+            _logger.info("E-Invoice auto posting docs_ids are empty")
             return  # exit without complete task
         else:
             payload = self.get_doc_payload(docs_ids, True)
-            self.api_submit_documents(payload)
-
+            self.api_submit_documents(payload=payload, auto=True)
+            
+        _logger.info("E-Invoice auto posting end")
+           
     def get_doc_payload(self, docs_ids, validate=False):
         if not docs_ids:
             return {}  # return empty dict
@@ -297,34 +307,32 @@ class EInvAPI(models.AbstractModel):
 
         return payload
 
-    def update_doc_state(self, doc, submissionUUID, accepted):
+    def update_doc_state(self, doc, submissionUUID, accepted,auto=False):
 
         invoice = self.env['account.move'].search([('name', '=', doc.internal_id)], limit=1)
         # doc.internal_id
-        if accepted:
-            invoice.einv_tax_state = 'valid'
-            invoice.einv_post_date = datetime.now()
-            invoice.einv_is_submitted = True
-            invoice.einv_uuid = doc.uuid
-            invoice.einv_longId = doc.long_id
-            invoice.einv_submissionUUID = submissionUUID
-            # TODO:complete other data
-            invoice.einv_error_code = ""
-            invoice.einv_error_message = ""
-            invoice.einv_error_detail = ""
-
-        else:
-            invoice.einv_tax_state = 'invalid'
-            # invoice.einv_post_date = datetime.now()
-            invoice.einv_uuid = doc.uuid
-            invoice.einv_longId = doc.long_id
-            invoice.einv_submissionUUID = submissionUUID
-            # TODO:complete other data
-            invoice.einv_error_code = doc.error.code
-            invoice.einv_error_message = doc.error.message
-            # invoice.einv_error_detail = doc.error.details
-            for error in doc.error.details:
-                pass
+        if invoice:
+            invoice.einv_action_type = 'auto' if auto else 'manual'
+            if accepted:
+                invoice.einv_tax_state = 'valid'
+                invoice.einv_post_date = datetime.now()
+                invoice.einv_is_submitted = True
+                invoice.einv_uuid = doc.uuid
+                invoice.einv_longId = doc.long_id
+                invoice.einv_submissionUUID = submissionUUID
+                self.reset_error(invoice)
+    
+            else:
+                invoice.einv_tax_state = 'invalid'
+                self.write_log(invoice, doc.error)
+                # invoice.einv_error_code = doc.error.code
+                # invoice.einv_error_message = doc.error.message
+                # invoice.einv_error_target = doc.error.target
+                #self.write_log(invoice,doc.error)
+                # invoice.einv_error_detail = doc.error.details
+                # for error in doc.error.details:
+                #     self.write_log(invoice, Error(code=error.code, message=error.message, target=error.target))
+                #
 
     # return with e-invoice api standard structure -------------------
     def map_doc(self, invoice) -> 'Document':
@@ -343,7 +351,7 @@ class EInvAPI(models.AbstractModel):
             if invoice.reversed_entry_id and invoice.reversed_entry_id.einv_uuid:
                 doc.references.append(invoice.reversed_entry_id.einv_uuid)
 
-        doc.document_type_version = self.api_version_number
+        doc.document_type_version = self.einv_version_number
 
         # https://www.programiz.com/python-programming/datetime/strftime
         doc.date_time_issued = invoice.invoice_date.strftime('%Y-%m-%dT%H:%M:%SZ') if invoice.invoice_date else ''
@@ -383,7 +391,7 @@ class EInvAPI(models.AbstractModel):
         partner.id = res_partner.vat  # Registeration Number or Nationl ID
         partner.name = res_partner.name or ""
         partner.type = 'B' if res_partner.is_company else 'P'
-        if res_partner.country_id.code != None and res_partner.country_id.code != self.api_country_code:
+        if res_partner.country_id.code != None and res_partner.country_id.code != self.einv_country_code:
             partner.type = 'F'
 
         # Address
@@ -553,10 +561,18 @@ class EInvAPI(models.AbstractModel):
     # region API Cancel / Reject Document
     # https://sdk.invoicing.eta.gov.eg/api/06-cancel-document/
     def api_cancel_doc(self):
+        """
+        api_endpoint  cancel_doc
+        :return: 
+        """
         self.change_doc_status('cancelled', '')  # TODO add confirm form with cancel reason
 
     # https://sdk.invoicing.eta.gov.eg/api/07-reject-document/
     def api_reject_doc(self):
+        """
+               api_endpoint  reject_doc
+               :return: 
+               """
         self.change_doc_status('rejected', '')  # TODO add confirm form with reject reason
 
     def change_doc_status(self, state, reason):
@@ -565,6 +581,9 @@ class EInvAPI(models.AbstractModel):
         if invoice.einv_uuid and invoice.einv_tax_state == 'valid':
             url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1.0/documents/{invoice.einv_uuid}/state"
             token = self.validate_token()
+            if not token:
+                self._raise_query_error("Not valid access token")
+                return
             payload = {'status': f'{state}', 'reason': f'{reason}'}
             headers = {'Content-Type': 'application/json', 'Accept': 'application/json', 'Accept-Language': 'ar',
                        'Authorization': f'bearer {token}'}
@@ -580,6 +599,8 @@ class EInvAPI(models.AbstractModel):
                     if state == 'rejected':
                         invoice.einv_tax_state = "reject_request"  # request succeeded wait for confirm
                         invoice.einv_reject_request_date = datetime.now()
+                    
+                    self.reset_error(invoice)
                 else:
                     errorMsg = f'Request to get token failed.\nCode:{response.status_code} ' \
                                f'\nContent: {response.content}'
@@ -616,7 +637,9 @@ class EInvAPI(models.AbstractModel):
         if invoice.einv_uuid:
             url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1.0/documents/state/{invoice.einv_uuid}/decline/{request_name}"
             token = self.validate_token()
-
+            if not token:
+                self._raise_query_error("Not valid access token")
+                return
             headers = {'Authorization': f'bearer {token}'}
 
             try:
@@ -629,6 +652,8 @@ class EInvAPI(models.AbstractModel):
 
                     elif request_name == 'rejection':
                         invoice.einv_decline_reject_request_date = datetime.now()
+
+                    self.reset_error(invoice)
                 else:
                     errorMsg = f'Request to get token failed.\nCode:{response.status_code} ' \
                                f'\nContent: {response.content}'
@@ -651,10 +676,18 @@ class EInvAPI(models.AbstractModel):
 
     # https://sdk.invoicing.eta.gov.eg/api/21-decline-cancellation/
     def api_decline_cancellation(self):
+        """
+               api_endpoint  decline cancellation
+               :return: 
+               """
         self.decline_request("cancelation")
 
     # https://sdk.invoicing.eta.gov.eg/api/22-decline-rejection/
     def api_decline_rejection(self):
+        """
+               api_endpoint  decline_rejection
+               :return: 
+               """
         self.decline_request("rejection")
 
     def action_einv_decline_cancel_doc(self):
@@ -669,13 +702,16 @@ class EInvAPI(models.AbstractModel):
     # https://sdk.invoicing.eta.gov.eg/api/08-get-recent-documents/
     def api_get_recent(self):
         """
-        Usage: change document states or check new document received, when found new docs call get detail to add new invoices
+        Usage:api_endpoint change document states or check new document received, when found new docs call get detail to add new invoices
         API allows taxpayer systems to query latest documents sent or received that are available on the eInvoicing solution.
         :return: GetRecentResponse
         """
 
         url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1.0/documents/recent"  # ?pageNo={pageNo}&pageSize={pageSize}
         token = self.validate_token()
+        if not token:
+            self._raise_query_error("Not valid access token")
+            return
 
         # headers = {'Content-Type': 'application/json', 'Accept': 'application/json', 'Accept-Language': 'ar',
         #           'Authorization': f'bearer {token}'}
@@ -711,7 +747,7 @@ class EInvAPI(models.AbstractModel):
     # https://sdk.invoicing.eta.gov.eg/api/20-get-document-details/
     def api_get_document_details(self, uuid):
         """
-        API allows taxpayers to retrieve a single document full details including validation results.
+        api_endpoint API allows taxpayers to retrieve a single document full details including validation results.
         used when need to add new received  invoice
         :param uuid: Unique e-invoice id number
         :return: GetDocDetailsResponse
@@ -720,6 +756,9 @@ class EInvAPI(models.AbstractModel):
 
         url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1.0/documents/{uuid}/details"
         token = self.validate_token()
+        if not token:
+            self._raise_query_error("Not valid access token")
+            return
 
         headers = {'Authorization': f'bearer {token}'}
 
@@ -744,7 +783,7 @@ class EInvAPI(models.AbstractModel):
     # https://sdk.invoicing.eta.gov.eg/api/12-get-document/
     def api_get_document(self, uuid):
         """
-        API allows taxpayers to retrieve document source XML or JSON with additional tax authority added metadata.
+        api_endpoint API allows taxpayers to retrieve document source XML or JSON with additional tax authority added metadata.
          used when need to add new received  invoice
         :param uuid: Unique e-invoice id number
         :return: GetDocResponse
@@ -752,7 +791,9 @@ class EInvAPI(models.AbstractModel):
 
         url = f"{self.get_config(ConfigKeys.API_BASE_URL.value)}/api/v1.0/documents/{uuid}/raw"
         token = self.validate_token()
-
+        if not token:
+            self._raise_query_error("Not valid access token")
+            return
         headers = {'Authorization': f'bearer {token}'}
 
         try:
@@ -777,14 +818,24 @@ class EInvAPI(models.AbstractModel):
     def action_einv_receive_recent_docs(self):  # manual from button
         self.fetch_recent_docs(auto=False)
 
+    def action_einv_sync(self):
+        # apply the logic here
+
+        self.fetch_recent_docs(auto=False)
+        #time.sleep(20)
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'reload',
+        }
     def fetch_recent_docs(self, auto=True):
         """
             Receive new invoices or update status
         :param auto: to determine creation by user or by task in background
         :return:
         """
+        if auto : _logger.info("E-Invoice auto receiving start")
         if auto and not bool(self.get_config(ConfigKeys.AUTO_RECEIVE.value)):
-            _logger.info("E-Invoive auto receiving not active")
+            _logger.info("E-Invoice auto receiving not active")
             return  # exit without complete task
 
         recent_docs = self.api_get_recent()
@@ -796,6 +847,8 @@ class EInvAPI(models.AbstractModel):
                     self.sync_doc_state(invoice, doc)
                 else:
                     self.create_invoice(doc, auto)
+
+        if auto: _logger.info("E-Invoice auto receiving end")
 
     def sync_doc_state(self, invoice, doc):
         if invoice.einv_tax_state != doc.status:
@@ -833,7 +886,9 @@ class EInvAPI(models.AbstractModel):
                 'einv_submissionUUID': doc.submission_uuid,
                 'einv_longId': doc.long_id,
                 'einv_tax_state': doc.status,
-                'einv_action_type': 'auto' if auto else 'manual'
+                'einv_action_type': 'auto' if auto else 'manual',
+                'einv_is_submitted': True,
+                'einv_received_date':from_datetime(doc.date_time_received)
 
                 # TODO complete invoice creation
                 # TODO write tester to test creating invoice by code
@@ -1082,25 +1137,42 @@ class EgtaxApiController(http.Controller):
         # except:
         #     _logger.error("/api/v1/documentsubmissions")
         #     print(body)
-        # try:
-        body=DocData.from_dict(http.request.jsonrequest)
-        res = SubmitResponse()
-        res.submission_uuid = f'{uuid.uuid4().hex}'
+        try:
+            body=DocData.from_dict(http.request.jsonrequest)
+            res = SubmitResponse()
+            res.submission_uuid = f'{uuid.uuid4().hex}'
 
-        for doc in body.documents:
-            accept_doc=AcceptedDocument()
-            accept_doc.uuid=f'{uuid.uuid4().hex}'
-            accept_doc.long_id = f'{uuid.uuid4().hex}'
-            accept_doc.internal_id = doc.internal_id
-            res.accepted_documents.append(accept_doc)
+            for doc in body.documents:
+                accept_doc=AcceptedDocument()
+                rejected= RejectedDocument()
 
-        response = res.to_dict()
-        # response = {
-        #     'submissionUUID': f'{uuid.uuid1().hex}',
-        #     'acceptedDocuments': [],
-        #     'rejectedDocuments': []
-        # }
-        # return Response(response=json.dumps(response), mimetype='application/json',status=400)
+                accept_doc.uuid=f'{uuid.uuid4().hex}'
+                accept_doc.long_id = f'{uuid.uuid4().hex}'
+                accept_doc.internal_id = doc.internal_id
+                #res.accepted_documents.append(accept_doc)
+
+                rejected.internal_id=doc.internal_id
+                rejected.error.code="INVALID"
+                rejected.error.message = "validation error retry again afrer enter valid data"
+                rejected.error.target = "validation error"
+
+                rejected.error.details =[
+                    Error(code="INVALID1",message="MSG1",target="TARGET1"),
+                Error(code="INVALID2",message="MSG2",target="TARGET2")]
+                res.rejected_documents.append((rejected))
+
+
+            response = res.to_dict()
+        except:
+            error_response = {
+                'code': '201',
+                'message': 'test error 201',
+                'target': f""
+            }
+            return error_response
+            #raise werkzeug.exceptions.BadRequest(json.dumps(error_response))
+            #raise werkzeug.exceptions.BadRequest(description="try", response=json.dumps(error_response))
+            #return Response(response=json.dumps(error_response), mimetype='application/json',status=201)
 
         # return Response(json.dumps(response), status=400)
         # raise werkzeug.exceptions.BadRequest(json.dumps(response))

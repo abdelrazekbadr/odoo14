@@ -33,3 +33,23 @@
 
 -generator map unit type to UoM odoo -->done
 
+API Features-------------------------------------------------------
+- [API Server Simulator]
+(8 endpoints)
+- get doc recent
+- get doc detail
+- submit doc(invoice) as issuer/customers
+- cancel (invoice) as issuer/customers
+- reject (bill) as receiver/vendors
+- decline cancellation (bill) as receiver/vendors
+- decline rejection (invoice) as issuer/customers
+- token/connect (authorization header)
+
+App Features -------------------------------------------------------
+- Auto receive invoices (task)
+- Auto send invoices (task)
+- USB Token signature
+- Dashboard
+
+
+

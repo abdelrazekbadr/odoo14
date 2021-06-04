@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/odoo/addons/base/data/res.country.state.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/odoo/addons/test_translation_import/i18n/dot.csv">
           <value>
             <Attribute>

@@ -488,6 +488,9 @@ class Error:
     target: str = ''
     details: Optional[List['Error']] = field(default_factory=list)
 
+    err_uri: str= '' #optional
+    err_name: str = '' #optional
+
     @staticmethod
     def from_dict(obj: Any) -> 'Error':
         assert isinstance(obj, dict)

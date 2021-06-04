@@ -15,15 +15,17 @@
                                 icon="fa-paper-plane-o"
                                 class="ml-2 mr-2"/>
                         <button name="action_einv_receive_recent_docs" type="object" string="Refresh status"
-                                invisible="context.get('default_move_type')  in ['in_invoice']"
+
+                                icon="fa-refresh"
                                 class="ml-2 mr-2"/>
 
-                        <button name="action_einv_receive_recent_docs" type="button" string="Receive e-Invoices"
-                                invisible="context.get('default_move_type')  in ['out_invoice']"
-                                class="ml-2 mr-2"/>
+<!--                        <button name="action_einv_receive_recent_docs" type="object" string="Receive e-Invoices"-->
+<!--                                invisible="context.get('default_move_type')  in ['out_invoice']"-->
+<!--                                class="ml-2 mr-2"/>-->
 
                         <!--                         <button name="action_post" states="draft" icon="fa-check" title="Post" type="object" groups="account.group_account_invoice"/>-->
                     </header>
+                    <field name="einv_is_submitted" optional="hide"></field>
                     <field name="name" decoration-bf="1"/>
                     <!--                    <field name="partner_id" string="Customer/Vendor"/>-->
                     <field name="invoice_partner_display_name"
@@ -40,17 +42,18 @@
                            invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund','out_receipt')"
                            string="Invoice Date"/>
 
-                    <field name="state" widget="badge" decoration-success="state == 'posted'"
-                           decoration-info="state == 'draft'" optional="show"/>
+                    <field name="state"  widget="badge" decoration-success="state == 'posted'"
+                           decoration-info="state == 'draft'" optional="hide"/>
                     <field name="move_type" string="Document Type"/>
 
                     <field name="einv_tax_state_display" widget="badge"
                            decoration-info="einv_tax_state_display == 'draft'"
                            decoration-success="einv_tax_state_display == 'valid' or einv_tax_state_display == 'submitted'"
-                           decoration-danger="einv_tax_state_display == 'cancelled' or einv_tax_state_display == 'cancel_request'"
+                           decoration-danger="einv_tax_state_display == 'cancelled' or einv_tax_state_display == 'cancel_request' or einv_tax_state_display=='invalid'"
                            decoration-warning="einv_tax_state_display == 'rejected' or einv_tax_state_display == 'reject_request'"
                            optional="show"/>
 
+                     <field name="amount_total" />
                     <field name="einv_post_date"/>
                     <!--                    <field name="einv_uuid" />-->
                     <!--                    <field name="einv_longId" />-->
@@ -72,7 +75,7 @@
             <!--            <field name="inherit_id" ref="account.view_move_form"/>-->
             <!--            <field name="inherit_id" ref=""/>-->
             <field name="arch" type="xml">
-                <form string="Document" create="false" edit="true" delete="false">
+                <form string="Document" create="false" edit="false" delete="false">
                     <header>
 <!--  Issuer                      -->
                         <button name="action_einv_cancel_doc" type="object" string="Cancel e-Invoice" icon="fa-ban"
@@ -141,7 +144,7 @@
                                 <field name="einv_tax_state_display" widget="badge"
                                        decoration-info="einv_tax_state_display == 'draft'"
                                        decoration-success="einv_tax_state_display == 'valid' or einv_tax_state_display == 'submitted'"
-                                       decoration-danger="einv_tax_state_display == 'cancelled' or einv_tax_state_display == 'cancel_request'"
+                                       decoration-danger="einv_tax_state_display == 'cancelled' or einv_tax_state_display == 'cancel_request' or einv_tax_state_display=='invalid'"
                                        decoration-warning="einv_tax_state_display == 'rejected' or einv_tax_state_display == 'reject_request'"
 
                                        optional="show"/>
@@ -157,7 +160,6 @@
 
                         </group>
                         <notebook>
-                            <!--                            attrs="{'invisible': [('move_type', '=', 'entry')]}"-->
                             <page id="invoice_tab"
                                   string="Invoice Lines"
                             >
@@ -253,7 +255,7 @@
                                        mode="tree">
                                     <tree string="Errors Detail" default_order="date desc,id">
                                         <!-- Displayed fields -->
-                                        <field name="code"/>
+                                        <field name="code" optional="hide"/>
                                         <field name="name"/>
                                         <field name="date"/>
                                         <!--                                        <field eval="date.strftime('%Y-%m-%d %H:%M')" name="date"/>-->
@@ -269,9 +271,7 @@
                             <page string="JSON Preview">
                                 <field name="einv_doc_json"></field>
                             </page>
-                            <page string="Test Create Invoice">
-                                <field name="einv_doc_json_Test"></field>
-                            </page>
+
                         </notebook>
 
                     </sheet>
@@ -394,7 +394,7 @@
         <record id="action_account_move_tax_customer" model="ir.actions.act_window">
             <field name="name">e-Invoices</field>
             <field name="res_model">account.move</field>
-            <field name="domain">['|', ('move_type', '=', 'out_invoice'), ('move_type', '=', 'out_refund')]</field>
+            <field name="domain">['|', ('move_type', '=', 'out_invoice'), ('move_type', '=', 'out_refund'),('state','!=','draft')]</field>
             <field name="context">{'default_move_type': 'out_invoice'}</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('view_account_move_tax_tree')}),
@@ -402,7 +402,7 @@
         </record>
 
         <record id="action_account_move_tax_vendor" model="ir.actions.act_window">
-            <field name="name">e-Invoices</field>
+            <field name="name">e-Bills</field>
             <field name="res_model">account.move</field>
             <field name="domain">['|', ('move_type', '=', 'in_invoice'), ('move_type', '=', 'in_refund')]</field>
             <field name="context">{'default_move_type': 'in_invoice'}</field>
@@ -416,7 +416,7 @@
         <field name="model_id" ref="account.model_account_move"/>
         <field name="state">code</field>
         <field name="code">
-            action=model.action_einv_receive_recent_docs()
+            action=model.action_einv_sync()
             #create new invoices, update status
         </field>
     </record>
