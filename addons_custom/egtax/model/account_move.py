@@ -14,28 +14,28 @@ class AccountMove(models.Model):
     _inherit = ["account.move", "egtax.einv_api"]
     # “submitted”, “valid”, “invalid”, “rejected”, “cancelled”
     einv_tax_state = fields.Selection(selection=[
-        ('draft', 'Draft'),
+        ('draft', 'Ready'),
         ('submitted', 'Submitted'),
-        ('valid', 'Valid'),
-        ('invalid', 'Invalid'),
+        ('valid', 'Sent'),
+        ('invalid', 'Error'),
         ('reject_request', 'Reject Request'),
         ('rejected', 'Rejected'),
         ('cancel_request', 'Cancel Request'),
-        ('cancelled', 'Cancelled')], string="Tax Status", help="", defult="draft")
+        ('cancelled', 'Cancelled')], string="Tax Status", help="", default="draft")
 
     einv_tax_state_display = fields.Selection(selection=[
-        ('draft', 'Draft'),
+        ('draft', 'Ready'),
         ('submitted', 'Submitted'),
-        ('valid', 'Valid'),
-        ('invalid', 'Invalid'),
+        ('valid', 'Sent'),
+        ('invalid', 'Error'),
         ('reject_request', 'Reject Request'),
         ('rejected', 'Rejected'),
         ('cancel_request', 'Cancel Request'),
         ('cancelled', 'Cancelled')], compute='_compute_einv_tax_state_display',
-        string="Tax Status", help="", defult="draft")
+        string="Tax Status", help="", default="draft")
     partner_display_name = fields.Char(string="Customer/Vendor", compute="_compute_partner_display_name")
 
-    einv_post_date = fields.Datetime(string="Tax Post Date", help="")
+    einv_post_date = fields.Datetime(string="Sent Date", help="")
     einv_is_submitted = fields.Boolean(string="Submitted", help="")
     einv_uuid = fields.Char(string="UUID", help="")
     einv_longId = fields.Char(string="Long ID", help="")
@@ -50,7 +50,7 @@ class AccountMove(models.Model):
     einv_action_type = fields.Selection(selection=[
         ('auto', 'Auto'),
         ('manual', 'Manual')],
-        string="Action Type", help="", defult="manual")
+        string="Action Type", help="", default="manual")
 
     einv_issued_date = fields.Datetime(string="Issue Date", help="")
     einv_received_date = fields.Datetime(string="Received Date", help="")
@@ -68,15 +68,13 @@ class AccountMove(models.Model):
     def _compute_einv_tax_state_display(self):
         for r in self:
             r.einv_tax_state_display = r.einv_tax_state or 'draft'
+            if not r.einv_tax_state:
+                r.einv_tax_state = 'draft'
 
     @api.depends('partner_id')
     def _compute_partner_display_name(self):
         for r in self:
             r.partner_display_name = r.partner_id.name
-
-
-
-
 
     # preview in formview only
     def _compute_preview_json(self):

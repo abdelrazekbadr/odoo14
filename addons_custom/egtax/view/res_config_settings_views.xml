@@ -79,9 +79,12 @@
                                     <field name="expire_in"/>
                                     <field name="auto_post"/>
                                     <field name="auto_receive"/>
+                                    <field name="enable_signature"/>
+                                     <field name="signature_type"/>
+                                     <field name="signature_api_url"/>
                                     <field name="last_token_date"/>
-                                    <field name="signature_type"/>
-                                    <field name="signature_value"/>
+
+<!--                                    <field name="signature_value"/>-->
                                 </group>
                                 <notebook>
                                 </notebook>

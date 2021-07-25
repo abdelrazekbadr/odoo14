@@ -1,0 +1,103 @@
+
+.card {
+  margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  border: 1px solid #999;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 30px;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+.card .footer{
+    padding: 5px;
+    background: #dee2e666;
+    /* margin: 1px; */
+    border-radius: 0px 0px 4px 4px;
+}
+.card .icon {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    font-size: 20px;
+    font-style: normal;
+    left: 50%;
+    line-height: 50px;
+    position: absolute;
+    top: -25px;
+    width: 50px;
+}
+.card .card-question {
+  margin: 20px 0 20px;
+  font-size: 150%;
+}
+.card .card-separator {
+  margin: 0px 10px 0px 10px;
+}
+/*
+.card a {
+  text-decoration: none;
+  color: #7f8c8d;
+}
+*/
+.card-red {
+  border-top: 4px solid #dc3545cf;
+}
+.card-orange {
+  border-top: 4px solid #ffc107;
+}
+.card-red .icon{
+    color:#dc3545;
+}
+.card-orange .icon{
+    color:#ffc107;
+}
+/* .card-red :before {
+  color: #e74c3c;
+  content: "";
+  font-family: "FontAwesome";
+} */
+.card-red .card-separator {
+  border: 1px solid #dc354566;
+}
+.card-orange .card-separator {
+  border: 1px solid #ffc10766;
+}
+.card-red .card-answer-separator {
+  border: 1px dotted #e74c3c66;
+}
+
+.card-green {
+  border-top: 4px solid #28a745cf;
+}
+/* .card-green :before {
+  color: #16a085;
+  content: "";
+  font-family: "FontAwesome";
+} */
+.card-green .card-separator {
+  border: 1px solid #28a74566;
+}
+.card-green .icon{
+    color:#28a745;
+}
+
+.card-blue {
+  border-top: 4px solid #3498db;
+}
+
+.card-blue .icon{
+    color:#3498db;
+}
+/* .card-blue :before {
+  color: #3498db;
+  content: "";
+  font-family: "FontAwesome";
+} */
+.card-blue .card-separator {
+  border: 1px solid #3498db;
+}

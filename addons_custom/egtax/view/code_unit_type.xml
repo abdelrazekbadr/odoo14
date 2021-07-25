@@ -122,6 +122,6 @@
             </field>
         </record>
 
-        <menuitem id="menu_egtax_unit_type" name="Unit Types" parent="egtax_config_menu" action="action_egtax_unit_type" sequence="120"/>
+<!--        <menuitem id="menu_egtax_unit_type" name="Unit Types" parent="egtax_config_menu" action="action_egtax_unit_type" sequence="120"/>-->
     </data>
 </odoo>

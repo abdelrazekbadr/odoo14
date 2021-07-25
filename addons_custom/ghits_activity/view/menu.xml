@@ -1,0 +1,10 @@
+<odoo>
+	<data>
+		<menuitem id="ghits_activity_top_menu" name="Activities" sequence="20" web_icon="ghits_activity,static/description/icon.png"
+		action="action_mail_activity" />
+		<menuitem id="ghits_activity_sub_menu" name="Operations" sequence="40" parent="ghits_activity_top_menu" />
+		<menuitem id="ghits_activity_config_menu" name="Configurations" sequence="50" parent="ghits_activity_top_menu" />
+	    <menuitem id="menu_mail_activity" name="Mail activity" parent="ghits_activity_config_menu" action="action_mail_activity" sequence="20"/>
+
+	</data>
+</odoo>

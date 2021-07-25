@@ -1,10 +1,10 @@
 {
   "result": [
     {
-      "uuid": "11221124",
-      "submissionUUID": "111222111224",
+      "uuid": "265d3d7032344291b911b08d4a2b4766",
+      "submissionUUID": "eca82f6b81244b4a9522a7cf5a5cb17b",
       "longId": "11221124",
-      "internalId": "Bill/Test/2021/06/0001",
+      "internalId": "INV/2021/06/0007",
       "typeName": "i",
       "typeVersionName": "1.0",
       "issuerId": "123456789",
@@ -17,7 +17,7 @@
       "totalDiscount": 1.5,
       "netAmount": 1.5,
       "total": 1.5,
-      "status": "cancelled",
+      "status": "rejected",
       "cancelRequestDate": "2021-06-03T00:00:00Z",
       "rejectRequestDate": "2021-06-03T00:00:00Z",
       "cancelRequestDelayedDate": "2021-06-03T00:00:00Z",

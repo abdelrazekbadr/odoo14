@@ -10,3 +10,5 @@ from . import code_activity_type
 from . import account_tax
 from . import uom
 from . import product
+from . import res_partner
+from . import  res_company

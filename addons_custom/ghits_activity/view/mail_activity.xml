@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="project assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel='stylesheet' href="/ghits_activity/static/css/style.css"/>
+            </xpath>
+
+        </template>
+        <!-- tree view -->
+        <record id="view_mail_activity_tree" model="ir.ui.view">
+            <field name="name">mail_activity_tree</field>
+            <field name="model">mail.activity</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Next Activities"
+                      decoration-danger="date_deadline &lt; current_date"
+                      decoration-success="date_deadline == current_date"
+                      default_order="date_deadline" create="false">
+                    <field name="res_name"/>
+                    <field name="activity_type_id"/>
+                    <field name="summary"/>
+                    <field name="date_deadline"/>
+                    <field name="user_id"/>
+
+                    <button type="object" name="action_open_form" icon="fa-arrow-circle-right"></button>
+
+                </tree>
+            </field>
+        </record>
+        <!-- kanban , to show image, please add image_small in the model -->
+        <record id="view_mail_activity_kanban" model="ir.ui.view">
+            <field name="name">mail_activity</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <kanban version="7.0"  create="false">
+                    <field name="id"/>
+                    <field name="res_name"/>
+                    <field name="summary"/>
+                    <field name="note"/>
+                    <field name="date_deadline"/>
+                    <field name="automated"/>
+                    <field name="state"/>
+                    <field name="activity_type_id"/>
+                    <field name="res_model_id"/>
+                    <field name="res_model_id"/>
+                    <field name="activity_category"/>
+                    <field name="user_id"/>
+                    <field name="res_name"/>
+                    <field name="icon"/>
+                    <field name="activity_decoration"></field>
+
+                    <!--                    <templates>-->
+                    <!--                        <t t-name="kanban-box">-->
+                    <!--                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">-->
+                    <!--                                <div class="oe_kanban_details">-->
+                    <!--                                    <h4>-->
+                    <!--                                        <a type="open"><field name="summary"/></a>-->
+                    <!--                                    </h4>-->
+                    <!--                                    <ul>-->
+                    <!--                                        <li>-->
+                    <!--                                            <span class="text-muted">Date deadline</span> <field-->
+                    <!--                                                name="date_deadline"></field>-->
+                    <!--                                        </li>-->
+                    <!--                                    </ul>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </t>-->
+                    <!--                    </templates>-->
+                    <templates>
+
+                        <t t-name="kanban-box">
+                            <!-- Set the Kanban Card color
+                           oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}-->
+                            <div t-attf-class="oe_kanban_global_click" style="padding:0;
+                             border: 0px; background: none;">
+                                <div>
+                                    <div t-attf-class="col-md-12 card
+                                       #{record.state.raw_value=='overdue'? 'card-red':
+                                       record.state.raw_value=='today'?'card-orange':
+                                       record.state.raw_value=='planned'?'card-green':'card-blue'}">
+
+                                        <h4>
+                                            <a type="open">
+                                                <field name="summary"/>
+                                            </a>
+                                        </h4>
+                                        <div class="card-separator"></div>
+                                        <div style="height:50px;overflow: hidden; max-height: 3.6em;">
+                                            <field name="note" widget="html"/>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between footer">
+                                            <div>
+                                                <i class="fa fa-file-o"></i>
+                                                <field name="res_name"></field>
+
+                                                <a type="object" name="action_open_form">
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <field name="user_id"></field>
+                                                <field name="user_id" widget="many2one_avatar_user"></field>
+                                            </div>
+                                        </div>
+                                        <div class="icon">
+                                            <i t-attf-class="fa #{record.icon.value}"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--                                <div t-attf-class="card-->
+                                <!--                                #{record.state.raw_value=='overdue'? 'bg-danger':-->
+                                <!--                                  record.state.raw_value=='today'?'bg-warning':-->
+                                <!--                                  record.state.raw_value=='planned'?'bg-success':''}">-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <h4>-->
+                                <!--                                            <a type="open">-->
+                                <!--                                                <i t-attf-class="fa #{record.icon.value}"></i>-->
+                                <!--                                                <field name="summary"/>-->
+                                <!--                                            </a>-->
+                                <!--                                        </h4>-->
+                                <!--                                        <p class="card-text">-->
+                                <!--                                            <span class="text-muted">Date Deadline:</span>-->
+                                <!--                                            <field name="date_deadline"></field>-->
+                                <!--                                        </p>-->
+                                <!--                                        <p>-->
+                                <!--                                            <div t-attf-value="#{record.state.raw_value=='overdue'}"/>-->
+                                <!--                                            <field name="state"></field>-->
+
+
+                                <!--                                        </p>-->
+
+
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer">-->
+                                <!--                                        <div class="d-flex justify-content-between">-->
+                                <!--                                            <div>-->
+                                <!--                                                <i class="fa fa-file-o"></i>-->
+                                <!--                                                <field name="res_name"></field>-->
+
+                                <!--                                                <a type="object" name="action_open_form" style="{color: white;}">-->
+                                <!--                                                    <i class="fa fa-external-link"></i>-->
+                                <!--                                                </a>-->
+                                <!--                                            </div>-->
+                                <!--                                            <div>-->
+                                <!--                                                <field name="user_id"></field>-->
+                                <!--                                                <field name="user_id" widget="many2one_avatar_user"></field>-->
+                                <!--                                            </div>-->
+                                <!--                                        </div>-->
+
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+
+                                <div class="oe_kanban_body">
+
+
+                                    <!-- Content elements and fields go here... -->
+                                </div>
+
+                                <div class="oe_clear"/>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <!-- calendar if a date field exists -->
+        <record id="view_mail_activity_cal" model="ir.ui.view">
+            <field name="name">mail_activity_cal</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <calendar string="Activity" date_start="date_deadline" color="activity_type_id">
+                    <field name="user_id" avatar_field="image_128"/>
+                    <field name="res_name"/>
+                    <field name="date_deadline"/>
+                    <field name="summary"/>
+                    <field name="activity_type_id" filters="1" invisible="1"/>
+                </calendar>
+                <!--                <calendar string="Mail activity" date_start="date_deadline">-->
+                <!--                    <field name="summary" />-->
+                <!--                </calendar>-->
+            </field>
+        </record>
+        <!-- graph -->
+        <record id="view_mail_activity_graph" model="ir.ui.view">
+            <field name="name">mail_activity</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <graph string="Mail activity" type="bar">
+
+                </graph>
+            </field>
+        </record>
+        <!-- action window -->
+
+        <!-- search -->
+        <record id="view_mail_activity_search" model="ir.ui.view">
+            <field name="name">mail_activity</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <search string="Activity">
+                    <field name="res_model_id"/>
+                    <field name="summary"/>
+                    <field name="activity_type_id"/>
+                    <filter invisible="0" string="Late Activities" name="activities_overdue"
+                            domain="[('date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                            help="Show all records which has next action date is before today"/>
+                    <filter invisible="0" string="Today Activities" name="activities_today"
+                            domain="[('date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter invisible="0" string="Future Activities" name="activities_upcoming_all"
+                            domain="[('date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))
+                        ]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Document" name="res_name" context="{'group_by': 'res_name'}"/>
+                        <filter string="Deadline" name="date_deadline" context="{'group_by': 'date_deadline'}"/>
+                        <filter string="Created By" name="createdby" context="{'group_by': 'create_uid'}"/>
+                        <filter string="Activity Type" name="activittype" context="{'group_by': 'activity_type_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_mail_activity" model="ir.actions.act_window">
+            <field name="name">Mail activity</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mail.activity</field>
+            <field name="view_mode">kanban,tree,form,calendar,graph</field>
+            <field name="search_view_id" ref="view_mail_activity_search"></field>
+            <field name="context">{"search_default_fieldname": 1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a new Mail activity
+                </p>
+                <p>
+                    Click the Create button to add a new Mail activity
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

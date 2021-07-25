@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- report qweb view -->
+        <report id="report_mail_activity_menu" string="Ghits activity - Mail activity"
+         model="mail.activity" report_type="qweb-pdf" 
+         file="mail.activity"  name="ghits_activity.mail_activity_report" />
+
+        <!-- document template -->
+        <template id="ghits_activity.mail_activity_report_document" >
+            <t t-call="web.external_layout">
+                <t t-set="doc" t-value="doc.with_context({'lang': lang})"/>
+                <div class="page">
+                    <h2>
+                        Mail activity: <span t-field="doc.name"/>
+                    </h2>
+                    <div class="row mt32 mb32">
+                        <div class="col-auto mw-100 mb-2">
+                            <strong> description</strong>
+                            <p class="m-0" t-field="doc._description" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong> order</strong>
+                            <p class="m-0" t-field="doc._order" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong> rec name</strong>
+                            <p class="m-0" t-field="doc._rec_name" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Res name</strong>
+                            <p class="m-0" t-field="doc.res_name" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Summary</strong>
+                            <p class="m-0" t-field="doc.summary" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Note</strong>
+                            <p class="m-0" t-field="doc.note" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Date deadline</strong>
+                            <p class="m-0" t-field="doc.date_deadline" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Automated</strong>
+                            <p class="m-0" t-field="doc.automated" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>State: selection= ('overdue', ' overdue'), ('today', ' today'), ('planned', ' planned')</strong>
+                            <p class="m-0" t-field="doc.state:Selection= ('overdue', 'Overdue'), ('today', 'Today'),  ('planned', 'Planned')" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Date deadline</strong>
+                            <p class="m-0" t-field="doc.date_deadline" />
+                        </div>
+                        <div class="col-auto mw-100 mb-2">
+                            <strong>Res name</strong>
+                            <p class="m-0" t-field="doc.res_name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+
+        <!-- main template -->
+        <template id="ghits_activity.mail_activity_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="lang" t-value="doc.create_uid.lang"/>
+                    <t t-call="ghits_activity.mail_activity_report_document" />
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

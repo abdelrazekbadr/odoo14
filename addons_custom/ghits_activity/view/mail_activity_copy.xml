@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="view_mail_activity_tree" model="ir.ui.view">
+            <field name="name">mail_activity_tree</field>
+            <field name="model">mail.activity</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+<!--                <tree string="Mail activity">-->
+
+<!--                    <field name="res_name" />-->
+<!--                    <field name="summary" />-->
+<!--&lt;!&ndash;                    <field name="note" />&ndash;&gt;-->
+<!--                    <field name="date_deadline" />-->
+<!--                    <field name="automated" />-->
+<!--                    <field name="state" />-->
+<!--                    <field name="activity_type_id" />-->
+<!--                    <field name="res_model_id"/>-->
+<!--                    <field name="activity_category" />-->
+<!--                    <field name="user_id" />-->
+<!--                    <field name="res_name" />-->
+<!--                </tree>-->
+
+                  <tree string="Next Activities"
+                    decoration-danger="date_deadline &lt; current_date"
+                    decoration-success="date_deadline == current_date"
+                    default_order="date_deadline" create="false">
+                <field name="res_name"/>
+                <field name="activity_type_id"/>
+                <field name="summary"/>
+                      <field name="date_deadline"/>
+                      <field name="user_id" />
+                  </tree>
+            </field>
+        </record>
+        <!-- form view -->
+<!--        <record id="view_mail_activity_form" model="ir.ui.view">-->
+<!--            <field name="name">mail_activity_form</field>-->
+<!--            <field name="model">mail.activity</field>-->
+<!--            <field name="type">form</field>-->
+<!--            <field name="priority" eval="8"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Mail activity">-->
+<!--                    <header>-->
+<!--                    </header>-->
+<!--                    <sheet>-->
+<!--                        <div class="oe_button_box" name="button_box">-->
+<!--                            &lt;!&ndash;button type="object" name="action_view_detail" class="oe_stat_button" icon="fa-pencil-square-o"&ndash;&gt;-->
+<!--                                &lt;!&ndash;field name="detail_count" widget="statinfo" string="Detail(s)"/&ndash;&gt;-->
+<!--                                &lt;!&ndash;field name="detail_ids" invisible="1"/&ndash;&gt;-->
+<!--                            &lt;!&ndash;/button&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="oe_title">-->
+<!--                            <label for="summary" class="oe_edit_only" string="Mail activity Name"/>-->
+<!--                            <h1><field name="summary"/></h1>-->
+<!--                        </div>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="res_name" />-->
+<!--                                <field name="summary" />-->
+<!--                                <field name="date_deadline" />-->
+<!--                                <field name="automated" />-->
+<!--                                <field name="state" />-->
+<!--                                <field name="activity_type_id"  />-->
+<!--                                <field name="res_model_id"/>-->
+<!--                    <field name="activity_category" />-->
+<!--                    <field name="user_id" />-->
+<!--                                <field name="res_name" />-->
+
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="note" widget="html"/>-->
+<!--                        </group>-->
+<!--                        <notebook>-->
+<!--                        </notebook>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+        <!-- search -->
+        <record id="view_mail_activity_search" model="ir.ui.view">
+            <field name="name">mail_activity</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <search string="Mail activity">
+                     <filter string="Res name" name="filter_by_res_name" domain="[('res_name','=','')]" />
+                    <filter string="Summary" name="filter_by_summary" domain="[('summary','=','')]" />
+                    <filter string="Note" name="filter_by_note" domain="[('note','=','')]" />
+                    <filter string="Automated" name="filter_by_automated" domain="[('automated','=','')]" />
+<!--                    <filter string="State" name="filter_by_state:Selection= ('overdue', 'Overdue'), ('today', 'Today'),  ('planned', 'Planned')" domain="[('state:Selection= ('overdue', 'Overdue'), ('today', 'Today'),  ('planned', 'Planned')','=','')]" />-->
+                    <filter string="Date deadline" name="filter_by_date_deadline" domain="[('date_deadline','=','')]" />
+                    <filter string="Res name" name="filter_by_res_name" domain="[('res_name','=','')]" />
+
+                    <field name="res_name" select="True"/>
+                    <field name="summary" select="True"/>
+                    <field name="note" select="True"/>
+                    <field name="date_deadline" select="True"/>
+                    <field name="automated" select="True"/>
+                    <field name="state" select="True"/>
+                    <field name="res_name" select="True"/>
+                    <group string="Group By..">
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- kanban , to show image, please add image_small in the model -->
+        <record id="view_mail_activity_kanban" model="ir.ui.view" >
+            <field name="name">mail_activity</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <kanban version="7.0">
+                    <field name="id" />
+                    <field name="res_name" />
+                    <field name="summary" />
+                    <field name="note" />
+                    <field name="date_deadline" />
+                    <field name="automated" />
+                    <field name="state" />
+                    <field name="activity_type_id" />
+                    <field name="res_model_id"/>
+                    <field name="res_model_id"/>
+                    <field name="activity_category" />
+                    <field name="user_id" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_details">
+                                    <h4>
+                                        <a type="open"><field name="summary"/></a>
+                                    </h4>
+                                    <ul>
+                                        <li>
+                                            <span class="text-muted">Date deadline</span> <field name="date_deadline"></field>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <!-- calendar if a date field exists -->
+        <record id="view_mail_activity_cal" model="ir.ui.view">
+            <field name="name">mail_activity_cal</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <calendar string="Activity" date_start="date_deadline" color="activity_type_id">
+                <field name="user_id" avatar_field="image_128"/>
+                <field name="res_name"/>
+                <field name="date_deadline"/>
+                <field name="summary"/>
+                <field name="activity_type_id" filters="1" invisible="1"/>
+            </calendar>
+<!--                <calendar string="Mail activity" date_start="date_deadline">-->
+<!--                    <field name="summary" />-->
+<!--                </calendar>-->
+            </field>
+        </record>
+        <!-- graph -->
+        <record id="view_mail_activity_graph" model="ir.ui.view">
+            <field name="name">mail_activity</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <graph string="Mail activity" type="bar">
+
+                </graph>
+            </field>
+        </record>
+        <!-- action window -->
+        <record id="action_mail_activity" model="ir.actions.act_window">
+            <field name="name">Mail activity</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mail.activity</field>
+            <field name="view_mode">kanban,tree,form,calendar,graph</field>
+            <field name="context">{"search_default_fieldname":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a new Mail activity
+                </p><p>
+                Click the Create button to add a new Mail activity
+                </p>
+            </field>
+        </record>
+
+          </data>
+</odoo>

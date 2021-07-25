@@ -329,6 +329,7 @@ class TaxTotal:
         return result
 
 
+
 @dataclass
 class Document:
     issuer:Partner = Partner()
@@ -346,11 +347,11 @@ class Document:
     references :List[str]= field(default_factory=list)  # _list()
     payment:Payment = Payment()
     delivery:Delivery = Delivery()
-    invoice_lines :List[InvoiceLine]= field(default_factory=list)  # _list() # 
+    invoice_lines :List[InvoiceLine]= field(default_factory=list)  # _list() #
     total_discount_amount:float = 0.0
     total_sales_amount:float = 0.0
     net_amount:float = 0.0
-    tax_totals :List[TaxTotal]= field(default_factory=list)  # _list()  # 
+    tax_totals :List[TaxTotal]= field(default_factory=list)  # _list()  #
     total_amount:float = 0.0
     extra_discount_amount:float = 0.0
     total_items_discount_amount:float = 0.0
@@ -382,7 +383,7 @@ class Document:
         total_amount = from_float(obj.get("totalAmount"))
         extra_discount_amount = from_float(obj.get("extraDiscountAmount"))
         total_items_discount_amount = from_float(obj.get("totalItemsDiscountAmount"))
-        signatures = from_list(Signature.from_dict, obj.get("signatures"))
+        signatures = from_list(Signature.from_dict, obj.get("signatures",[]))
         return Document(issuer, receiver, document_type, document_type_version, date_time_issued,
                         taxpayer_activity_code, internal_id, purchase_order_reference, purchase_order_description,
                         sales_order_reference, sales_order_description, proforma_invoice_number, references, payment,
@@ -415,7 +416,10 @@ class Document:
         result["totalAmount"] = to_float(self.total_amount)
         result["extraDiscountAmount"] = to_float(self.extra_discount_amount)
         result["totalItemsDiscountAmount"] = to_float(self.total_items_discount_amount)
-        result["signatures"] = from_list(lambda x: to_class(Signature, x), self.signatures)
+
+        if self.signatures and len(self.signatures)>0:
+            result["signatures"] = from_list(lambda x: to_class(Signature, x), self.signatures)
+
         return result
 
 
@@ -484,6 +488,7 @@ class AcceptedDocument:
 @dataclass
 class Error:
     code: str = ''
+    message: str = ''
     message: str = ''
     target: str = ''
     details: Optional[List['Error']] = field(default_factory=list)

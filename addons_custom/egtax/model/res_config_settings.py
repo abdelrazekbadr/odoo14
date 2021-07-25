@@ -22,6 +22,8 @@ class ResConfigSettings(models.TransientModel):
     client_token = fields.Char(string="Client Token", readonly=False, help="")
     auto_post = fields.Boolean(string="Auto Post", help="")
     auto_receive = fields.Boolean(string="Auto Receive", help="")
+    enable_signature = fields.Boolean(string="Enable Signature", help="")
+    signature_api_url = fields.Char(string="Signature API URL ", readonly=False, help="")
     last_token_date = fields.Datetime(string="Last token date", readonly=True, help="")
     signature_type = fields.Selection(selection=[('i', 'Issuer '), ('s', 'Service Provider')], string="Signature type",
                                       help="")
@@ -52,6 +54,8 @@ class ResConfigSettings(models.TransientModel):
             client_token=config.get_param(ConfigKeys.CLIENT_TOKEN.value),
             auto_post=bool(config.get_param(ConfigKeys.AUTO_POST.value)) ,
             auto_receive=bool(config.get_param(ConfigKeys.AUTO_RECEIVE.value)),
+            enable_signature=bool(config.get_param(ConfigKeys.ENABLE_SIGNATURE.value)),
+            signature_api_url=config.get_param(ConfigKeys.SIGNATURE_API_URL.value),
             last_token_date=from_datetime(config.get_param(ConfigKeys.CLIENT_TOKEN_LAST_DATE.value)),
             signature_type=config.get_param(ConfigKeys.SIGNATURE_TYPE.value),
             signature_value=config.get_param(ConfigKeys.SIGNATURE_VALUE.value),
@@ -77,6 +81,8 @@ class ResConfigSettings(models.TransientModel):
         config.set_param(ConfigKeys.CLIENT_TOKEN.value, self.client_token)
         config.set_param(ConfigKeys.AUTO_POST.value, self.auto_post)
         config.set_param(ConfigKeys.AUTO_RECEIVE.value, self.auto_receive)
+        config.set_param(ConfigKeys.ENABLE_SIGNATURE.value, self.enable_signature)
+        config.set_param(ConfigKeys.SIGNATURE_API_URL.value, self.signature_api_url)
         config.set_param(ConfigKeys.CLIENT_TOKEN_LAST_DATE.value, self.last_token_date)
         config.set_param(ConfigKeys.SIGNATURE_TYPE.value, self.signature_type)
         config.set_param(ConfigKeys.SIGNATURE_VALUE.value, self.signature_value)

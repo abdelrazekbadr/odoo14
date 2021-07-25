@@ -15,6 +15,8 @@ class ConfigKeys(Enum):
     ID_SRV_BASE_URL = 'egtax.idSrvBaseUrl'
     AUTO_POST = 'egtax.auto_post'
     AUTO_RECEIVE = 'egtax.auto_receive'
+    ENABLE_SIGNATURE = 'egtax.enable_signature'
+    SIGNATURE_API_URL = 'egtax.signature_api_url'
     START_DATE ='egtax.start_date'
     ACTIVITY_CODE = 'egtax.activity_code'
     PRODUCT_CODING_SCHEMA = 'egtax.product_coding_schema'

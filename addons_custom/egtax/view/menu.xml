@@ -1,5 +1,6 @@
 <odoo>
     <data>
+        
         <menuitem id="egtax_top_menu" name="e-Invoices" action="action_account_move_tax_customer" sequence="20"
                   web_icon="egtax,static/description/icon.ico"/>
         <menuitem id="egtax_sub_menu" name="Operations" sequence="40" parent="egtax_top_menu"/>
