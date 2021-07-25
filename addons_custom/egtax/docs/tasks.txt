@@ -52,4 +52,9 @@ App Features -------------------------------------------------------
 - Dashboard
 
 
+--git------------------------------------------------------------------
+>> git add -all
+>> git commit -m "add activity module"
+>> git push -u origin master
+
 
